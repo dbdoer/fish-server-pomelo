@@ -1,0 +1,952 @@
+
+šŠ
+field-options.protomi"9
+CurrencyUnit
+gold (
+gem (
+coupon ("2
+
+helloworld
+
+id (
+str (	
+opt ("'
+	ErrorInfo
+csid (
+code ("$
+SC_AccountRepetition
+code ("
+CS_AccountSwitch" 
+SC_AccountSwitch
+code ("%
+CS_Login
+uid (	
+uuid (	"«
+SC_Login
+code (
+userInfo (2.mi.UserInfo"
+dataPropList (2.mi.DataProp"
+dataCardList (2.mi.DataCard
+guideStepNum (
+timeNow (	
+novicePackage (
+novicePackageTime (	
+otherPackage	 (
+isUpdate
+ (
+	isChecked (
+lastTimeStamp (	"=
+DataProp
+propID (
+propType (
+propNum ("-
+DataCard
+	monthCard (
+canGet ("(
+CS_ModifyNickName
+newNickname (	"6
+SC_ModifyNickName
+code (
+newNickname (	"&
+CS_ModifyHeadUrl
+
+newHeadUrl (	"4
+SC_ModifyHeadUrl
+code (
+
+newHeadUrl (	"²
+MailInfo
+type (
+
+id (	
+state (
+
+templateId (
+replacement (	
+itemList (2.mi.GoodUnit
+
+createTime (
+	isAdjunct (
+title	 (	"
+CS_Mail_Get
+
+id (	".
+SC_Mail_List
+mailList (2.mi.MailInfo")
+CS_Mail_Check
+
+id (	
+type (",
+SC_Mail_Check
+err (
+result ("'
+CS_Mail_Del
+
+id (	
+type ("*
+SC_Mail_Del
+err (
+result ("
+CS_Mail_Adjunct
+
+id (	".
+SC_Mail_Adjunct
+err (
+result ("5
+SC_Mail_OneKey_Adjunct
+err (
+result ("1
+SC_Mail_OneKey_Del
+err (
+result ("-
+
+CS_PropUse
+propId (
+propNum ("I
+
+SC_PropUse
+errCode (
+gold (
+gem (
+bullion ("=
+CS_PropGive
+numId (	
+propId (
+propNum ("
+SC_PropGive
+errCode ("
+CS_GoodsList"]
+	GoodsInfo
+	goodsName (	
+bullion (
+label (	
+link (	
+goodsId ("A
+SC_GoodsList
+errCode ( 
+	goodsList (2.mi.GoodsInfo"
+CS_GoodsExchange
+goodsId (
+userName (	
+telephoneNumber (	
+	goodsName (	
+bullion (
+email (	"#
+SC_GoodsExchange
+errCode ("
+CS_MonthCardUse""
+SC_MonthCardUse
+errCode ("
+CS_CoefficientDebug"G
+SC_CoefficientDebug
+errCode (
+result (2.mi.Coefficient"¿
+Coefficient
+currentProfitEP (	
+coefficient (	
+basicsCoefficient (	
+rechargeCoefficient (	
+noviceCoefficient (	
+posCoefficient (	
+roomCoefficient (	"
+CS_redeemCodeUse
+
+id (	"G
+SC_redeemCodeUse
+errCode ("
+dataPropList (2.mi.DataProp"*
+CS_giftGive
+uid (	
+giftId ("*
+SC_giftGive
+err (
+giftId ("
+SC_checkState
+code ("8
+
+recordData
+name (	
+giftId (
+time (	"3
+SC_giftRecord"
+
+recordList (2.mi.recordData"?
+SC_BroadcastGiftGive
+
+id (	
+uid (	
+giftId (";
+SC_GiftRemain
+name (	
+giftId (
+time (	"G
+SC_MessageRemind
+messageType (
+mailList (2.mi.MailInfo"M
+SC_BroadcastLevelUp
+playerIndex (
+level (
+
+experience (	"
+wave
+deep ("3
+Screen
+screenid (
+waves (2.mi.wave"5
+Track
+trackid (
+screens (2
+.mi.Screen"*
+	TrackTime
+trackId (
+time (",
+DeadFish
+trackId (
+fishIds ("%
+Pathinfo
+tracks (2	.mi.Track"5
+SC_SynchTrackTime 
+	tracktime (2.mi.TrackTime"X
+CompetitionUserInfo
+uid (	
+leftAttackCount (
+score (
+time ("+
+GoodUnit
+goodId (
+goodNum (":
+DropData
+fishId (
+goodList (2.mi.GoodUnit"*
+CS_EnterCompetitionRoom
+sceneid ("ë
+SC_CompetitionRoomInfo
+userList (2.mi.UserInfo
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish
+totalAttackCount (4
+competitionInfoList (2.mi.CompetitionUserInfo"
+CS_LeaveRoom
+type ("
+SC_LeaveRoom
+code ("Y
+SC_BroadcastEnterRoom
+userInfo (2.mi.UserInfo 
+	tracktime (2.mi.TrackTime"
+SC_BroadcastCompEnterRoom
+userInfo (2.mi.UserInfo 
+	tracktime (2.mi.TrackTime0
+competitionInfo (2.mi.CompetitionUserInfo"G
+SC_BroadcastLeaveRoom
+uid (	
+kicked (
+	matchType ("1
+SC_DropData"
+dropDataList (2.mi.DropData"o
+SC_BroadcastDropData
+playerIndex (
+fishId ("
+dataPropList (2.mi.DataProp
+gemNum ("u
+SC_FishWaveBegin
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish"s
+SC_FishWaveEnd
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish"0
+SC_DropCard
+	cardCount (
+fishId ("A
+SC_UseCard_Normal
+canUse (
+cardId (
+rate ("U
+SC_BroadcastUseCard
+uid (	
+cardId (
+isCompleted (
+rate ("J
+CS_RainbowEventPos
+	positionX (
+	positionY (
+fishid ("`
+SC_BroadcastRainbowEventPos
+uid (	
+	positionX (
+	positionY (
+fishid ("7
+CS_EventExplosionInfo
+fireid (
+fishid (">
+CS_ExpressionInfo
+	messageId (
+messageContent (	"!
+SC_ExpressionInfo
+code ("3
+CS_ChangeWeapon
+weaponid (
+isAuto ("
+CS_Heartbeat"5
+SC_Heartbeat
+
+secondtime (
+	microtime ("
+CS_RefreshRoomInfo"1
+SC_UploadData
+goldPool (
+energy ("%
+CS_SkinUnlock
+unlockSkinId ("#
+SC_SkinUnlock
+
+curSkinIds ("0
+CS_SkinChange
+skinID (
+actType ("
+SC_SkinChange
+err ("7
+SC_BroadcastSkinChange
+uid (	
+skinType ("$
+CS_Guide_Step
+fishTypePos ("
+SC_Guide_Step
+code ("9
+SC_BroadcastChangeWeapon
+uid (	
+weaponid ("O
+SC_BroadcastCurrencyUnit
+uid (	&
+currencyUnit (2.mi.CurrencyUnit"b
+SC_BroadcastExpressionInfo
+name (	
+pos (
+	messageId (
+messageContent (	"2
+SC_SpecialWeapon_Energy
+curWeaponEnergy ("I
+CS_SpecialWeapon_Fire
+
+weaponType (
+fireX (
+fireY ("(
+SC_SpecialWeapon_Fire
+errCode ("g
+SC_BroadcastSpecialWeapon_Fire
+playerIndex (
+
+weaponType (
+fireX (
+fireY ("J
+CS_SpecialWeapon_ExplosionInfo
+
+fishidlist (
+finalExplode (""
+CS_SynchData
+
+questIndex (""
+SC_SynchData
+
+questIndex ("‚
+CompetitionInfo
+competitionId (
+status (
+	startTime (
+endTime (
+goal (
+weaponId (
+reward1Type (
+reward1Number (
+reward2Type	 (
+reward2Number
+ (
+costGem (
+score (
+rank ("F
+RankInfo
+headurl (	
+name (	
+rank (
+score ("7
+SC_FastMatchRankSelf
+self (2.mi.MatchRankItem"&
+SC_ThemeSwitchReady
+isStart ("-
+SC_ThemeSwitchBegin
+nextSceneIndex ("(
+SC_ThemeBossComing
+
+themeIndex ("%
+CS_RankInfo
+competition_id ("P
+SC_RankInfo
+	rankInfos (2.mi.RankInfo 
+
+myRankInfo (2.mi.RankInfo"
+CS_ContinueCompetition"J
+SC_ContinueCompetition0
+competitionInfo (2.mi.CompetitionUserInfo"S
+SC_BroadcastContinueCompetition0
+competitionInfo (2.mi.CompetitionUserInfo",
+SC_BroadcastQiLinValue
+
+qiLinValue ("2
+SC_BroadcastBombLockScreen
+isLockScreen ("G
+SC_StartSceneEvent
+	eventType (
+pathinfo (2.mi.Pathinfo"-
+SceneEventReward
+uid (	
+gold ("f
+SC_EndSceneEvent
+pathinfo (2.mi.Pathinfo2
+sceneEventRewardList (2.mi.SceneEventReward"4
+SceneEventFishNode
+fishid (
+nodeid ("`
+CS_SceneEventExplosionInfo
+fireid (2
+sceneEventFishNode (2.mi.SceneEventFishNode"o
+SC_SceneEventExplosionInfo
+fireid (
+whole (2
+sceneEventFishNode (2.mi.SceneEventFishNode"u
+#SC_BroadcastSceneEventExplosionInfo
+uid (	
+whole (2
+sceneEventFishNode (2.mi.SceneEventFishNode"3
+AchievementConUnit
+conId (
+number ("~
+AchievementUnit
+
+id (6
+achievementConUnitList (2.mi.AchievementConUnit
+isCompleted (
+
+isReceived ("
+CS_AchievementData"P
+SC_AchievementData,
+achievementList (2.mi.AchievementUnit
+flag ("X
+SC_BroadcastAchievementData
+uid (	,
+achievementList (2.mi.AchievementUnit",
+CS_AchievementAward
+achievementId (",
+SC_AchievementAward
+achievementId (".
+CS_UseSkill
+skillId (
+isOpen ("!
+CS_BuyUseSkill
+skillId ("P
+SC_UseSkill
+skillId (
+isUsable (
+code (
+costType ("D
+SC_BroadcastUseSkill
+uid (	
+skillId (
+isOpen ("2
+CS_SkillProcess
+skillId (
+fishId ("H
+SC_BroadcastSkillProcess
+uid (	
+skillId (
+fishId ("4
+SC_BroadcastSkillEnd
+uid (	
+skillId (",
+SC_BroadcastGroupSkillEnd
+skillId ("&
+AwdList
+type (
+count ("
+CS_OnLineAwdInit"<
+SC_OnLineAwdInit
+err (
+state (
+time (" 
+CS_OnLineAwdLingQu
+
+id ("?
+SC_OnLineAwdLingQu
+err (
+time (
+idList ("f
+SC_TimeRewardGoldZero
+time (
+award1 (
+award2 (
+award3 (
+timeNow ("!
+CS_TimeReward
+timeZone ("(
+SC_TimeReward
+
+is (
+num ("
+CS_Subsidy_Sync"t
+SC_Subsidy_Sync
+errCode (
+isPreGetSubsidy (
+stateNumber (
+	startTime (
+nowTime ("
+CS_SubsidyReward"K
+SC_SubsidyReward
+errCode (
+isGetSubsidy (
+stateNum (")
+SC_AcceptGold
+uid (	
+Num ("8
+SignData
+goodId (
+goodNum (
+vip ("=
+SignTotalData
+goodId (
+goodNum (
+day (",
+CS_GetToTalSignReward
+rewardWhich ("%
+SC_GetToTalSignReward
+code ("[
+SC_PushSignData
+signData (2.mi.SignData(
+signTotalData (2.mi.SignTotalData"
+CS_GetSignData"ž
+SC_GetSignData
+code (
+todayIsSign (
+
+curSignNum (
+
+curDateDay (
+curMonthNum (
+
+signRepair (
+claimTotalReward (	"
+CS_GetSignReward" 
+SC_GetSignReward
+code ("M
+SenderPersonalData
+uid (	
+pos (
+headurl (	
+name (	"Ù
+TemplateMessageData2
+senderPersonalData (2.mi.SenderPersonalData
+	channelId (
+	messageId (
+fishId (
+fishGold (
+matchId (
+
+rewardGold (
+sendType (
+content	 (	"P
+SC_FullServiceNoticeData4
+templateMessageData (2.mi.TemplateMessageData"/
+	QuestUnit
+questId (
+	questType ("J
+QuestAwardUnit
+rewardId (
+	rewardNum (
+rewardIndex (" 
+CS_QuestAward
+questId ("¥
+SC_QuestAward
+questId (
+
+rewardGold (%
+	awardUnit (2.mi.QuestAwardUnit 
+	nextQuest (2.mi.QuestUnit&
+currencyUnit (2.mi.CurrencyUnit"D
+CS_PurchProduct
+	productID (	
+state (
+tradeNo (	"Z
+SC_PurchProduct
+	productID (	
+productType (
+
+productNum (
+err ("1
+CS_SubmitCallsOrder
+
+id (
+mobile (	"3
+SC_SubmitCallsOrder
+code (	
+coupon (" 
+CS_SubmitCardOrder
+
+id ("2
+SC_SubmitCardOrder
+code (	
+coupon ("7
+CS_DebugInfo
+type (
+
+id (
+state ("-
+NormalRoomInfo
+type (
+count ("?
+CustomRoomInfo
+type (
+count (
+roomInfo (	"
+CS_GetNormalList"5
+SC_NormalRoomList 
+room (2.mi.NormalRoomInfo"
+CS_TotalNumFastMatch"8
+SC_TotalNumFastMatch 
+room (2.mi.NormalRoomInfo"5
+SC_CustomRoomList 
+room (2.mi.CustomRoomInfo"
+CS_ChangeSite
+toSite ("-
+SC_ChangeSite
+newSite (
+err (" 
+Site
+pos (
+uid (	"0
+SC_BroadcastChangeSite
+site (2.mi.Site"
+CS_AgainEnterMatch"Û
+fastMatchUserInfo
+uid (	
+gold (
+gem (
+pos (
+headurl (	
+name (	
+weaponId (
+skinType (
+coupon	 (
+energy
+ (
+optimalComScore (
+showId (
+skillBingFeng (
+skillSuoding (
+bullet (
+score (
+rank (
+curTaskFishNum (
+curUseSkill (	"Ü
+SC_AgainEnterMatch
+time (
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish'
+userList (2.mi.fastMatchUserInfo
+taskFishReward (
+targetTaskFishNum (
+taskFishType (&
+showTop	 (2.mi.fastMatchUserInfo
+curFishFarmId
+ (
+explosionQiLin (
+code ("
+CS_GetFastMatchList"7
+	MatchItem
+count (
+cost (
+total ("/
+SC_FastMatchList
+list (2.mi.MatchItem"4
+CS_FastMatchSignUp
+type (	
+timeZone ("·
+SC_FastMatchSignUp
+userList (2.mi.UserInfo
+taskFishReward (
+targetTaskFishNum (
+taskFishType (
+curFishFarmId (
+errCode (
+waitTime ("
+SC_BroadcastFastMatchStart
+time (
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish"*
+
+ItemReward
+type (
+number ("x
+MatchRankItem
+uid (	
+name (	
+headurl (
+rank (
+score (
+reward (2.mi.ItemReward"
+CS_FastMatchRank"C
+SC_FastMatchRank
+list (2.mi.MatchRankItem
+finish (" 
+SC_FastMatchTime
+time ("/
+SC_BroadcastFastMatchProcess
+current ("$
+SC_FastMatchWaitTime
+time ("x
+SC_BroadcastClassicRstInfo
+	matchType (
+reward (
+position (
+rewardId (
+newGoldPool (";
+IntegralRank
+uid (	
+name (	
+integral ("2
+IntegralInfo"
+rankList (2.mi.IntegralRank"2
+bigMatchInfo"
+rankInfo (2.mi.IntegralInfo"R
+SC_Big_Match_Info
+err ("
+infoList (2.mi.bigMatchInfo
+time (	"T
+CS_Enter_Big_Match_Room
+	matchType (
+isAgainMatch (
+timeZone ("²
+SC_Enter_Big_Match_Room
+err (
+userList (2.mi.UserInfo
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish&
+
+onlineInfo (2.mi.OnlineRoomInfo
+curTaskFishInfo (
+targetTaskFishNum (
+taskFishType	 (
+curFishFarmId
+ ("V
+BigMatchScore
+typeId (
+curScore (
+maxScore (
+	curBullet ("M
+SC_Big_Match_PlayerScore
+err ($
+	scoreList (2.mi.BigMatchScore"=
+SC_Big_Match_Settlement
+curScore (
+maxScore ("¢
+RankingData
+uid (	
+name (	
+level (
+headurl (
+param (
+gold (
+
+experience (	
+glory (
+gem	 (
+sex
+ ("/
+SelfData
+selfType (
+	selfParam ("#
+CS_Ranking_List
+rankType ("©
+SC_Ranking_List
+err (!
+goldRank (2.mi.RankingData#
+
+masterRank (2.mi.RankingData!
+giftRank (2.mi.RankingData
+selfData (2.mi.SelfData"±
+
+FriendInfo
+guid (	
+name (	
+headurl (	
+sex (
+gold (
+vipLv (
+level (
+glory (
+state	 (
+
+experience
+ (	
+gem ("C
+SC_Friends_List
+err (#
+friendsList (2.mi.FriendInfo"K
+SC_Friends_Request_List
+err (#
+requestList (2.mi.FriendInfo"4
+CS_Friends_Request_Deal
+type (
+uid (	"K
+SC_Friends_Request_Deal
+err (#
+reqDealList (2.mi.FriendInfo""
+CS_Friends_Find
+keyWord (	"B
+SC_Friends_Find
+err ("
+
+playerInfo (2.mi.FriendInfo"
+CS_Friends_Find_Arround"H
+SC_Friends_Find_Arround
+err ( 
+findList (2.mi.FriendInfo"
+CS_Friends_Add
+uid (	"
+SC_Friends_Add
+err (" 
+CS_Friends_Delete
+uid (	" 
+SC_Friends_Delete
+err ("%
+SC_Friends_Request
+request (" 
+CS_Friends_Invite
+uid (	" 
+SC_Friends_Invite
+err ("B
+SC_Invite_Friend
+	matchType (
+roomId (	
+uid (	"N
+CS_Friends_Invite_Request
+result (
+	matchType (
+roomId (	"(
+SC_Friends_Invite_Request
+err ("9
+SC_Friends_RequestDeal_Res
+result (
+uid (	"7
+CS_EnterOnlineRoom
+roomId (	
+	matchType (	"Ö
+SC_OnlineRoomInfo
+userList (2.mi.UserInfo
+pathinfo (2.mi.Pathinfo 
+	tracktime (2.mi.TrackTime
+	deadfishs (2.mi.DeadFish&
+
+onlineInfo (2.mi.OnlineRoomInfo
+curTaskFishInfo (
+targetTaskFishNum (
+taskFishType (
+explosionQiLin	 (
+goldPool
+ (
+curFishFarmId (
+err ("@
+OnlineRoomInfo
+uid (	
+cardId (
+	topEnergy ("¤
+UserInfo
+uid (	
+name (	
+headurl (	
+gold (
+gem (
+coupon (
+energy (
+weaponId (
+pos	 (
+optimalComScore
+ (
+weaponMaxLevel (
+skinType (
+unlockedSkins (
+unlockedMaxSceneId (
+skillSuoding (
+skillBingfeng (
+showid (
+bullet (
+vipLv (
+	vipNumber (	
+curTaskFishNum (
+level (
+
+experience (	
+glory (
+curUseSkill (	
+registerTime (	
+loginIP (	
+fbheadimage (	
+
+fbnickname (	"É
+ActivityInfo
+aid (
+title (	
+order (
+titleCorner (
+picture (	
+	titleIcon (
+	startTime (	
+overTime (	
+activiytType	 (
+detailedType
+ (
+curTargetNum (
+needTargetNum (
+
+attendMode (
+state (&
+
+rewardInfo (2.mi.ActivityReward
+link (	"
+CS_ActivityList
+uid ("F
+SC_ActivityList
+err (&
+activityList (2.mi.ActivityInfo"©
+
+NoticeInfo
+nid (
+title (	
+order (
+titleCorner (	
+	imageName (	
+detailContent (	
+	startTime (	
+overTime (	
+link	 (	"
+CS_NoticeList
+uid ("@
+SC_NoticeList
+err ("
+
+noticeList (2.mi.NoticeInfo"1
+ActivityReward
+propID (
+propNum (" 
+CS_ActivityReward
+aid ("H
+SC_ActivityReward
+err (&
+
+rewardlist (2.mi.ActivityReward"
+CS_DebugCommand
+cmd (	"!
+SC_DebugCommand
+result (	

@@ -1,0 +1,32 @@
+{
+	"1": {
+		"fish_type" : 2,
+		"name" : "dapanyu_haigui",
+		"gold" : 60,
+		"value" : "60",
+		"refreshLowerLimit" : 20,
+		"refreshUpperLimit" : 22,
+		"weight" : "12",
+		"ztp_threshold" : 1
+	},
+	"2": {
+		"fish_type" : 2,
+		"name" : "dapanyu_denglong",
+		"gold" : 80,
+		"value" : "80",
+		"refreshLowerLimit" : 20,
+		"refreshUpperLimit" : 22,
+		"weight" : "16",
+		"ztp_threshold" : 1
+	},
+	"3": {
+		"fish_type" : 2,
+		"name" : "dapanyu_bianfu",
+		"gold" : 100,
+		"value" : "100",
+		"refreshLowerLimit" : 20,
+		"refreshUpperLimit" : 22,
+		"weight" : "20",
+		"ztp_threshold" : 1
+	}
+}

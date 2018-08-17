@@ -1,0 +1,15 @@
+一 准备
+1 node MasterServer/main.js
+2 node ServerManager/main.js
+3 node FrontServer/client.js 
+打开 batch_test_register_guest(100);
+二 
+redis数据库中取出数据 fish4user:* 写入到
+client-user.json
+
+三 测试启动流程
+1 node MasterServer/main.js
+2 node ServerManager/main.js
+3 node RoomServer/main.js
+4 node FrontServer/client-ctrl.js
+

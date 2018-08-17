@@ -1,0 +1,196 @@
+{
+  "protobuf": {
+    "99999": "CS_DebugInfo",
+    "10000": "login2socket",
+    "44": "offlinegold",
+
+    "100": "CS_AccountSwitch",
+    "101": "CS_Login",
+    "102": "CS_ModifyNickName",
+    "103": "CS_ModifyHeadUrl",
+    "105": "CS_Mail_Check",
+    "106": "CS_Mail_Del",
+    "108": "CS_Mail_Adjunct",
+
+    "111": "CS_PropUse",
+    "112": "CS_PropGive",
+    "114": "CS_GoodsExchange",
+    "115": "CS_MonthCardUse",
+    "117": "CS_redeemCodeUse",
+    "118": "CS_giftGive",
+
+    "201": "CS_EnterOnlineRoom",
+    "205": "CS_LeaveRoom",
+
+    "218": "CS_RainbowEventPos",
+    "219": "CS_EventExplosionInfo",
+
+    "220": "CS_ExpressionInfo",
+    "221": "CS_ChangeWeapon",
+    "222": "CS_Heartbeat",
+    "227": "CS_SkinUnlock",
+    "228": "CS_SkinChange",
+
+    "230": "CS_Guide_Step",
+    "235": "CS_SpecialWeapon_Fire",
+    "236": "CS_SpecialWeapon_ExplosionInfo",
+
+    "240": "CS_SynchData",
+
+    "261": "CS_GetNormalList",
+    "262": "CS_ChangeSite",
+    "264": "CS_GetFastMatchList",
+    "265": "CS_FastMatchSignUp",
+    "267": "CS_FastMatchRank",
+
+    "272": "CS_Enter_Big_Match_Room",
+    "275": "CS_Ranking_List",
+    "278": "CS_Friends_Request_Deal",
+    "279": "CS_Friends_Find",
+    "282": "CS_Friends_Add",
+    "283": "CS_Friends_Delete",
+    "285": "CS_Friends_Invite",
+    "287": "CS_Friends_Invite_Request",
+
+    "304": "CS_RankInfo",
+
+    "403": "CS_SceneEventExplosionInfo",
+    "420": "CS_ActivityReward",
+
+    "500": "CS_TotalNumFastMatch",
+    "501": "CS_DebugCommand",
+    "503": "CS_AchievementAward",
+
+    "601": "CS_UseSkill",
+    "605": "CS_BuyUseSkill",
+    "603": "CS_SkillProcess",
+
+    "701": "CS_QuestAward",
+    "711": "CS_OnLineAwdLingQu",
+
+    "802": "CS_TimeReward",
+    "805": "CS_GetToTalSignReward",
+    "807": "CS_GetSignData",
+    "808": "CS_GetSignReward",
+
+    "901": "CS_PurchProduct",
+    "910": "CS_SubmitCallsOrder",
+    "911": "CS_SubmitCardOrder"
+  }
+  ,"response": {
+    "4099": "SC_AccountRepetition",
+    "4100": "SC_AccountSwitch",
+    "4101": "SC_Login",
+    "4102": "SC_ModifyNickName",
+    "4103": "SC_ModifyHeadUrl",
+    "4104": "SC_Mail_List",
+    "4105": "SC_Mail_Check",
+    "4106": "SC_Mail_Del",
+    "4107": "SC_MessageRemind",
+    "4108": "SC_Mail_Adjunct",
+    "4109": "SC_Mail_OneKey_Adjunct",
+
+    "4110": "SC_Mail_OneKey_Del",
+    "4111": "SC_PropUse",
+    "4112": "SC_PropGive",
+    "4113": "SC_GoodsList",
+    "4114": "SC_GoodsExchange",
+    "4115": "SC_MonthCardUse",
+    "4116": "SC_CoefficientDebug",
+    "4117": "SC_redeemCodeUse",
+    "4118": "SC_giftGive",
+    "4119": "SC_giftRecord",
+    "4125": "SC_checkState",
+
+    "4201": "SC_OnlineRoomInfo",
+    "4203": "SC_BroadcastEnterRoom",
+    "4205": "SC_LeaveRoom",
+
+    "4211": "Pathinfo",
+    "4213": "SC_FishWaveBegin",
+    "4218": "SC_RainbowEventPos",
+    "4219": "SC_EventExplosionInfo",
+
+    "4220": "SC_ExpressionInfo",
+    "4221": "SC_ChangeWeapon",
+    "4222": "SC_Heartbeat",
+    "4224": "SC_UploadData",
+    "4226": "SC_BroadcastDropData",
+    "4227": "SC_SkinUnlock",
+    "4228": "SC_SkinChange",
+
+    "4230": "SC_Guide_Step",
+    "4232": "SC_BroadcastCurrencyUnit",
+    "4233": "SC_BroadcastExpressionInfo",
+    "4234": "SC_SpecialWeapon_Energy",
+    "4235": "SC_SpecialWeapon_Fire",
+    "4236": "SC_BroadcastSpecialWeapon_Fire",
+    "4237": "SC_BroadcastGiftGive",
+    "4238": "SC_GiftRemain",
+
+    "4240": "SC_SynchData",
+
+    "4261": "SC_NormalRoomList",
+    "4262": "SC_ChangeSite",
+    "4264": "SC_FastMatchList",
+    "4265": "SC_FastMatchSignUp",
+    "4267": "SC_FastMatchRank",
+
+    "4271": "SC_Big_Match_Info",
+    "4272": "SC_Enter_Big_Match_Room",
+    "4273": "SC_Big_Match_PlayerScore",
+    "4274": "SC_Big_Match_Settlement",
+    "4275": "SC_Ranking_List",
+    "4276": "SC_Friends_List",
+    "4277": "SC_Friends_Request_List",
+    "4278": "SC_Friends_Request_Deal",
+    "4279": "SC_Friends_Find",
+
+    "4280": "SC_AgainEnterMatch",
+    "4281": "SC_Friends_Find_Arround",
+    "4282": "SC_Friends_Add",
+    "4283": "SC_Friends_Delete",
+    "4284": "SC_Friends_Request",
+    "4285": "SC_Friends_Invite",
+    "4286": "SC_Invite_Friend",
+    "4287": "SC_Friends_Invite_Request",
+    "4288": "SC_Friends_RequestDeal_Res",
+
+    "4301": "SC_FastMatchRankSelf",
+    "4302": "SC_ThemeSwitchReady",
+    "4303": "SC_ThemeSwitchBegin",
+    "4304": "SC_ThemeBossComing",
+
+    "4403": "SC_SceneEventExplosionInfo",
+    "4410": "SC_ActivityList",
+    "4411": "SC_NoticeList",
+    "4420": "SC_ActivityReward",
+
+    "4500": "SC_TotalNumFastMatch",
+    "4501": "SC_DebugCommand",
+    "4503": "SC_AchievementAward",
+
+    "4601": "SC_UseSkill",
+    "4605": "SC_BuyUseSkill",
+    "4603": "SC_SkillProcess",
+
+    "4701": "SC_QuestAward",
+    "4710": "SC_OnLineAwdInit",
+    "4711": "SC_OnLineAwdLingQu",
+
+    "4805": "SC_GetToTalSignReward",
+    "4806": "SC_PushSignData",
+    "4807": "SC_GetSignData",
+    "4808": "SC_GetSignReward",
+    "4809": "SC_FullServiceNoticeData",
+    "4801": "SC_TimeRewardGoldZero",
+    "4802": "SC_TimeReward",
+    "4803": "SC_Subsidy_Sync",
+    "4804": "SC_SubsidyReward",
+    "4810": "SC_AcceptGold",
+
+    "4901": "SC_PurchProduct",
+    "4910": "SC_SubmitCallsOrder",
+    "4911": "SC_SubmitCardOrder"
+  }
+}

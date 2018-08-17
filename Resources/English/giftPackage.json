@@ -1,0 +1,15 @@
+{
+	"104501": {
+		"product_id" : "com.cqgaming.fish.moonthpack",
+		"icon" : "icon_shangchengxitong_003.png",
+		"price" : "4.9900",
+		"title" : "text_shangchengxitong_005.png",
+		"prop_id" : "1003",
+		"count" : "1000",
+		"number1" : "4.9900",
+		"number2" : "50",
+		"number3" : "30",
+		"premium_proportion" : "9",
+		"google_pay_code" : "com.fpnew.fish.moonthpack"
+	}
+}

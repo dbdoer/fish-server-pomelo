@@ -1,0 +1,14 @@
+{
+	"1": {
+		"gold_condition" : 5000000,
+		"rankinglist" : 10,
+		"ranking_refreshtime" : 2,
+		"box_rate" : 0.1000,
+		"bigmatch_awardtime" : 0,
+		"kicked_overtime" : 300,
+		"initial_gold" : 2000,
+		"rename_cost" : 200,
+		"gold_quota" : 630000,
+		"mail_time" : 15
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"10": {
+		"reward_1_type" : 1000001,
+		"reward_1_number" : 100000,
+		"reward_2_type" : 1000002,
+		"reward_2_number" : 200
+	},
+	"50": {
+		"reward_1_type" : 1000001,
+		"reward_1_number" : 50000,
+		"reward_2_type" : 1000002,
+		"reward_2_number" : 100
+	},
+	"100": {
+		"reward_1_type" : 1000001,
+		"reward_1_number" : 30000,
+		"reward_2_type" : 1000002,
+		"reward_2_number" : 50
+	},
+	"200": {
+		"reward_1_type" : 1000001,
+		"reward_1_number" : 20000,
+		"reward_2_type" : 1000002,
+		"reward_2_number" : 20
+	},
+	"500": {
+		"reward_1_type" : 1000001,
+		"reward_1_number" : 10000,
+		"reward_2_type" : 1000002,
+		"reward_2_number" : 20
+	}
+}

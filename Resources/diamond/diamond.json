@@ -1,0 +1,68 @@
+{
+	"104001": {
+		"product_id" : "com.zsbuyu.iap.gem600",
+		"icon" : "icon_shop_baoshi_001.png",
+		"price" : "6",
+		"count" : "600",
+		"premium_proportion" : "0",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.600diamonds",
+		"unicom_code" : "170509581452",
+		"unicom_index" : "001"
+	},
+	"104002": {
+		"product_id" : "com.zsbuyu.iap.gem3150",
+		"icon" : "icon_shop_baoshi_002.png",
+		"price" : "30",
+		"count" : "3150",
+		"premium_proportion" : "0.0500",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.1260diamonds",
+		"unicom_code" : "170509581453",
+		"unicom_index" : "002"
+	},
+	"104003": {
+		"product_id" : "com.zsbuyu.iap.gem7480",
+		"icon" : "icon_shop_baoshi_003.png",
+		"price" : "68",
+		"count" : "7480",
+		"premium_proportion" : "0.1000",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.6600diamonds",
+		"unicom_code" : "170509581454",
+		"unicom_index" : "003"
+	},
+	"104004": {
+		"product_id" : "com.zsbuyu.iap.gem14720",
+		"icon" : "icon_shop_baoshi_004.png",
+		"price" : "128",
+		"count" : "14720",
+		"premium_proportion" : "0.1500",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.13800diamonds",
+		"unicom_code" : "170509581455",
+		"unicom_index" : "004"
+	},
+	"104005": {
+		"product_id" : "com.zsbuyu.iap.gem39360",
+		"icon" : "icon_shop_baoshi_005.png",
+		"price" : "328",
+		"count" : "39360",
+		"premium_proportion" : "0.2000",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.43200diamonds",
+		"unicom_code" : "170509581456",
+		"unicom_index" : "005"
+	},
+	"104006": {
+		"product_id" : "com.zsbuyu.iap.gem84240",
+		"icon" : "icon_shop_baoshi_006.png",
+		"price" : "648",
+		"count" : "84240",
+		"premium_proportion" : "0.3000",
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.78300diamonds",
+		"unicom_code" : "170509581457",
+		"unicom_index" : "006"
+	}
+}

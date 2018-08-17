@@ -1,0 +1,33 @@
+{
+  "register":[
+    {
+      "day" : 1,
+      "award_amount" : 100
+    },
+    {
+      "day" : 2,
+      "award_amount" : 200
+    },
+    {
+      "day" : 3,
+      "award_amount" : 300
+    },
+    {
+      "day" : 4,
+      "award_amount" : 400
+    },
+    {
+      "day" : 5,
+      "award_amount" : 500
+    },
+   {
+      "day" : 6,
+      "award_amount" : 600
+    },
+    {
+      "day" : 7,
+      "award_amount" : 1000
+    }
+
+  ]
+}

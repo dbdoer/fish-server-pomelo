@@ -1,0 +1,20 @@
+{
+	"0": {
+		"item_id" : 1002,
+		"reward_num" : 3000,
+		"reward_stime" : "11",
+		"reward_etime" : "13"
+	},
+	"1": {
+		"item_id" : 1002,
+		"reward_num" : 3000,
+		"reward_stime" : "17",
+		"reward_etime" : "19"
+	},
+	"2": {
+		"item_id" : 1002,
+		"reward_num" : 3000,
+		"reward_stime" : "21",
+		"reward_etime" : "23"
+	}
+}

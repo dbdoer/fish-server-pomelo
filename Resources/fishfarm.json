@@ -1,0 +1,41 @@
+{
+	"0": {
+		"FishFarm_ID" : 1030101,
+		"FishFarm_Description" : "火龙",
+		"Music" : "bgm_scene01",
+		"Map_Index" : 1,
+		"Track_Index" : "0|1|2|3|4|7|8|9|12|13|14|16|17|18|41|51|52",
+		"Track_smallBoss" : "33|34|36|37|38|39",
+		"Track_bigBoss" : "42",
+		"Scensetime" : "300",
+		"Map_Background" : "bj_huolong_003",
+		"track_yuchao" : "45|46|47|48|49|50",
+		"Track_spweapon_fish" : "54"
+	},
+	"1": {
+		"FishFarm_ID" : 1030102,
+		"FishFarm_Description" : "雷龙",
+		"Music" : "bgm_scene02",
+		"Map_Index" : 2,
+		"Track_Index" : "0|1|2|4|6|7|10|11|13|15|16|18|41|51|52",
+		"Track_smallBoss" : "34|35|36|37|38|39",
+		"Track_bigBoss" : "43",
+		"Scensetime" : "300",
+		"Map_Background" : "bj_leilong_001",
+		"track_yuchao" : "45|46|47|48|49|50",
+		"Track_spweapon_fish" : "54"
+	},
+	"2": {
+		"FishFarm_ID" : 1030103,
+		"FishFarm_Description" : "螃蟹",
+		"Music" : "bgm_scene03",
+		"Map_Index" : 3,
+		"Track_Index" : "0|1|2|3|4|6|7|9|11|14|15|16|17|41|51|52",
+		"Track_smallBoss" : "33|34|35|36|37|38",
+		"Track_bigBoss" : "44",
+		"Scensetime" : "300",
+		"Map_Background" : "bj_pengxie_002",
+		"track_yuchao" : "45|46|47|48|49|50",
+		"Track_spweapon_fish" : "54"
+	}
+}

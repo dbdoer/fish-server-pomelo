@@ -1,0 +1,27 @@
+{
+	"1": {
+		"name" : "青铜奖",
+		"random_coefficient" : 2000,
+		"probability" : 1500
+	},
+	"2": {
+		"name" : "白银奖",
+		"random_coefficient" : 3000,
+		"probability" : 3000
+	},
+	"3": {
+		"name" : "黄金奖",
+		"random_coefficient" : 5000,
+		"probability" : 3000
+	},
+	"4": {
+		"name" : "铂金奖",
+		"random_coefficient" : 7000,
+		"probability" : 1500
+	},
+	"5": {
+		"name" : "钻石奖",
+		"random_coefficient" : 10000,
+		"probability" : 1000
+	}
+}

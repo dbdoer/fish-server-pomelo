@@ -1,0 +1,12 @@
+{
+	"item":[
+		{ "item_index":0, "item_name":"fishjoy_string_item_gold", "item_name_zhcn":"金币", "item_id":1000001, "item_icon":null },
+		{ "item_index":1, "item_name":"fishjoy_string_item_diamond", "item_name_zhcn":"钻石", "item_id":1000002, "item_icon":null },
+		{ "item_index":2, "item_name":"fishjoy_string_item_coupon", "item_name_zhcn":"兑换币", "item_id":1000003, "item_icon":null },
+		{ "item_index":3, "item_name":"fishjoy_string_item_bingfeng", "item_name_zhcn":"冰封", "item_id":1100101, "item_icon":null },
+		{ "item_index":4, "item_name":"fishjoy_string_item_suoding", "item_name_zhcn":"锁定", "item_id":1100102, "item_icon":null },
+		{ "item_index":5, "item_name":"fishjoy_string_item_weapon", "item_name_zhcn":"武器", "item_id":1010100, "item_icon":null },
+		{ "item_index":6, "item_name":"fishjoy_string_item_caihong", "item_name_zhcn":"彩虹", "item_id":1080101, "item_icon":null },
+		{ "item_index":7, "item_name":"fishjoy_string_item_throwcoin", "item_name_zhcn":"翻金币小游戏", "item_id":1080201, "item_icon":null }
+	]
+}

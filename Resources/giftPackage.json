@@ -1,0 +1,15 @@
+{
+	"104501": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.packs30",
+		"icon" : "icon_shangchengxitong_003.png",
+		"price" : "30",
+		"title" : "text_shangchengxitong_005.png",
+		"prop_id" : "1003",
+		"count" : "1000",
+		"number1" : "30",
+		"number2" : "300",
+		"number3" : "30",
+		"premium_proportion" : "9",
+		"google_pay_code" : "com.fpnew.fish.moonthpack"
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"104201": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tierA",
+		"icon" : "icon_shop_jinbi_001.png",
+		"price" : "100",
+		"count" : 10000,
+		"google_pay_code" : ""
+	},
+	"104202": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tierB",
+		"icon" : "icon_shop_jinbi_002.png",
+		"price" : "500",
+		"count" : 50000,
+		"google_pay_code" : ""
+	},
+	"104203": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tier1",
+		"icon" : "icon_shop_jinbi_003.png",
+		"price" : "1000",
+		"count" : 100000,
+		"google_pay_code" : ""
+	},
+	"104204": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tier2",
+		"icon" : "icon_shop_jinbi_004.png",
+		"price" : "5000",
+		"count" : 500000,
+		"google_pay_code" : ""
+	},
+	"104205": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tier5",
+		"icon" : "icon_shop_jinbi_005.png",
+		"price" : "10000",
+		"count" : 1000000,
+		"google_pay_code" : ""
+	},
+	"104206": {
+		"product_id" : "com.punchbox.buyushijie.iap.coin.tier10",
+		"icon" : "icon_shop_jinbi_006.png",
+		"price" : "50000",
+		"count" : 5000000,
+		"google_pay_code" : ""
+	}
+}

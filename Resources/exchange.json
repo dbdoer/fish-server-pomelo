@@ -1,0 +1,7 @@
+{
+	"exchange":[
+		{ "exchange_id":1050101, "exchange_name":"30元话费充值卡", "exchange_string":"fishjoy_string_exchange_item01", "exchange_icon":null, "exchange_type":1, "cost_number":30, "amount":30 },
+		{ "exchange_id":1050102, "exchange_name":"50元话费充值卡", "exchange_string":"fishjoy_string_exchange_item02", "exchange_icon":null, "exchange_type":1, "cost_number":50, "amount":50 },
+		{ "exchange_id":1050104, "exchange_name":"100元京东卡", "exchange_string":"fishjoy_string_exchange_item03", "exchange_icon":null, "exchange_type":2, "cost_number":100, "amount":100 }
+	]
+}

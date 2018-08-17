@@ -1,0 +1,602 @@
+{
+	"1": {
+		"experience" : 0,
+		"reward_type" : 1,
+		"reward_num" : 0,
+		"novice_coefficient" : 2
+	},
+	"2": {
+		"experience" : 500,
+		"reward_type" : 1,
+		"reward_num" : 200,
+		"novice_coefficient" : 1.6000
+	},
+	"3": {
+		"experience" : 1150,
+		"reward_type" : 1,
+		"reward_num" : 350,
+		"novice_coefficient" : 1.1000
+	},
+	"4": {
+		"experience" : 1995,
+		"reward_type" : 1,
+		"reward_num" : 500,
+		"novice_coefficient" : 0.8000
+	},
+	"5": {
+		"experience" : 3094,
+		"reward_type" : 1,
+		"reward_num" : 650,
+		"novice_coefficient" : 0.4000
+	},
+	"6": {
+		"experience" : 4522,
+		"reward_type" : 1,
+		"reward_num" : 800,
+		"novice_coefficient" : 0.1500
+	},
+	"7": {
+		"experience" : 6379,
+		"reward_type" : 1,
+		"reward_num" : 950,
+		"novice_coefficient" : 0.1000
+	},
+	"8": {
+		"experience" : 8793,
+		"reward_type" : 1,
+		"reward_num" : 1100,
+		"novice_coefficient" : 0
+	},
+	"9": {
+		"experience" : 11931,
+		"reward_type" : 1,
+		"reward_num" : 1250,
+		"novice_coefficient" : 0
+	},
+	"10": {
+		"experience" : 16010,
+		"reward_type" : 1,
+		"reward_num" : 1400,
+		"novice_coefficient" : 0
+	},
+	"11": {
+		"experience" : 21313,
+		"reward_type" : 1,
+		"reward_num" : 1550,
+		"novice_coefficient" : 0
+	},
+	"12": {
+		"experience" : 28207,
+		"reward_type" : 1,
+		"reward_num" : 1850,
+		"novice_coefficient" : 0
+	},
+	"13": {
+		"experience" : 37169,
+		"reward_type" : 1,
+		"reward_num" : 2150,
+		"novice_coefficient" : 0
+	},
+	"14": {
+		"experience" : 48820,
+		"reward_type" : 1,
+		"reward_num" : 2450,
+		"novice_coefficient" : 0
+	},
+	"15": {
+		"experience" : 63966,
+		"reward_type" : 1,
+		"reward_num" : 2750,
+		"novice_coefficient" : 0
+	},
+	"16": {
+		"experience" : 83656,
+		"reward_type" : 1,
+		"reward_num" : 3050,
+		"novice_coefficient" : 0
+	},
+	"17": {
+		"experience" : 109253,
+		"reward_type" : 1,
+		"reward_num" : 3350,
+		"novice_coefficient" : 0
+	},
+	"18": {
+		"experience" : 142529,
+		"reward_type" : 1,
+		"reward_num" : 3650,
+		"novice_coefficient" : 0
+	},
+	"19": {
+		"experience" : 185788,
+		"reward_type" : 1,
+		"reward_num" : 3950,
+		"novice_coefficient" : 0
+	},
+	"20": {
+		"experience" : 242024,
+		"reward_type" : 1,
+		"reward_num" : 4250,
+		"novice_coefficient" : 0
+	},
+	"21": {
+		"experience" : 315131,
+		"reward_type" : 1,
+		"reward_num" : 4550,
+		"novice_coefficient" : 0
+	},
+	"22": {
+		"experience" : 410170,
+		"reward_type" : 1,
+		"reward_num" : 5000,
+		"novice_coefficient" : 0
+	},
+	"23": {
+		"experience" : 533721,
+		"reward_type" : 1,
+		"reward_num" : 5450,
+		"novice_coefficient" : 0
+	},
+	"24": {
+		"experience" : 694337,
+		"reward_type" : 1,
+		"reward_num" : 5900,
+		"novice_coefficient" : 0
+	},
+	"25": {
+		"experience" : 903138,
+		"reward_type" : 1,
+		"reward_num" : 6350,
+		"novice_coefficient" : 0
+	},
+	"26": {
+		"experience" : 1174579,
+		"reward_type" : 1,
+		"reward_num" : 6800,
+		"novice_coefficient" : 0
+	},
+	"27": {
+		"experience" : 1527453,
+		"reward_type" : 1,
+		"reward_num" : 7250,
+		"novice_coefficient" : 0
+	},
+	"28": {
+		"experience" : 1986189,
+		"reward_type" : 1,
+		"reward_num" : 7700,
+		"novice_coefficient" : 0
+	},
+	"29": {
+		"experience" : 2582546,
+		"reward_type" : 1,
+		"reward_num" : 8150,
+		"novice_coefficient" : 0
+	},
+	"30": {
+		"experience" : 3357810,
+		"reward_type" : 1,
+		"reward_num" : 8600,
+		"novice_coefficient" : 0
+	},
+	"31": {
+		"experience" : 4365653,
+		"reward_type" : 1,
+		"reward_num" : 9050,
+		"novice_coefficient" : 0
+	},
+	"32": {
+		"experience" : 5675849,
+		"reward_type" : 1,
+		"reward_num" : 9650,
+		"novice_coefficient" : 0
+	},
+	"33": {
+		"experience" : 7379104,
+		"reward_type" : 1,
+		"reward_num" : 10250,
+		"novice_coefficient" : 0
+	},
+	"34": {
+		"experience" : 9593335,
+		"reward_type" : 1,
+		"reward_num" : 10850,
+		"novice_coefficient" : 0
+	},
+	"35": {
+		"experience" : 12471836,
+		"reward_type" : 1,
+		"reward_num" : 11450,
+		"novice_coefficient" : 0
+	},
+	"36": {
+		"experience" : 16213887,
+		"reward_type" : 1,
+		"reward_num" : 12050,
+		"novice_coefficient" : 0
+	},
+	"37": {
+		"experience" : 21078553,
+		"reward_type" : 1,
+		"reward_num" : 12650,
+		"novice_coefficient" : 0
+	},
+	"38": {
+		"experience" : 27402619,
+		"reward_type" : 1,
+		"reward_num" : 13250,
+		"novice_coefficient" : 0
+	},
+	"39": {
+		"experience" : 35623905,
+		"reward_type" : 1,
+		"reward_num" : 13850,
+		"novice_coefficient" : 0
+	},
+	"40": {
+		"experience" : 46311577,
+		"reward_type" : 1,
+		"reward_num" : 14450,
+		"novice_coefficient" : 0
+	},
+	"41": {
+		"experience" : 60205550,
+		"reward_type" : 1,
+		"reward_num" : 15050,
+		"novice_coefficient" : 0
+	},
+	"42": {
+		"experience" : 78267715,
+		"reward_type" : 1,
+		"reward_num" : 15800,
+		"novice_coefficient" : 0
+	},
+	"43": {
+		"experience" : 101748530,
+		"reward_type" : 1,
+		"reward_num" : 16550,
+		"novice_coefficient" : 0
+	},
+	"44": {
+		"experience" : 132273589,
+		"reward_type" : 1,
+		"reward_num" : 17300,
+		"novice_coefficient" : 0
+	},
+	"45": {
+		"experience" : 171956166,
+		"reward_type" : 1,
+		"reward_num" : 18050,
+		"novice_coefficient" : 0
+	},
+	"46": {
+		"experience" : 223543516,
+		"reward_type" : 1,
+		"reward_num" : 18800,
+		"novice_coefficient" : 0
+	},
+	"47": {
+		"experience" : 290607071,
+		"reward_type" : 1,
+		"reward_num" : 19550,
+		"novice_coefficient" : 0
+	},
+	"48": {
+		"experience" : 377789692,
+		"reward_type" : 1,
+		"reward_num" : 20300,
+		"novice_coefficient" : 0
+	},
+	"49": {
+		"experience" : 491127100,
+		"reward_type" : 1,
+		"reward_num" : 21050,
+		"novice_coefficient" : 0
+	},
+	"50": {
+		"experience" : 638465730,
+		"reward_type" : 1,
+		"reward_num" : 21800,
+		"novice_coefficient" : 0
+	},
+	"51": {
+		"experience" : 830005949,
+		"reward_type" : 1,
+		"reward_num" : 22550,
+		"novice_coefficient" : 0
+	},
+	"52": {
+		"experience" : 1079008234,
+		"reward_type" : 1,
+		"reward_num" : 23450,
+		"novice_coefficient" : 0
+	},
+	"53": {
+		"experience" : 1402711204,
+		"reward_type" : 1,
+		"reward_num" : 24350,
+		"novice_coefficient" : 0
+	},
+	"54": {
+		"experience" : 1823525065,
+		"reward_type" : 1,
+		"reward_num" : 25250,
+		"novice_coefficient" : 0
+	},
+	"55": {
+		"experience" : 2370583085,
+		"reward_type" : 1,
+		"reward_num" : 26150,
+		"novice_coefficient" : 0
+	},
+	"56": {
+		"experience" : 3081758511,
+		"reward_type" : 1,
+		"reward_num" : 27050,
+		"novice_coefficient" : 0
+	},
+	"57": {
+		"experience" : 4006286564,
+		"reward_type" : 1,
+		"reward_num" : 27950,
+		"novice_coefficient" : 0
+	},
+	"58": {
+		"experience" : 5208173033,
+		"reward_type" : 1,
+		"reward_num" : 28850,
+		"novice_coefficient" : 0
+	},
+	"59": {
+		"experience" : 6770625443,
+		"reward_type" : 1,
+		"reward_num" : 29750,
+		"novice_coefficient" : 0
+	},
+	"60": {
+		"experience" : 8801813576,
+		"reward_type" : 1,
+		"reward_num" : 30650,
+		"novice_coefficient" : 0
+	},
+	"61": {
+		"experience" : 11442358149,
+		"reward_type" : 1,
+		"reward_num" : 31550,
+		"novice_coefficient" : 0
+	},
+	"62": {
+		"experience" : 14875066094,
+		"reward_type" : 1,
+		"reward_num" : 32600,
+		"novice_coefficient" : 0
+	},
+	"63": {
+		"experience" : 19337586422,
+		"reward_type" : 1,
+		"reward_num" : 33650,
+		"novice_coefficient" : 0
+	},
+	"64": {
+		"experience" : 25138862849,
+		"reward_type" : 1,
+		"reward_num" : 34700,
+		"novice_coefficient" : 0
+	},
+	"65": {
+		"experience" : 32680522204,
+		"reward_type" : 1,
+		"reward_num" : 35750,
+		"novice_coefficient" : 0
+	},
+	"66": {
+		"experience" : 42484679365,
+		"reward_type" : 1,
+		"reward_num" : 36800,
+		"novice_coefficient" : 0
+	},
+	"67": {
+		"experience" : 55230083675,
+		"reward_type" : 1,
+		"reward_num" : 37850,
+		"novice_coefficient" : 0
+	},
+	"68": {
+		"experience" : 71799109278,
+		"reward_type" : 1,
+		"reward_num" : 38900,
+		"novice_coefficient" : 0
+	},
+	"69": {
+		"experience" : 93338842561,
+		"reward_type" : 1,
+		"reward_num" : 39950,
+		"novice_coefficient" : 0
+	},
+	"70": {
+		"experience" : 121340495829,
+		"reward_type" : 1,
+		"reward_num" : 41000,
+		"novice_coefficient" : 0
+	},
+	"71": {
+		"experience" : 157742645078,
+		"reward_type" : 1,
+		"reward_num" : 42050,
+		"novice_coefficient" : 0
+	},
+	"72": {
+		"experience" : 205065439101,
+		"reward_type" : 1,
+		"reward_num" : 43250,
+		"novice_coefficient" : 0
+	},
+	"73": {
+		"experience" : 266585071331,
+		"reward_type" : 1,
+		"reward_num" : 44450,
+		"novice_coefficient" : 0
+	},
+	"74": {
+		"experience" : 346560593230,
+		"reward_type" : 1,
+		"reward_num" : 45650,
+		"novice_coefficient" : 0
+	},
+	"75": {
+		"experience" : 450528771699,
+		"reward_type" : 1,
+		"reward_num" : 46850,
+		"novice_coefficient" : 0
+	},
+	"76": {
+		"experience" : 585687403709,
+		"reward_type" : 1,
+		"reward_num" : 48050,
+		"novice_coefficient" : 0
+	},
+	"77": {
+		"experience" : 761393625322,
+		"reward_type" : 1,
+		"reward_num" : 49250,
+		"novice_coefficient" : 0
+	},
+	"78": {
+		"experience" : 989811713419,
+		"reward_type" : 1,
+		"reward_num" : 50450,
+		"novice_coefficient" : 0
+	},
+	"79": {
+		"experience" : 1286755227945,
+		"reward_type" : 1,
+		"reward_num" : 51650,
+		"novice_coefficient" : 0
+	},
+	"80": {
+		"experience" : 1672781796829,
+		"reward_type" : 1,
+		"reward_num" : 52850,
+		"novice_coefficient" : 0
+	},
+	"81": {
+		"experience" : 2174616336378,
+		"reward_type" : 1,
+		"reward_num" : 54050,
+		"novice_coefficient" : 0
+	},
+	"82": {
+		"experience" : 2827001237791,
+		"reward_type" : 1,
+		"reward_num" : 55400,
+		"novice_coefficient" : 0
+	},
+	"83": {
+		"experience" : 3675101609628,
+		"reward_type" : 1,
+		"reward_num" : 56750,
+		"novice_coefficient" : 0
+	},
+	"84": {
+		"experience" : 4777632093016,
+		"reward_type" : 1,
+		"reward_num" : 58100,
+		"novice_coefficient" : 0
+	},
+	"85": {
+		"experience" : 6210921721421,
+		"reward_type" : 1,
+		"reward_num" : 59450,
+		"novice_coefficient" : 0
+	},
+	"86": {
+		"experience" : 8074198238347,
+		"reward_type" : 1,
+		"reward_num" : 60800,
+		"novice_coefficient" : 0
+	},
+	"87": {
+		"experience" : 10496457710351,
+		"reward_type" : 1,
+		"reward_num" : 62150,
+		"novice_coefficient" : 0
+	},
+	"88": {
+		"experience" : 13645395023956,
+		"reward_type" : 1,
+		"reward_num" : 63500,
+		"novice_coefficient" : 0
+	},
+	"89": {
+		"experience" : 17739013531643,
+		"reward_type" : 1,
+		"reward_num" : 64850,
+		"novice_coefficient" : 0
+	},
+	"90": {
+		"experience" : 23060717591636,
+		"reward_type" : 1,
+		"reward_num" : 66200,
+		"novice_coefficient" : 0
+	},
+	"91": {
+		"experience" : 29978932869627,
+		"reward_type" : 1,
+		"reward_num" : 67550,
+		"novice_coefficient" : 0
+	},
+	"92": {
+		"experience" : 38972612731015,
+		"reward_type" : 1,
+		"reward_num" : 69050,
+		"novice_coefficient" : 0
+	},
+	"93": {
+		"experience" : 50664396550820,
+		"reward_type" : 1,
+		"reward_num" : 70550,
+		"novice_coefficient" : 0
+	},
+	"94": {
+		"experience" : 65863715516566,
+		"reward_type" : 1,
+		"reward_num" : 72050,
+		"novice_coefficient" : 0
+	},
+	"95": {
+		"experience" : 85622830172036,
+		"reward_type" : 1,
+		"reward_num" : 73550,
+		"novice_coefficient" : 0
+	},
+	"96": {
+		"experience" : 111309679224147,
+		"reward_type" : 1,
+		"reward_num" : 75050,
+		"novice_coefficient" : 0
+	},
+	"97": {
+		"experience" : 144702582991891,
+		"reward_type" : 1,
+		"reward_num" : 76550,
+		"novice_coefficient" : 0
+	},
+	"98": {
+		"experience" : 188113357889958,
+		"reward_type" : 1,
+		"reward_num" : 78050,
+		"novice_coefficient" : 0
+	},
+	"99": {
+		"experience" : 244547365257445,
+		"reward_type" : 1,
+		"reward_num" : 79550,
+		"novice_coefficient" : 0
+	},
+	"100": {
+		"experience" : 317911574835179,
+		"reward_type" : 1,
+		"reward_num" : 81050,
+		"novice_coefficient" : 0
+	}
+}

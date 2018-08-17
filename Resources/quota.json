@@ -1,0 +1,26 @@
+{
+	"1": {
+		"recharge_coefficient" : 0.1000,
+		"cost_quota" : 20000
+	},
+	"30": {
+		"recharge_coefficient" : 0.1000,
+		"cost_quota" : 600000
+	},
+	"68": {
+		"recharge_coefficient" : 0.1000,
+		"cost_quota" : 1360000
+	},
+	"128": {
+		"recharge_coefficient" : 0.1500,
+		"cost_quota" : 2560000
+	},
+	"328": {
+		"recharge_coefficient" : 0.1500,
+		"cost_quota" : 6560000
+	},
+	"648": {
+		"recharge_coefficient" : 0.2000,
+		"cost_quota" : 12960000
+	}
+}

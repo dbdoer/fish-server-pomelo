@@ -1,0 +1,3 @@
+forever stop MasterServer/main.js &&
+forever stop ServerManager/main.js &&
+echo "stop ok"

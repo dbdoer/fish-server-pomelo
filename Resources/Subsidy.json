@@ -1,0 +1,17 @@
+{
+	"1": {
+		"number" : 1,
+		"gold" : 5000,
+		"waiting_time" : 30
+	},
+	"2": {
+		"number" : 2,
+		"gold" : 5000,
+		"waiting_time" : 60
+	},
+	"3": {
+		"number" : 3,
+		"gold" : 5000,
+		"waiting_time" : 120
+	}
+}

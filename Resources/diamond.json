@@ -1,0 +1,56 @@
+{
+	"104001": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond6",
+		"icon" : "icon_shop_baoshi_001.png",
+		"price" : "6",
+		"count" : 600,
+		"premium_proportion" : 0,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.600diamonds"
+	},
+	"104002": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond30",
+		"icon" : "icon_shop_baoshi_002.png",
+		"price" : "30",
+		"count" : 3150,
+		"premium_proportion" : 0.0500,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.1260diamonds"
+	},
+	"104003": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond68",
+		"icon" : "icon_shop_baoshi_003.png",
+		"price" : "68",
+		"count" : 7480,
+		"premium_proportion" : 0.1000,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.6600diamonds"
+	},
+	"104004": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond128",
+		"icon" : "icon_shop_baoshi_004.png",
+		"price" : "128",
+		"count" : 14720,
+		"premium_proportion" : 0.1500,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.13800diamonds"
+	},
+	"104005": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond328",
+		"icon" : "icon_shop_baoshi_005.png",
+		"price" : "328",
+		"count" : 39360,
+		"premium_proportion" : 0.2000,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.43200diamonds"
+	},
+	"104006": {
+		"product_id" : "com.ckaiyou.aiyoubuyu.iap.diamond648",
+		"icon" : "icon_shop_baoshi_006.png",
+		"price" : "648",
+		"count" : 84240,
+		"premium_proportion" : 0.3000,
+		"currency_type" : "cn",
+		"google_pay_code" : "com.fpnew.fish.78300diamonds"
+	}
+}

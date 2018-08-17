@@ -1,0 +1,226 @@
+{
+	"1001": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "金条",
+		"text_description" : "金条可以兑换丰富的实物奖励！"
+	},
+	"1002": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "金币",
+		"text_description" : ""
+	},
+	"1003": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "钻石",
+		"text_description" : ""
+	},
+	"1004": {
+		"exchange_type" : 5,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "荣誉",
+		"text_description" : ""
+	},
+	"1101": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "充电宝",
+		"text_description" : ""
+	},
+	"1102": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "电饭煲",
+		"text_description" : ""
+	},
+	"1103": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "华为P8",
+		"text_description" : ""
+	},
+	"1104": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "苹果6S",
+		"text_description" : ""
+	},
+	"1201": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "1元话费券",
+		"text_description" : "可兑换1元话费"
+	},
+	"1202": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "5元话费券",
+		"text_description" : "可兑换5元话费"
+	},
+	"1203": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "10元话费券",
+		"text_description" : "可兑换10元话费"
+	},
+	"1204": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "50元话费券",
+		"text_description" : "可兑换50元话费"
+	},
+	"1205": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "100元话费券",
+		"text_description" : "可兑换100元话费"
+	},
+	"1206": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "5交通卡",
+		"text_description" : "5交通卡"
+	},
+	"1207": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "10交通卡",
+		"text_description" : "10交通卡"
+	},
+	"1208": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "50交通卡",
+		"text_description" : "50交通卡"
+	},
+	"1209": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "10bhp",
+		"text_description" : "10油票"
+	},
+	"1210": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "20bhp",
+		"text_description" : "20油票"
+	},
+	"1211": {
+		"exchange_type" : 1,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "100bhp",
+		"text_description" : "100油票"
+	},
+	"1212": {
+		"exchange_type" : 2,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "20000pulsa",
+		"text_description" : "20000电话充值卡"
+	},
+	"1301": {
+		"exchange_type" : 3,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "1万参赛劵",
+		"text_description" : "可以免费报名竞技场-新手赛"
+	},
+	"1302": {
+		"exchange_type" : 3,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "10万参赛劵",
+		"text_description" : "可以免费报名竞技场-中级赛"
+	},
+	"1303": {
+		"exchange_type" : 3,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "100万参赛劵",
+		"text_description" : "可以免费报名竞技场-高级赛"
+	},
+	"1304": {
+		"exchange_type" : 3,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "1000万参赛劵",
+		"text_description" : "可以免费报名竞技场-大亨赛"
+	},
+	"1401": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 100000,
+		"prop_info" : "青铜弹头",
+		"text_description" : "使用弹头可以获得100000金币"
+	},
+	"1402": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 300000,
+		"prop_info" : "白银弹头",
+		"text_description" : "使用弹头可以获得300000金币"
+	},
+	"1403": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 500000,
+		"prop_info" : "黄金弹头",
+		"text_description" : "使用弹头可以获得500000金币"
+	},
+	"1404": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 1000000,
+		"prop_info" : "铂金弹头",
+		"text_description" : "使用弹头可以获得1000000金币"
+	},
+	"1405": {
+		"exchange_type" : 4,
+		"buy_value" : 0,
+		"sell_value" : 5000000,
+		"prop_info" : "钻石弹头",
+		"text_description" : "使用弹头可以获得5000000金币"
+	},
+	"10119": {
+		"exchange_type" : 6,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "蒸汽朋克",
+		"text_description" : ""
+	},
+	"10120": {
+		"exchange_type" : 6,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "寒冰粒子",
+		"text_description" : ""
+	},
+	"10121": {
+		"exchange_type" : 6,
+		"buy_value" : 0,
+		"sell_value" : 0,
+		"prop_info" : "上古巨兽",
+		"text_description" : ""
+	}
+}

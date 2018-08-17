@@ -1,0 +1,17 @@
+{
+	"0": {
+		"hour_begin" : 11,
+		"hour_end" : 13,
+		"gold" : 200
+	},
+	"1": {
+		"hour_begin" : 17,
+		"hour_end" : 19,
+		"gold" : 200
+	},
+	"2": {
+		"hour_begin" : 20,
+		"hour_end" : 23,
+		"gold" : 200
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"1": {
+		"item_id" : 1002,
+		"reward_num" : 1000,
+		"reward_time" : "10"
+	},
+	"2": {
+		"item_id" : 1002,
+		"reward_num" : 2000,
+		"reward_time" : "30"
+	},
+	"3": {
+		"item_id" : 1003,
+		"reward_num" : 30,
+		"reward_time" : "60"
+	}
+}

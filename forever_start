@@ -1,0 +1,3 @@
+forever start MasterServer/main.js &&
+forever start ServerManager/main.js &&
+echo "start ok"

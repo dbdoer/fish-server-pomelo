@@ -1,0 +1,17 @@
+
+â
+logserver.protomi"…
+	logheader
+	timestamp (
+millisencond (
+logtype (
+playerid (
+roomid (
+serverid (
+
+ip (	"
+logecho
+info (	"*
+firelog
+fireId (
+canfire (

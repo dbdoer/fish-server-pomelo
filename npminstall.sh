@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+npm install	 async@1.4.2
+npm install	 dnode@1.2.2
+npm install	 event@1.0.0
+npm install  excel-export@0.5.1
+npm install	 express@4.10.7
+npm install	 generic-pool@2.4.2
+npm install	 ioredis@1.15.1
+npm install	 log4js@0.6.21
+npm install	 mime@1.2.9
+npm install  mysql@2.11.1
+npm install	 node-schedule@0.2.9
+npm install	 profiler@1.2.3
+npm install	 proto2json@0.3.0
+npm install	 protobuf@0.11.0
+npm install	 protobuf.js@1.1.2
+npm install	 redis@2.7.1
+npm install  request@2.27.0
+npm install	 should@7.0.3
+npm install	 underscore@1.8.3
+npm install	 uuid@2.0.1
+npm install	 xml2json@0.9.0

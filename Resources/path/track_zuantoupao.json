@@ -1,0 +1,107 @@
+{
+  "track":
+  {
+      "version": "1.0",
+      "track_id": "481",
+      "screens":
+      {
+          "count": "2",
+          "screen":
+          [
+              {
+                "customScreenTime": "0",
+                "wave":
+                {
+                  "delay": "30",
+                  "index": "0"
+                },
+                "name": "screen0",
+                "usingCustom": "False",
+                "waves": ""
+              },
+              {
+                "customScreenTime": "0",
+                "wave":
+                {
+                  "delay": "35",
+                  "index": "1"
+                },
+                "name": "screen1",
+                "usingCustom": "False",
+                "waves": ""
+              }
+          ]
+      },
+      "screen_time": "26",
+      "waves":
+      {
+          "count": "2",
+          "wave":
+          [
+            {
+                "path":
+                {
+                  "fish_id": "481100",
+                  "fish_type": "48",
+                  "eventpoints": "",
+                  "flipY": "False",
+                  "fish_special_type": "0",
+                  "move":
+                  {
+                    "point_count": "6",
+                    "points": "(-41.3, -75.9, 10.0)|(-32.2, -28.7, 10.0)|(-55.4, 20.6, 25.0)|(-0.2, 31.5, 40.0)|(53.5, 8.8, 55.0)|(111.2, -41.5, 10.0)",
+                    "movestyle": "0",
+                    "time": "15",
+                    "type": "crspline",
+                    "loop": "False",
+                    "name": "0_crspline0"
+                  },
+                  "fish_name": "zuantoupao",
+                  "show_path": "False",
+                  "flipDragon": "False",
+                  "delay_time": "0",
+                  "repeat_times": "1",
+                  "fish_size": "1",
+                  "move_count": "1",
+                  "name": "path0"
+                },
+                "depth": "-1",
+                "name": "wave0",
+                "path_count": "1"
+            },
+            {
+              "path":
+              {
+                "fish_id": "481101",
+                "fish_type": "48",
+                "eventpoints": "",
+                "flipY": "False",
+                "fish_special_type": "0",
+                "move":
+                {
+                    "point_count": "6",
+                    "points": "(-98.0, 54.8, 10.0)|(-40.2, -18.1, 10.0)|(11.4, -21.9, 25.0)|(38.6, -2.5, 40.0)|(38.4, 24.0, 10.0)|(6.1, 76.0, 10.0)",
+                    "movestyle": "0",
+                    "time": "15",
+                    "type": "crspline",
+                    "loop": "False",
+                    "name": "0_crspline0"
+                },
+                "fish_name": "zuantoupao",
+                "show_path": "False",
+                "flipDragon": "False",
+                "delay_time": "0",
+                "repeat_times": "1",
+                "fish_size": "1",
+                "move_count": "1",
+                "name": "path0 (1)"
+              },
+              "depth": "-1",
+              "name": "wave1",
+              "path_count": "1"
+            }
+          ]
+      },
+      "screen_select_strategy": "0"
+  }
+}

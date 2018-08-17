@@ -1,0 +1,1846 @@
+package mi;
+//数组使用关键字 repeated
+
+
+// 玩家货币
+message CurrencyUnit
+{
+	required uint32 gold = 1; // 金币
+	required uint32 gem = 2;  // 宝石
+	required uint32 coupon = 3;  // 兑换券
+}
+
+// helloworld 10000
+message helloworld
+{
+	required uint32 id = 1;
+	required string str = 2;
+	required uint32 opt = 3;
+}
+
+//packetid:25 错误信息
+//type:
+//1:房间相关
+//code:
+//1:房间中已经存在该玩家
+//2:进入房间的玩家没有登录
+message ErrorInfo
+{
+	required uint32 csid = 1; // 请求id
+	required uint32 code = 2; // 错误码
+}
+
+//----------登录注册模块-----------
+
+//packetid: 4099 账号重复登录推送
+message SC_AccountRepetition
+{
+	required bool code = 1; //
+}
+
+//packetid: 100 切换账号请求
+message CS_AccountSwitch
+{
+}
+
+//packetid: 4100 切换账号响应
+message SC_AccountSwitch
+{
+	required bool code = 1; //0代表切换成功
+}
+
+//packetid: 101 登录请求
+message CS_Login
+{
+	required string uid = 1;
+	required string uuid = 2;
+}
+
+//packetid: 4101 登录响应
+message SC_Login
+{
+	required int32 code = 1; //0代表登陆成功，1代表用户不存在，2代表密码错误
+	required mi.UserInfo userInfo = 2;
+	repeated mi.DataProp dataPropList = 3;
+    required mi.DataCard dataCardList = 4;
+    optional int32 guideStepNum = 5;  /// 新手引导步骤
+    optional string timeNow = 6;  //服务器时间
+    repeated uint32 novicePackage = 7;  //新手礼包数组  //0未领取，1已领取
+    optional string novicePackageTime = 8;  //服务器时间
+    repeated uint32 otherPackage = 9;  //特惠礼包数组  //0未领取，1已领取
+    required uint32 isUpdate = 10;   //1已修改昵称 0未修改
+    required uint32 isChecked = 11;   //是否勾选赠送礼物提示  1  勾选  0 未勾选
+    required string lastTimeStamp = 12;  //玩家最后一条礼物记录时间戳
+}
+//道具属性
+message DataProp
+{
+	required uint32 propID = 1;
+	required uint32 propType = 2;
+	required uint32 propNum = 3;
+}
+//月卡属性
+message DataCard
+{
+	required uint32 monthCard = 1;  //月卡剩余天数
+	required uint32 canGet = 2;     //今天是否可领取   1是0否
+}
+
+//packetid: 102 修改昵称
+message CS_ModifyNickName
+{
+	required string newNickname = 1;
+}
+//packetid: 4102 修改昵称响应
+message SC_ModifyNickName
+{
+	required int32 code = 1; // 0 修改成功，1 失败
+	required string newNickname = 2;
+}
+
+//packetid: 103 修改头像
+message CS_ModifyHeadUrl
+{
+	required string newHeadUrl = 1;
+}
+
+//packetid: 4103 修改头像响应
+message SC_ModifyHeadUrl
+{
+	required int32 code = 1;  // 0 修改成功，1 失败
+	required string newHeadUrl = 2;
+}
+
+//----------邮件模块-----------	
+// 邮件信息
+message MailInfo
+ {
+ 	required uint32 type = 1; // 邮件类型
+ 	required string id = 2; // 邮件id
+ 	required uint32 state = 3; //状态 1未check 2已check
+ 	required uint32 templateId = 4; // 模板id
+ 	repeated string replacement = 5; // 邮件内容替换符
+ 	repeated mi.GoodUnit itemList = 6; //奖励
+ 	required uint32 createTime = 7; //创建的时间
+ 	required uint32 isAdjunct = 8; //是否领取
+ 	required string title = 9; //标题
+ }
+
+//packetid: 104 邮件列表响应
+message CS_Mail_Get
+{
+    required string id = 1;
+}
+
+
+//packetid: 4104 邮件列表响应
+message SC_Mail_List
+{
+	repeated mi.MailInfo mailList = 1;
+}
+
+//packetid: 105 邮件查看请求
+message CS_Mail_Check
+{
+	required string id = 1;
+	required uint32 type = 2;
+}
+
+//packetid: 4105 邮件查看响应
+message SC_Mail_Check
+{
+    required uint32 err = 1; // 错误ID
+	required uint32 result = 2; //1-success, 0-fail
+}
+
+//packetid: 106 邮件删除请求
+message CS_Mail_Del
+{
+	required string id = 1;
+	required uint32 type = 2;
+}
+
+//packetid: 4106 邮件删除响应
+message SC_Mail_Del
+{
+    required uint32 err = 1; // 错误ID
+	required uint32 result = 2; //1-success, 0-fail
+}
+
+//packetid: 108 领取邮件附件请求
+ message CS_Mail_Adjunct
+ {
+ 	required string id = 1;
+ }
+
+ //packetid: 4108 领取邮件附件响应
+ message SC_Mail_Adjunct
+ {
+     required uint32 err = 1; // 错误ID
+ 	 required uint32 result = 2; //1-success, 0-fail
+ }
+
+//packetid 109 邮件一键领取请求
+//packetid 4109 邮件一键领取响应
+message SC_Mail_OneKey_Adjunct
+{
+    required uint32 err = 1; // 错误ID
+    required uint32 result = 2; //1-success, 0-fail
+}
+
+//packetid 110  邮件一键删除请求
+//packetid 4110  邮件一键删除响应
+message SC_Mail_OneKey_Del
+{
+    required uint32 err = 1; // 错误ID
+    required uint32 result = 2; //1-success, 0-fail
+}
+
+//---------------道具模块-----------
+ // packetid: 111 道具使用
+ message CS_PropUse
+ {
+ 	required uint32 propId = 1;
+ 	required uint32 propNum = 2;
+ }
+
+ // packetid: 4111 道具使用响应
+ message SC_PropUse
+ {
+    required uint32 errCode = 1;  //0成功
+ 	required uint32 gold = 2;    //获得物品的类别
+ 	required uint32 gem = 3;     //获得物品的数量
+ 	required uint32 bullion = 4;     //获得物品的数量
+ }
+ // packetid: 112 道具赠送
+ message CS_PropGive
+ {
+ 	required string numId = 1;   //被赠送人的数字账号
+ 	required uint32 propId = 2;
+ 	required uint32 propNum = 3;
+ }
+
+ // packetid: 4112 道具赠送响应
+ message SC_PropGive
+ {
+     required uint32 errCode = 1;  //0成功
+
+ }
+
+ //---------------实物兑换-----------
+ // packetid: 113 可兑换实物请求
+ message CS_GoodsList
+ {
+
+ }
+ message GoodsInfo
+ {
+  	required string goodsName = 1;
+    required uint32 bullion = 2;
+    required string label = 3;
+    required string link = 4;
+    required uint32 goodsId = 5;
+ }
+
+ // packetid: 4113 可兑换实物响应
+ message SC_GoodsList
+ {
+    required uint32 errCode = 1;  //0成功
+    repeated mi.GoodsInfo goodsList = 2;
+ }
+ // packetid: 114 实物兑换请求
+ message CS_GoodsExchange
+ {
+ 	optional uint32 goodsId = 1;   //虚拟物品的id（非必要字段，如果兑换的是虚拟物品才带此字段）
+ 	optional string userName = 2;          //玩家姓名
+ 	optional string telephoneNumber = 3;  //玩家电话
+ 	optional string goodsName = 4;  //实物名字
+ 	optional uint32 bullion = 5;    //兑换实物所需要的金条
+ 	optional string email = 6;      //玩家邮箱
+ }
+
+ // packetid: 4114 实物兑换响应
+ message SC_GoodsExchange
+ {
+     required uint32 errCode = 1;  //0成功
+     //required uint32 bullion = 2;   //消耗金条的数量
+ }
+
+ // packetid: 115 月卡使用请求
+  message CS_MonthCardUse
+  {
+
+  }
+
+  // packetid: 4115 月卡使用响应
+  message SC_MonthCardUse
+  {
+     required uint32 errCode = 1;  //0成功
+  }
+
+// packetid: 116 数值debug
+  message CS_CoefficientDebug
+  {
+
+  }
+
+  // packetid: 4116
+  message SC_CoefficientDebug
+  {
+     required uint32 errCode = 1;  //0成功
+     required mi.Coefficient result = 2;  //0成功
+  }
+  message Coefficient
+  {
+   required string currentProfitEP = 1;
+   required string coefficient = 2;
+   required string basicsCoefficient = 3;
+   required string rechargeCoefficient = 4;
+   required string noviceCoefficient = 5;
+   required string posCoefficient = 6;
+   required string roomCoefficient = 7;
+  }
+
+// packetid: 117 兑换码使用
+  message CS_redeemCodeUse
+  {
+  required string id = 1;
+  }
+// packetid: 4117
+  message SC_redeemCodeUse
+  {
+  required uint32 errCode = 1;  //0成功
+  repeated mi.DataProp dataPropList = 2;
+  }
+
+  //************赠送礼物************
+    // packetid: 118
+    message CS_giftGive
+    {
+        required string uid = 1;      //收礼物人账号
+        required uint32 giftId = 2;   //礼物id
+    }
+    // packetid: 4118
+    message SC_giftGive
+    {
+        required uint32 err = 1;    //  err = 0 赠送成功
+        required uint32 giftId = 2;
+    }
+
+    //赠送礼物勾选提示
+    //packetid: 4125
+    message SC_checkState
+    {
+    	required uint32 code = 1; // 0设置成功, 其他设置失败
+    }
+
+
+    //********礼物记录********
+    message recordData
+    {
+        required string name = 1;     //  赠送玩家姓名
+        required uint32 giftId = 2;   //  礼物id
+        required string time = 3;    // 赠送时间戳
+    }
+    //packetid: 4119
+    message SC_giftRecord
+    {
+        repeated mi.recordData recordList = 1;  //  我的礼物记录列表
+    }
+
+    //packetid 4237 广播房间内礼物赠送
+    message SC_BroadcastGiftGive
+    {
+        required string id = 1;  //  发送礼物玩家id
+        required string uid = 2;  //接受者id
+        required uint32 giftId = 3;
+
+    }
+
+    //packetid 4238 推送礼物信息
+    message SC_GiftRemain
+    {
+        required string name = 1;     //  赠送玩家姓名
+        required uint32 giftId = 2;   //  礼物id
+        required string time = 3;    // 赠送时间戳
+    }
+
+
+//----------服务器有新消息推送-----------
+//packetid: 4107 消息推送
+message SC_MessageRemind
+{
+	required uint32 messageType = 1; //1 有新邮件 2 有新邮件配置文件
+	repeated mi.MailInfo mailList = 2; //添加的邮件内容
+}
+
+//--------------等级模块-------------
+// packetid: 4120 广播等级提升
+message SC_BroadcastLevelUp
+{
+	required uint32 playerIndex = 1; //玩家座位
+	required uint32 level = 2; //当前等级
+	required string experience = 3; //当前经验值
+}
+
+
+
+//----------房间内通信模块-----------
+// track 信息单元
+message wave
+{
+	required uint32 deep = 1;
+}
+message Screen
+{
+	required uint32 screenid = 1;
+	repeated mi.wave waves = 2;
+}
+message Track
+{
+	required uint32 trackid = 1;
+	repeated mi.Screen screens = 2; 
+}
+
+message TrackTime
+{
+	required uint32 trackId = 1;
+	required uint32 time = 2;
+}
+
+//死亡鱼信息
+message DeadFish
+{
+	required uint32 trackId = 1;
+	repeated uint32 fishIds = 2;
+}
+
+//packetid: 4211 广播基础tracks信息
+message Pathinfo
+{
+	repeated mi.Track tracks = 1; 
+}
+
+
+//packetid: 4212 同步trackTime
+message SC_SynchTrackTime
+{
+	repeated mi.TrackTime tracktime = 1;
+}
+
+
+//packetid: 比赛玩家信息
+message CompetitionUserInfo
+{
+	required string uid = 1;
+	required uint32 leftAttackCount = 2;
+	required uint32 score = 3;
+	required uint32 time = 4;
+}
+
+
+message GoodUnit
+{
+	required uint32 goodId = 1;
+	required uint32 goodNum = 2;
+}
+
+message DropData
+{
+	required uint32 fishId = 1;
+	repeated mi.GoodUnit goodList = 2;
+}
+
+//packetid: 202 比赛模式进入房间
+message CS_EnterCompetitionRoom
+{
+	required uint32 sceneid = 1;	
+}
+
+
+//比赛模式 packetid: 4202 比赛模式进入房间响应
+message SC_CompetitionRoomInfo
+{
+	repeated mi.UserInfo userList = 1;
+	required mi.Pathinfo pathinfo = 2;
+	repeated mi.TrackTime tracktime = 3;
+	repeated mi.DeadFish deadfishs = 4;
+	required uint32 totalAttackCount = 5;
+	repeated mi.CompetitionUserInfo competitionInfoList = 6;
+}
+
+
+
+//packetid: 205 联网或比赛模式离开房间
+message CS_LeaveRoom
+{
+	required int32 type = 1;
+}
+
+//packetid: 4205 联网或比赛模式离开房间响应
+message SC_LeaveRoom
+{
+	required int32 code = 1;	//0:普通联网 1:比赛模式
+}
+
+//packetid: 4203 广播进入房间
+message SC_BroadcastEnterRoom
+{
+	required mi.UserInfo userInfo = 1;
+	repeated mi.TrackTime tracktime = 2;
+}
+
+//packetid: 4204 广播比赛模式进入房间
+message SC_BroadcastCompEnterRoom
+{
+	required mi.UserInfo userInfo = 1;
+	repeated mi.TrackTime tracktime = 2;
+	required mi.CompetitionUserInfo competitionInfo = 3;
+}
+
+//packetid: 4206 联网或比赛模式广播玩家离开房间
+message SC_BroadcastLeaveRoom
+{
+	required string uid = 1;
+	optional bool kicked = 2;
+	optional int32 matchType = 3;
+}
+
+//packetid: 4225 掉落物品
+message SC_DropData
+{
+	repeated mi.DropData dropDataList = 1;
+}
+
+//packetid: 4226 广播掉落物品
+message SC_BroadcastDropData
+{
+	required uint32 playerIndex = 1;
+	required uint32 fishId = 2;
+	repeated mi.DataProp dataPropList = 3;
+	required uint32 gemNum = 4;
+}
+
+//packetid: 4213 鱼潮开始
+message SC_FishWaveBegin
+{
+	optional mi.Pathinfo pathinfo = 1;
+	repeated mi.TrackTime tracktime = 2;
+	repeated mi.DeadFish deadfishs = 3;
+}
+
+//packetid: 4214 鱼潮结束
+message SC_FishWaveEnd
+{
+	required mi.Pathinfo pathinfo = 1;
+	repeated mi.TrackTime tracktime = 2;
+	repeated mi.DeadFish deadfishs = 3;
+}
+
+
+//packetid: 4215 掉落卡牌 
+message SC_DropCard
+{
+	required uint32 cardCount = 1;
+	required uint32 fishId = 2;
+}
+
+//packetid: 216 客户端使用卡片
+//message CS_UseCard
+//{
+//}
+
+//packetid: 4216 回复是否可以使用卡牌，不带参数（彩虹事件）
+message SC_UseCard_Normal
+{
+	required bool canUse = 1;
+	required uint32 cardId = 2;
+	required float rate = 3;
+}
+
+//packetid: 4217 广播玩家使用卡牌
+message SC_BroadcastUseCard
+{
+	required string uid = 1;
+	required uint32 cardId = 2;
+	required uint32 isCompleted = 3;  //0:start  1:completed
+	required float rate = 4;
+}
+
+//packetid: 218 彩虹事件客户端触发点及鱼
+message CS_RainbowEventPos
+{
+	required float positionX = 1;
+	required float positionY = 2;
+	required int32 fishid = 3;
+}
+
+
+//packetid: 4218 服务器广播彩虹事件触发点及鱼
+message SC_BroadcastRainbowEventPos
+{
+	required string uid = 1;
+	required float positionX = 2;
+	required float positionY = 3;
+	required int32 fishid = 4;
+}
+
+//packetid: 219 事件触发的碰撞
+message CS_EventExplosionInfo
+{
+	required uint32 fireid = 1;
+	repeated uint32 fishid = 2;
+}
+
+//packetid: 220 房间内聊天信息
+message CS_ExpressionInfo
+{
+    required uint32 messageId = 1;
+    required string messageContent = 2;
+}
+//packetid: 4220 房间内聊天信息
+message SC_ExpressionInfo
+{
+    required uint32 code = 1;
+}
+
+//packetid: 221 切换武器
+message CS_ChangeWeapon
+{
+	required uint32 weaponid = 1;
+	optional bool isAuto = 2;
+}
+
+//packetid: 222 客户端定时心跳
+message CS_Heartbeat
+{
+
+}
+
+//packetid: 4222 服务器定时心跳
+message SC_Heartbeat
+{
+	required uint32 secondtime = 1;
+	required uint32 microtime = 2;
+}
+
+
+//packetid: 223 刷新房间信息
+message CS_RefreshRoomInfo
+{
+}
+
+//packetid: 4223 刷新房间信息响应
+//message SC_RefreshRoomInfo
+//{
+	//required mi.SC_RoomInfo roomInfo = 1;
+//}
+
+// packetid: 4224 定时同步数据
+message SC_UploadData
+{
+	required uint32 goldPool = 1; // 当前奖金池数量
+	required uint32 energy = 2; // 当前玩家能量
+}
+
+//Skin leo_add 
+// packetid: 227 解锁皮肤  (未用到 xihaou)
+message CS_SkinUnlock
+{
+	required uint32 unlockSkinId = 1; // 解锁的皮肤ID
+}
+
+// packetid: 4227 推送解锁后当前皮肤列表
+message SC_SkinUnlock
+{
+	repeated uint32 curSkinIds = 1; //
+}
+
+// packetid: 228 切换皮肤
+message CS_SkinChange
+{
+	required uint32 skinID = 1; // 切换的皮肤ID
+	required uint32 actType = 2; // 行为类别
+}
+// packetid: 4228 切换皮肤响应
+message SC_SkinChange
+{
+	required uint32 err = 1; // 结果 (0:正常, 其他:不正常)
+}
+// packetid: 4229 广播切换皮肤
+message SC_BroadcastSkinChange
+{
+	required string uid = 1;
+	required uint32 skinType = 2;
+}
+
+//packetid: 230  新手引导步骤消息
+message CS_Guide_Step
+{
+	required uint32 fishTypePos = 1;
+}
+//packetid: 4230  新手引导步骤消息响应
+message SC_Guide_Step
+{
+	required int32 code = 1;
+}
+
+//packetid: 231 **未用到**
+//packetid: 4231 广播切换武器
+message SC_BroadcastChangeWeapon
+{
+	required string uid = 1;
+	required uint32 weaponid = 2;
+}
+
+//packetid: 232 **未用到**
+// packetid: 4232 广播玩家货币数
+message SC_BroadcastCurrencyUnit
+{
+	required string uid = 1;
+	required mi.CurrencyUnit currencyUnit = 2;
+}
+
+//packetid 4233 广播房间内聊天
+ message SC_BroadcastExpressionInfo
+ {
+     required string name = 1;
+     required uint32 pos = 2;
+     required uint32 messageId = 3;
+     required string messageContent = 4;
+
+ }
+//-------------特殊玩法模块协议--------------
+//packetid: 4234 --特殊武器当前能量值
+message SC_SpecialWeapon_Energy
+{
+	required int32 curWeaponEnergy = 1;
+}
+//packetid: 235 --特殊武器开火请求
+message CS_SpecialWeapon_Fire
+{
+	required uint32 weaponType = 1;
+	required uint32 fireX = 2;
+	required uint32 fireY = 3;
+}
+
+//packetid: 4235 --特殊武器开火应答
+message SC_SpecialWeapon_Fire
+{
+	required uint32 errCode = 1;
+}
+
+//packetid: 4236 --特殊武器开火广播
+message SC_BroadcastSpecialWeapon_Fire
+{
+	required uint32 playerIndex = 1;
+	required uint32 weaponType = 2;
+	required uint32 fireX = 3;
+	required uint32 fireY = 4;
+}
+
+//packetid: 236 --特殊武器碰撞请求
+message CS_SpecialWeapon_ExplosionInfo
+{
+	repeated int32 fishidlist = 1;
+	optional int32 finalExplode = 2;
+}
+//-----------------------------------------
+
+
+
+//packetid: 240 进入房间前同步数据
+message CS_SynchData
+{
+	required int32 questIndex = 1; // 任务index
+}
+//packetid: 4240 进入房间前同步数据响应
+message SC_SynchData
+{
+	required int32 questIndex = 1; // 任务index
+}
+
+//----------比赛模式模块-----------
+//比赛数据
+message CompetitionInfo
+{
+	required uint32 competitionId = 1;
+	required uint32 status = 2; //0:已结束 1:正在进行 2:未开始
+	required uint32 startTime = 3;
+	required uint32 endTime = 4;
+	required uint32 goal = 5;
+	required uint32 weaponId = 6;
+	required uint32 reward1Type = 7;
+	required uint32 reward1Number = 8;
+	required uint32 reward2Type = 9;
+	required uint32 reward2Number = 10;
+	required uint32 costGem = 11;
+	required uint32 score = 12; // 我的得分
+	required uint32 rank = 13; // 我的排名
+}
+
+//排名信息
+message RankInfo
+{
+	required string headurl = 1;
+	required string name = 2;
+	required uint32 rank = 3;
+	required uint32 score = 4;
+}
+
+//packetid: 4300 未用到
+// 推送个人排行数据 pid = 4301
+message SC_FastMatchRankSelf{
+    required MatchRankItem self= 1;
+}
+
+//-------------------- 主题玩法协议部分 ------------------------------
+//packetid: 4302 准备切换主题
+message SC_ThemeSwitchReady
+{
+	required bool isStart = 1;
+}
+
+//packetid: 4303 主题切换开始
+message SC_ThemeSwitchBegin
+{
+	required uint32 nextSceneIndex = 1;
+}
+
+// packetid: 4304 boss刷新广播_
+message SC_ThemeBossComing
+{
+	required uint32 themeIndex = 1;// 主题索引_
+}
+
+//-------------------- 主题玩法协议部分 ------------------------------
+
+//packetid: 304 请求排行信息 *未用到*
+message CS_RankInfo
+{
+	required uint32 competition_id = 1;
+}
+
+//packetid: 4304 请求排行信息响应 *未用到*
+message SC_RankInfo
+{
+	repeated mi.RankInfo rankInfos = 1;
+	required mi.RankInfo myRankInfo = 2;
+}
+
+
+//packetid: 305 继续比赛 *未用到*
+message CS_ContinueCompetition
+{
+}
+
+//packetid: 4305 继续比赛响应 *未用到*
+message SC_ContinueCompetition
+{
+	required mi.CompetitionUserInfo competitionInfo = 1;
+}
+
+//packetid: 4306 广播继续比赛响应 *未用到*
+message SC_BroadcastContinueCompetition
+{
+	required mi.CompetitionUserInfo competitionInfo = 1;
+}
+
+//packetid: 4310 广播麒麟Boss价值响应
+message SC_BroadcastQiLinValue
+{
+	required uint32 qiLinValue = 1;
+}
+//packetid: 4311 广播炸弹Boss锁屏响应
+message SC_BroadcastBombLockScreen
+{
+	required uint32 isLockScreen = 1;
+}
+
+
+//----------场景事件---------
+//packetid: 4401 场景事件开始
+message SC_StartSceneEvent
+{
+	required uint32 eventType = 1;
+	required mi.Pathinfo pathinfo = 2;
+}
+
+message SceneEventReward
+{
+	required string uid = 1;
+	required uint32 gold = 2;
+}
+
+//packetid: 4402 场景事件结束
+message SC_EndSceneEvent
+{
+	required mi.Pathinfo pathinfo = 1;
+	repeated mi.SceneEventReward sceneEventRewardList = 2;
+}
+
+message SceneEventFishNode
+{
+	required uint32 fishid = 1;
+	required uint32 nodeid = 2;
+}
+
+//packetid: 403 场景事件过程中碰撞信息
+message CS_SceneEventExplosionInfo
+{
+	required uint32 fireid = 1;
+	repeated mi.SceneEventFishNode sceneEventFishNode = 2;
+}
+
+//packetid: 4403 场景事件碰撞结算
+message SC_SceneEventExplosionInfo
+{
+	required uint32 fireid = 1;
+	required bool whole = 2;
+	repeated mi.SceneEventFishNode sceneEventFishNode = 3;
+}
+
+//packetid: 4404 广播场景事件碰撞
+message SC_BroadcastSceneEventExplosionInfo
+{
+	required string uid = 1;
+	required bool whole = 2;
+	repeated mi.SceneEventFishNode sceneEventFishNode = 3;
+}
+
+
+
+
+
+//----------成就模块-----------
+// 成就条件
+message AchievementConUnit
+{
+	required uint32 conId = 1;
+	required uint32 number = 2;
+}
+
+// 成就单元
+message AchievementUnit
+{
+	required uint32 id = 1;
+	repeated mi.AchievementConUnit achievementConUnitList = 2;
+	required bool isCompleted = 3;
+	required bool isReceived = 4;
+}
+
+// packetid: 501 客户端请求成就数据
+message CS_AchievementData
+{
+}
+
+// packetid: 4501 服务器下发成就数据
+message SC_AchievementData
+{
+	repeated mi.AchievementUnit achievementList = 1;
+	required uint32 flag = 2; // 1 客户端主动请求 2 服务器主动推送
+}
+
+// packetid: 4502 服务器广播完成成就
+message SC_BroadcastAchievementData
+{
+	required string uid = 1;
+	repeated mi.AchievementUnit achievementList = 2;
+}
+
+// packetid: 503 领取成就奖励
+message CS_AchievementAward
+{
+	required uint32 achievementId = 1;
+}
+
+// packetid: 4503 领取成就奖励响应
+message SC_AchievementAward
+{
+	required uint32 achievementId = 1;
+}
+
+
+
+
+//----------技能模块-----------
+// packetid: 601 使用技能
+message CS_UseSkill
+{
+	required uint32 skillId = 1; // 技能id
+	required bool isOpen = 2;	// 技能状态
+}
+
+// packetid: 605 钻石购买技能
+message CS_BuyUseSkill
+{
+	required uint32 skillId = 1; 	// 技能id
+}
+
+// packetid: 4601 使用技能响应
+message SC_UseSkill
+{
+	required uint32 skillId = 1; 	// 技能id
+	required bool isUsable = 2; 	// 是否可用
+	required uint32 code = 3; 		// 不可用原因 1 CD时间未结束 2 使用次数不足
+	required uint32 costType = 4;   // 1 花费次数 2 花费钻石
+}
+
+// packetid: 4602 广播技能使用
+message SC_BroadcastUseSkill
+{
+	required string uid = 1; 		// 用户id
+	required uint32 skillId = 2; 	// 技能id
+	required bool isOpen = 3;		// 技能状态
+}
+
+// packetid: 603 技能过程处理
+message CS_SkillProcess
+{
+	required uint32 skillId = 1; 	// 技能id
+	required uint32 fishId = 2; 	// 鱼id
+}
+
+// packetid: 4603 技能过程处理广播
+message SC_BroadcastSkillProcess
+{
+	required string uid = 1; 		// 用户id
+	required uint32 skillId = 2; 	// 技能id
+	required uint32 fishId = 3; 	// 鱼id
+}
+
+// packetid: 4604 服务器通知客户端技能结束(个人技能 锁定，不受群体影响)
+message SC_BroadcastSkillEnd
+{
+	required string uid = 1; 	//  用户id
+	required uint32 skillId = 2; 	// 技能id
+}
+
+// packetid: 4605 服务器通知客户端技能结束(群体技能 冰冻，受群体影响)
+message SC_BroadcastGroupSkillEnd
+{
+	required uint32 skillId = 1; 	// 技能id
+}
+
+message AwdList
+{
+    optional int32 type = 1;
+    optional int32 count = 2;
+}
+//packetid: 710 已领取的奖励情况
+message CS_OnLineAwdInit{
+
+}
+
+//packetid: 4710 已领取的奖励情况响应
+message SC_OnLineAwdInit{
+	required uint32 err = 1; //0表示成功 1 表示失败
+	repeated uint32 state = 2; //数组，后续有几个领奖时间段里面就有几个元素，每个元素含义，0未领取，1已领取
+	required uint32 time = 3;  //当天已登录总时长
+}
+
+//packetid: 711 领取奖励请求
+message CS_OnLineAwdLingQu{
+    repeated uint32 id = 1; //领第几次奖
+}
+
+
+//packetid: 4711 领取奖励响应
+message SC_OnLineAwdLingQu{
+	required uint32 err = 1; //0表示可领取
+	optional uint32 time = 2;  //可选字段，如果是后端判断未到领取时间，则告诉前端正确时间，重新倒计时
+    repeated uint32 idList = 3; //后端校验后可领取的时间段id
+}
+
+//----------定时领奖-----------
+//packetid 801 金币为0，启动定时领奖定时器
+//packetid 4801 金币为0，启动定时领奖定时器结果
+message SC_TimeRewardGoldZero
+{
+    required uint32 time = 1;
+    required bool award1 = 2;
+    required bool award2 = 3;
+    required bool award3 = 4;
+    required uint32 timeNow = 5;
+}
+
+//packetid 802 定时领奖
+message CS_TimeReward
+{
+    required int32 timeZone = 1; // 时区
+}
+//packetid 4802 定时领奖结果
+message SC_TimeReward
+{
+    required bool is = 1;
+    required uint32 num = 2;
+}
+
+//packetid 803 破产补助同步数据
+message CS_Subsidy_Sync
+{
+}
+//packetid 4803 破产补助同步数据响应
+message SC_Subsidy_Sync
+{
+    required uint32 errCode = 1;
+	required bool  isPreGetSubsidy= 2;//是否处于倒计时中
+    required uint32 stateNumber = 3;//当天已领取次数
+    required uint32 startTime = 4;
+    required uint32 nowTime = 5;
+}
+
+//packetid 804 破产补助领取请求
+message CS_SubsidyReward
+{
+}
+//packetid 4804 破产补助领取结果
+message SC_SubsidyReward
+{
+    required uint32 errCode = 1;
+    required bool  isGetSubsidy= 2;
+    required uint32 stateNum = 3;
+}
+
+//packetid 4810 破产补助领取金币广播
+message SC_AcceptGold
+{
+    required string uid = 1;
+    required uint32 Num = 2;
+}
+
+
+//----------签到领奖--------start---
+message SignData
+{
+    required uint32 goodId = 1;  /// 物品ID
+	required uint32 goodNum = 2; /// 物品数量
+	required uint32 vip = 3;     /// 达到翻倍的条件
+}
+message SignTotalData
+{
+    required uint32 goodId = 1;  /// 物品ID
+	required uint32 goodNum = 2; /// 物品数量
+	required uint32 day = 3;     /// 达到奖励的条件
+}
+// packetid: 805
+message CS_GetToTalSignReward{
+	required uint32 rewardWhich = 1;  /// 领取的是哪个奖励
+}
+// packetid: 4805
+message SC_GetToTalSignReward
+{
+	required uint32 code = 1;
+}
+// packetid: 806
+// packetid: 4806
+message SC_PushSignData
+{
+	repeated mi.SignData signData = 1;
+	repeated mi.SignTotalData signTotalData = 2;
+}
+// packetid: 807
+message CS_GetSignData
+{
+}
+// packetid: 4807
+message SC_GetSignData
+{
+	required uint32 code = 1;        /// 错误值
+	required bool todayIsSign  = 2;   /// 当天是否签到
+	required uint32 curSignNum = 3;  /// 已签到的天数或累计签到
+	required uint32 curDateDay = 4;  /// 服务器当前天数
+	required uint32 curMonthNum= 5;  /// 服务器当前月数
+	required uint32 signRepair = 6;  /// 当月已补签天数
+	required string claimTotalReward= 7;  /// 领取累计奖励情况
+}
+// packetid: 808
+message CS_GetSignReward
+{
+}
+// packetid: 4808
+message SC_GetSignReward
+{
+    required uint32 code = 1;
+}
+//---------签到领奖--------end---
+
+
+//————全服通告(数据结构可供聊天，公告等后续功能公用)—————//
+message SenderPersonalData
+{
+    required string uid = 1;
+    required uint32 pos = 2;
+    required string headurl = 3;
+    required string name = 4;
+}
+message TemplateMessageData
+{
+    required mi.SenderPersonalData senderPersonalData = 1;
+    required uint32 channelId = 2;
+    required uint32 messageId = 3;
+    required uint32 fishId = 4;
+    required uint32 fishGold = 5;
+    required uint32 matchId = 6;    //比赛场次id
+    required uint32 rewardGold = 7;   //彩金系统钻石奖奖金
+    required uint32 sendType = 8;     //消息类型
+    required string content = 9;     //系统公告的内容
+}
+// packetid: 4809
+message SC_FullServiceNoticeData
+{
+    required mi.TemplateMessageData  templateMessageData = 1;
+}
+
+
+
+//----------任务模块-----------
+// 任务数据
+message QuestUnit
+{
+	required int32 questId = 1; 	//  任务id
+	required uint32 questType = 2; 	//  任务类型
+}
+
+// 任务奖励单元
+message QuestAwardUnit
+{
+	required uint32 rewardId = 1; 	 //  奖励id
+	required uint32 rewardNum = 2;   //  领奖数量
+	required uint32 rewardIndex = 3; //  领奖index，如果类型1 默认0，类型2，从1开始
+}
+
+// packetid: 701 任务领奖
+message CS_QuestAward
+{
+	required uint32 questId = 1; 	//  任务id
+}
+
+// packetid: 4701 任务领奖返回
+message SC_QuestAward
+{
+	required uint32 questId = 1; 			//  当前领奖任务id
+	required uint32 rewardGold = 2; 		//  货币数量
+	required mi.QuestAwardUnit awardUnit = 3; // 领奖数据
+	required mi.QuestUnit nextQuest = 4; 	// 下一个任务
+	required mi.CurrencyUnit currencyUnit = 5; // 玩家当前货币
+}
+
+
+//----------支付模块-----------
+// 请求购买商品 901
+message CS_PurchProduct
+{
+	required string productID = 1; 	//  商品id
+	required uint32 state = 2; 	//  购买状态 1成功Id
+	required string tradeNo = 3;   //订单号
+}
+// 购买商品返回 4901
+message SC_PurchProduct
+{
+	required string productID = 1; 	  //  商品id
+	required uint32 productType = 2;  //  商品类型
+	required uint32 productNum = 3;   //  商品数量
+	required uint32 err = 4;          //  错误值
+}
+
+
+
+
+//----------兑换-----------
+// packetid: 910 提交兑换话费订单
+message CS_SubmitCallsOrder
+{
+	required uint32 id = 1;  	 	  //  兑换商品消耗兑换圈id
+	required string mobile = 2; 	  //  手机号
+}
+
+// packetid: 4910 提交兑换话费订单响应
+message SC_SubmitCallsOrder
+{
+	required string code = 1; 	  	//  0000 = 提交成功 1002 = 手机号不正确  2003 = 手机号是黑名单 9999 = 充值错误
+	required uint32 coupon = 2; 	//  当前兑换券数量
+}
+
+// packetid: 911 提交兑换京东卡
+message CS_SubmitCardOrder
+{
+	required uint32 id = 1;  	 	//  兑换商品消耗兑换圈id
+}
+
+// packetid: 4911 提交兑换京东卡订单响应
+message SC_SubmitCardOrder
+{
+	required string code = 1; 	  	//  0000 = 提交成功 9999 = 兑换失败
+	required uint32 coupon = 2; 	//  当前兑换券数量
+}
+
+
+
+
+//----------Debug接口-----------
+// packetid: 99999
+message CS_DebugInfo
+{
+	required uint32 type = 1; 	// 1 场景事件，2 掉落卡牌
+	required uint32 id = 2; // 101 场景龙事件,201 掉落彩虹事件卡牌
+	required int32 state = 3; // -1,立即触发；1，状态开启; 0 状态关闭
+}
+
+//-------------------------------------- 新增 -------------------------------------------
+//新增战斗中消息包括一些房间消息 packetId从260开始向上增加
+
+//普通房间信息
+message NormalRoomInfo
+{
+    optional int32 type = 1;
+    optional int32 count = 2;
+}
+
+//自定义&大亨房间信息 未完成 可能会添加其他数据
+message CustomRoomInfo
+{
+    optional int32 type = 1;
+    optional int32 count = 2;
+    optional string roomInfo = 3;
+}
+
+//请求普通列表  261
+message CS_GetNormalList{
+}
+
+//白手起家&中产列表  4261
+message SC_NormalRoomList
+{
+   repeated NormalRoomInfo room = 1;
+}
+
+
+
+//快速赛人数  500
+message CS_TotalNumFastMatch{
+}
+
+//快速赛人数 4500
+message SC_TotalNumFastMatch
+{
+   repeated NormalRoomInfo room = 1;
+}
+
+//自定义&大亨列表
+message SC_CustomRoomList
+{
+    repeated CustomRoomInfo room = 1;
+}
+
+//更换位置 pid = 262
+message CS_ChangeSite{
+    required int32 toSite = 1;
+}
+
+//更换位置响应 pid = 4262
+message SC_ChangeSite{
+    required int32 newSite = 1;
+    optional int32 err = 2;
+}
+
+//座位 uid -> pos
+message Site{
+    required int32 pos = 1;
+    required string uid = 2;
+}
+
+//更换位置广播 pid = 4263
+message SC_BroadcastChangeSite{
+    repeated Site site = 1;
+}
+
+//重新进入比赛pid = 280
+message CS_AgainEnterMatch{
+}
+// 快速赛玩家基础信息 将大部分required更换为optional 无实际影响
+message fastMatchUserInfo{
+    required string uid = 1;
+    required uint32 gold = 2;
+    required uint32 gem = 3;
+    required uint32 pos = 4;
+    required string headurl = 5;
+    required string name = 6; // 昵称
+    optional uint32 weaponId = 7; // 武器id
+    optional uint32 skinType = 8;
+    optional uint32 coupon = 9;
+    optional uint32 energy = 10;
+    optional uint32 optimalComScore = 11;
+    optional uint32 showId = 12;
+    optional uint32 skillBingFeng = 13;
+    optional uint32 skillSuoding = 14;
+    optional uint32 bullet = 15;
+    optional uint32 score = 16;
+    optional uint32 rank = 17;
+    optional uint32 curTaskFishNum = 18;
+    optional string curUseSkill = 19;
+}
+//重新进入比赛pid = 4280
+message SC_AgainEnterMatch{
+    optional int32 time = 1;
+    optional mi.Pathinfo pathinfo = 2;
+    repeated mi.TrackTime tracktime = 3;
+    repeated mi.DeadFish deadfishs = 4;
+    repeated mi.fastMatchUserInfo userList = 5;
+    required uint32 taskFishReward = 6;
+    required uint32 targetTaskFishNum = 7;
+    required uint32 taskFishType = 8;
+	repeated mi.fastMatchUserInfo showTop = 9;
+	optional uint32 curFishFarmId = 10;
+	optional uint32 explosionQiLin = 11;
+    required int32 code = 12;
+}
+
+
+//获取快速匹配比赛列表 pid = 264
+message CS_GetFastMatchList{
+}
+
+//比赛模式列表元素
+message MatchItem{
+    required int32 count = 1;
+    required int32 cost = 2;
+    required int32 total = 3;
+}
+//快速比赛列表响应 pid = 4264
+message SC_FastMatchList{
+    repeated MatchItem list = 1;
+}
+
+//快速比赛报名pid = 265
+message CS_FastMatchSignUp{
+    required string type = 1;
+    required int32 timeZone = 2; // 时区时间
+}
+
+//快速比赛报名响应 pid = 4265
+message SC_FastMatchSignUp{
+	repeated mi.UserInfo userList = 1;
+    required uint32 taskFishReward = 2;
+    required uint32 targetTaskFishNum = 3;
+    required uint32 taskFishType = 4;
+	optional uint32 curFishFarmId = 5; /// 当前主题ID
+	required uint32 errCode = 6;
+	optional int32 waitTime = 7; /// 等待的时间
+}
+
+//快速比赛开始 pid = 4266
+message SC_BroadcastFastMatchStart{
+    required int32 time = 1;
+    optional mi.Pathinfo pathinfo = 2;
+    repeated mi.TrackTime tracktime = 3;
+    repeated mi.DeadFish deadfishs = 4;
+}
+//物品奖励元素
+message ItemReward{
+    required int32 type = 1;
+    required int32 number = 2;
+}
+//比赛排名元素
+message MatchRankItem{
+    optional string uid = 1;
+    optional string name = 2;
+    optional int32 headurl = 3;
+    required int32 rank = 4;
+	optional int32 score = 5;
+	repeated ItemReward reward = 6;
+}
+
+message CS_FastMatchRank{
+}
+
+//比赛排名变动广播&结算(针对每一个玩家会有不同的数据self) pid = 4267
+message SC_FastMatchRank{
+    repeated MatchRankItem list = 1;
+    required bool finish = 2;
+}
+
+//计时广播 pid = 4268 单位是秒
+message SC_FastMatchTime{
+    required int32 time = 1;
+}
+
+//等待进度改变 pid = 4269
+message SC_BroadcastFastMatchProcess{
+    required int32 current = 1;
+}
+
+//快速比赛等待玩家 pid = 4290
+message SC_FastMatchWaitTime{
+    required int32 time = 1;
+}
+
+
+//经典模式中彩金结果统计 pid = 4270
+message SC_BroadcastClassicRstInfo{
+  	required uint32 matchType = 1;
+  	required uint32 reward = 2;
+	required uint32 position = 3;
+	optional uint32 rewardId = 4;
+	optional uint32 newGoldPool = 5;
+}
+
+message IntegralRank {
+	required string uid = 1;
+	required string name = 2;
+	required uint32 integral = 3  ;
+}
+message IntegralInfo {
+    repeated IntegralRank rankList = 1;  ///
+}
+message bigMatchInfo {
+    repeated IntegralInfo rankInfo  = 1;  ///积分排行
+}
+//packetid 271 获取大奖赛数据请求
+//packetid 4271 获取大奖赛数据响应
+message SC_Big_Match_Info
+{
+    required uint32 err = 1; // 错误ID
+    required bigMatchInfo infoList = 2;  ///
+    required string time = 3; // 获取服务器时间
+}
+
+//packetid 272 进入大奖赛房间请求
+message CS_Enter_Big_Match_Room {
+    required uint32 matchType = 1; //  比赛类型ID
+    required bool isAgainMatch = 2; //  是否重新比赛
+    required int32 timeZone = 3; // 时区
+}
+//packetid 4272 进入大奖赛房间响应
+message SC_Enter_Big_Match_Room
+{
+    required uint32 err = 1; // 错误ID
+    repeated mi.UserInfo userList = 2;
+    optional mi.Pathinfo pathinfo = 3;
+    repeated mi.TrackTime tracktime = 4;
+    repeated mi.DeadFish deadfishs = 5;
+    optional mi.OnlineRoomInfo onlineInfo = 6;
+    repeated uint32 curTaskFishInfo = 7;
+    required uint32 targetTaskFishNum = 8;
+   	required uint32 taskFishType = 9;
+	optional uint32 curFishFarmId = 10;
+}
+
+message BigMatchScore{
+    required uint32 typeId = 1; // 大奖赛比赛类别
+    required uint32 curScore = 2; // 大奖赛玩家当前积分
+    required uint32 maxScore = 3; // 大奖赛玩家历史积分
+    required uint32 curBullet = 4; // 大奖赛玩家当前子弹数
+}
+//packetid 273 大奖赛获取玩家积分请求
+//packetid 4273 大奖赛获取玩家积分响应
+message SC_Big_Match_PlayerScore{
+    required uint32 err = 1; // 错误ID
+    repeated BigMatchScore scoreList = 2; // 大奖赛玩家积分列表
+}
+
+//packetid 4274 大奖赛结算推送
+message SC_Big_Match_Settlement{
+    required uint32 curScore = 1;
+    required uint32 maxScore = 2;
+}
+
+message RankingData{
+    required string uid = 1; //
+    required string name = 2; //
+    required uint32 level = 3; //
+    required uint32 headurl = 4; //
+    required uint32 param = 5; //
+	optional uint32 gold = 6;
+	optional string experience = 7;
+	optional uint32 glory = 8;
+	required uint32 gem = 9;
+	required uint32 sex = 10;
+}
+message SelfData{
+    required uint32 selfType = 1; //
+    required uint32 selfParam = 2;
+}
+//packetid 275 排行榜获取数据请求
+message CS_Ranking_List{
+    required uint32 rankType = 1;
+}
+
+//packetid 4275 排行榜获取数据推送
+message SC_Ranking_List{
+    required uint32 err = 1;
+    repeated RankingData goldRank = 2;
+    repeated RankingData masterRank = 3;
+    repeated RankingData giftRank = 4;
+    repeated SelfData selfData = 5;
+}
+
+//-------------------- 好友系统协议部分 ------------------------------
+// 好友系统中玩家的基础数据
+message FriendInfo{
+    required string guid = 1; //guid
+    required string name = 2; // 昵称
+    required string headurl = 3; // 头像索引
+    required uint32 sex = 4; // 性别
+    required uint32 gold = 5; // 金币数
+    required uint32 vipLv = 6; // vip等级
+    required uint32 level = 7; // 等级
+    required uint32 glory = 8; // 荣誉值
+    required uint32 state = 9; // 是否在线
+    required string experience = 10; //经验值
+    required uint32 gem = 11;  //钻石
+
+}
+//packetid 276 好友列表数据请求
+//packetid 4276 好友列表数据推送
+message SC_Friends_List{
+    required uint32 err = 1;
+    repeated FriendInfo friendsList = 2;
+}
+
+//packetid 277 查看好友请求列表
+//packetid 4277 好友请求列表查看推送
+message SC_Friends_Request_List{
+    required uint32 err = 1;
+    repeated FriendInfo requestList = 2;
+}
+//packetid 278 处理好友请求
+message CS_Friends_Request_Deal{
+    required uint32 type = 1; // 1 同意 2 拒绝 3 全部同意 4 全部拒绝
+    optional string uid = 2; // 单个同意或拒绝的情况下需附带uid信息便于后端处理
+}
+//packetid 4278 处理好友请求推送
+message SC_Friends_Request_Deal{
+    required uint32 err = 1; // 是否处理成功判断
+    repeated FriendInfo reqDealList = 2;
+}
+//packetid 279 查找好友请求
+message CS_Friends_Find{
+    required string keyWord = 1; // 玩家输入的昵称或者是ID
+}
+//packetid 4279 查找好友请求推送
+message SC_Friends_Find{
+    required uint32 err = 1;
+    optional FriendInfo playerInfo = 2; // 后端返回查找的玩家信息
+}
+//packetid 281 查找附近的人的请求
+message CS_Friends_Find_Arround{
+   //
+}
+//packetid 4281 查找附近的人推送
+message SC_Friends_Find_Arround{
+    required uint32 err = 1;
+    repeated FriendInfo findList = 2; // 后端返回查找附近玩家的信息
+}
+
+//packetid 282 添加好友请求
+message CS_Friends_Add{
+    required string uid = 1; // 玩家uid
+}
+//packetid 4282 添加好友推送
+message SC_Friends_Add{
+    required uint32 err = 1;
+}
+
+//packetid 283 删除好友请求
+message CS_Friends_Delete{
+   required string uid =1; // 玩家uid
+}
+//packetid 4283 删除好友推送
+message SC_Friends_Delete{
+	required uint32 err = 1;
+}
+
+//packetid 4284 添加好友结果推送  0 拒绝 1 同意
+message SC_Friends_Request{
+	required uint32 request = 1;  // 1 success
+}
+
+//packetid 285 邀请好友参战请求
+message CS_Friends_Invite{
+   required  string uid = 1; // 玩家uid
+}
+//packetid 4285 邀请好友参战响应
+message SC_Friends_Invite{
+	required uint32 err = 1;
+}
+
+//packetid 4286 推送好友邀请参战
+message SC_Invite_Friend{
+	required uint32 matchType = 1;
+	required string roomId = 2;
+	required string uid = 3;
+}
+
+//packetid 287 好友邀请参战结果请求 result = 1 同意 0 拒绝
+message CS_Friends_Invite_Request{
+	required uint32 result = 1;
+	required uint32 matchType = 2;
+	required string roomId = 3;
+}
+//packetid 4287 好友邀请参战结果响应
+message SC_Friends_Invite_Request{
+	required uint32 err = 1;
+}
+//packetid 4288 申请列表同意推送对方结果
+message SC_Friends_RequestDeal_Res{
+	required bool result = 1;
+	required string uid = 2;
+}
+//-------------------- 好友系统协议部分 ------------------------------
+
+//--------------------------------------- 修改 -------------------------------------------------
+//packetid: 201 进入房间
+message CS_EnterOnlineRoom
+{
+	optional string roomId = 1; //实际是配置表里的比赛ID(在经典模式中，代表初级场或中级场...)
+	optional string matchType = 2; //实际是房间ID(在经典模式中，该值没有定义...)
+}
+
+//联网模式 packetid: 4201 联网模式进入房间响应
+message SC_OnlineRoomInfo
+{
+	repeated mi.UserInfo userList = 1;
+	optional mi.Pathinfo pathinfo = 2;
+	repeated mi.TrackTime tracktime = 3;
+	repeated mi.DeadFish deadfishs = 4;
+	optional mi.OnlineRoomInfo onlineInfo = 5;
+	repeated uint32 curTaskFishInfo = 6;
+   	required uint32 targetTaskFishNum = 7;
+   	required uint32 taskFishType = 8;
+	optional uint32 explosionQiLin = 9; /// 碰撞麒麟的次数
+	optional uint32 goldPool = 10; /// 只用于经典赛
+	optional uint32 curFishFarmId = 11; /// 当前主题ID
+	required uint32 err = 12;
+}
+
+//message OnlineRoomInfo
+//{
+//	repeated string uid = 1;
+//	repeated uint32 cardId = 2;
+//	repeated mi.QuestUnit questUnit = 3;//删除
+//	required uint32 topEnergy = 4;
+//}
+
+message OnlineRoomInfo
+{
+	repeated string uid = 1;
+	repeated uint32 cardId = 2;
+	required uint32 topEnergy = 4;
+}
+
+// 玩家基础信息 将大部分required更换为optional 无实际影响
+message UserInfo
+{
+	required string uid = 1; // 唯一id
+ 	optional string name = 2; // 昵称
+ 	optional string headurl = 3; // 头像
+ 	required uint32 gold = 4; // 金币
+ 	required uint32 gem = 5;  // 宝石
+ 	optional uint32 coupon = 6; // 兑换券
+ 	optional uint32 energy = 7; // 当前场景能量
+ 	optional uint32 weaponId = 8; // 武器id
+ 	optional uint32 pos = 9; // 位置
+ 	optional uint32 optimalComScore = 10; // 最佳比赛成绩
+ 	optional uint32 weaponMaxLevel = 11; // 最高武器等级
+ 	optional uint32 skinType = 12; //当前皮肤类型
+ 	repeated uint32 unlockedSkins = 13; //已解锁的所有皮肤
+ 	optional uint32 unlockedMaxSceneId = 14; //已解锁的最大场景id
+ 	optional uint32 skillSuoding = 15; //锁定技能可用次数
+ 	optional uint32 skillBingfeng = 16; //冰封技能可用次数
+ 	optional uint64 showid = 17; // 用户显示id
+ 	optional uint32 bullet = 18; // 子弹数
+ 	optional uint32 vipLv = 19;  //vip等级
+ 	optional string vipNumber = 20;   //vip经验总数（玩家总的花费）
+ 	optional uint32 curTaskFishNum = 21;  //任务鱼数(目前只大奖赛用到)
+ 	optional uint32 level = 22; //玩家等级
+    optional string experience = 23; //玩家经验
+    optional uint32 glory = 24; //玩家荣誉值(大师分)
+    optional string curUseSkill = 25; //当前使用技能情况
+    optional string registerTime = 26; //注册时长
+    optional string loginIP = 27; //登录ip
+    optional string fbheadimage = 28; //FaceBook头像
+    optional string fbnickname = 29; //FaceBook昵称
+}
+
+//活动信息
+message ActivityInfo{
+	required uint32 aid = 1; //活动id
+	required string title = 2; //活动标题
+	optional uint32 order = 3; //活动顺序位置
+	required uint32 titleCorner = 4; //角标类型 1 new 2 hot
+	required string picture = 5; //活动详情背板资源名
+	required uint32 titleIcon = 6; //标题图标
+	required string startTime = 7; //活动开始时间
+	required string overTime = 8; //活动结束时间
+	required uint32 activiytType = 9; //活动类型
+	required uint32 detailedType = 10; //详细类型
+	required uint32 curTargetNum = 11; //当前目标数量
+	required uint32 needTargetNum = 12; //所需目标数量
+	required uint32 attendMode = 13; //活动参与方式 0 商城 1 经典赛 2 快速赛 3 大奖赛
+	required bool state = 14;//活动状态
+	repeated mi.ActivityReward rewardInfo = 15;
+	required string link = 16; //活动图片链接
+}
+
+//packetid: 410 请求活动列表
+message CS_ActivityList{
+	required uint32 uid = 1;
+}
+
+//packetid: 4410 活动列表响应
+message SC_ActivityList{
+	required uint32 err = 1; //0表示成功 1 表示失败
+	repeated mi.ActivityInfo activityList = 2;
+}
+
+//-----------------公告模块协议-------------
+//公告信息
+message NoticeInfo{
+	required uint32 nid = 1; //公告id
+	required string title = 2; //公告标题
+	optional uint32 order = 3; //公告顺序位置
+	required string titleCorner = 4; //角标类型 1 new 2 hot
+	optional string imageName = 5; //公告背景图名称
+	optional string detailContent = 6; //公告内容
+	required string startTime = 7; //公告开始时间
+	required string overTime = 8; //公告结束时间
+	required string link = 9;
+}
+
+//packetid: 411 请求公告列表
+message CS_NoticeList{
+	required uint32 uid = 1;
+}
+
+//packetid: 4411 公告列表应答
+message SC_NoticeList{
+	required uint32 err = 1; //0表示成功 1 表示失败
+	repeated mi.NoticeInfo noticeList = 2;
+}
+// 活动奖励内容
+message ActivityReward{
+	required uint32 propID = 1; //道具id
+	required uint32 propNum = 2; //道具数量
+}
+
+//packetid: 420 请求活动奖励
+message CS_ActivityReward{
+	required uint32 aid = 1;
+}
+
+//packetid: 4420 活动奖励响应
+message SC_ActivityReward{
+	required uint32 err = 1; //错误ID
+	repeated ActivityReward rewardlist = 2;//道具列表
+}
+
+//packetid: 501 客户端的调试指令
+message CS_DebugCommand{
+	required string cmd = 1; //command
+}
+
+//packetid: 4501
+message SC_DebugCommand{
+	required string result = 1; //命令结果
+}

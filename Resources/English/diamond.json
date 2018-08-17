@@ -1,0 +1,56 @@
+{
+	"104001": {
+		"product_id" : "com.cqgaming.fish.600diamonds",
+		"icon" : "icon_shop_baoshi_001.png",
+		"price" : "0.9900",
+		"count" : "600",
+		"premium_proportion" : 0,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.600diamonds"
+	},
+	"104002": {
+		"product_id" : "com.cqgaming.fish.1260diamonds",
+		"icon" : "icon_shop_baoshi_002.png",
+		"price" : "1.9900",
+		"count" : "1260",
+		"premium_proportion" : 0.0500,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.1260diamonds"
+	},
+	"104003": {
+		"product_id" : "com.cqgaming.fish.6600diamonds",
+		"icon" : "icon_shop_baoshi_003.png",
+		"price" : "9.9900",
+		"count" : "6600",
+		"premium_proportion" : 0.1000,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.6600diamonds"
+	},
+	"104004": {
+		"product_id" : "com.cqgaming.fish.13800diamonds",
+		"icon" : "icon_shop_baoshi_004.png",
+		"price" : "19.9900",
+		"count" : "13800.0000",
+		"premium_proportion" : 0.1500,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.13800diamonds"
+	},
+	"104005": {
+		"product_id" : "com.cqgaming.fish.36000diamonds",
+		"icon" : "icon_shop_baoshi_005.png",
+		"price" : "49.9900",
+		"count" : "36000",
+		"premium_proportion" : 0.2000,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.36000diamonds"
+	},
+	"104006": {
+		"product_id" : "com.cqgaming.fish.78000diamonds",
+		"icon" : "icon_shop_baoshi_006.png",
+		"price" : "99.9900",
+		"count" : "78000",
+		"premium_proportion" : 0.3000,
+		"currency_type" : "en",
+		"google_pay_code" : "com.fpnew.fish.78000diamonds"
+	}
+}

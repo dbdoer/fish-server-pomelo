@@ -1,0 +1,54 @@
+{
+	"104301": {
+		"prop_id" : "1003",
+		"count" : "7820.0000",
+		"premium_proportion" : "0.1500",
+		"give" : "1020.0000",
+		"price" : "9.9900",
+		"product_id" : "com.cqgaming.fish.pack7820",
+		"icon" : "icon_shangchengxitong_008_2.png",
+		"title" : "text_libaoxitong_020.png",
+		"title_hl" : "text_libaoxitong_019.png",
+		"google_pay_code" : "com.fpnew.fish.pack7820",
+		"skin_id" : 0
+	},
+	"104302": {
+		"prop_id" : "1003",
+		"count" : "15360",
+		"premium_proportion" : "0.2000",
+		"give" : "2560",
+		"price" : "19.9900",
+		"product_id" : "com.cqgaming.fish.pack15360",
+		"icon" : "icon_shangchengxitong_008_3.png",
+		"title" : "text_libaoxitong_022.png",
+		"title_hl" : "text_libaoxitong_021.png",
+		"google_pay_code" : "com.fpnew.fish.pack15360",
+		"skin_id" : 0
+	},
+	"104303": {
+		"prop_id" : "1003",
+		"count" : "42640",
+		"premium_proportion" : "0.3000",
+		"give" : "9840",
+		"price" : "49.9900",
+		"product_id" : "com.cqgaming.fish.pack42640",
+		"icon" : "icon_shangchengxitong_008_1.png",
+		"title" : "text_libaoxitong_024.png",
+		"title_hl" : "text_libaoxitong_023.png",
+		"google_pay_code" : "com.fpnew.fish.pack42640",
+		"skin_id" : 0
+	},
+	"104304": {
+		"prop_id" : "1003",
+		"count" : "97200",
+		"premium_proportion" : "0.5000",
+		"give" : "32400",
+		"price" : "99.9900",
+		"product_id" : "com.cqgaming.fish.pack97200",
+		"icon" : "icon_shangchengxitong_007_1.png",
+		"title" : "text_libaoxitong_026.png",
+		"title_hl" : "text_libaoxitong_025.png",
+		"google_pay_code" : "com.fpnew.fish.pack97200",
+		"skin_id" : 10121
+	}
+}

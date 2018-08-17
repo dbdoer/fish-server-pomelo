@@ -1,0 +1,27 @@
+{
+	"1401": {
+		"gold_num" : 100000,
+		"diamond_num" : 0,
+		"Bullion_num" : 0
+	},
+	"1402": {
+		"gold_num" : 300000,
+		"diamond_num" : 0,
+		"Bullion_num" : 0
+	},
+	"1403": {
+		"gold_num" : 500000,
+		"diamond_num" : 0,
+		"Bullion_num" : 0
+	},
+	"1404": {
+		"gold_num" : 1000000,
+		"diamond_num" : 0,
+		"Bullion_num" : 0
+	},
+	"1405": {
+		"gold_num" : 5000000,
+		"diamond_num" : 0,
+		"Bullion_num" : 0
+	}
+}

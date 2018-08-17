@@ -1,0 +1,10 @@
+{
+  "configs": [
+    {
+      "new_player_equalizing": 850,
+      "peak_of_gold": 20000,
+      "equalizing_interval": 2,
+      "gold_reward_rate": 0.5
+    }
+  ]
+}

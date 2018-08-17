@@ -1,0 +1,210 @@
+{
+  "configs": [
+    {
+      "server": "jp.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.c.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.d.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.e.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.f.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "jp.g.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "hk.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "hk.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "hk.c.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "hk.d.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "sg.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "sg.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "sg.c.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "sg.d.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "tw.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "tw.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "kr.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "kr.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.c.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.d.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.e.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "us.f.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "uk.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "uk.b.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    },
+    {
+      "server": "de.a.cloudss.club",
+      "server_port": 23842,
+      "password": "157400",
+      "method": "rc4-md5",
+      "remarks": ""
+    }
+  ],
+  "strategy": null,
+  "index": 0,
+  "global": false,
+  "enabled": true,
+  "shareOverLan": false,
+  "isDefault": false,
+  "localPort": 10086,
+  "pacUrl": null,
+  "useOnlinePac": false,
+  "availabilityStatistics": false
+}

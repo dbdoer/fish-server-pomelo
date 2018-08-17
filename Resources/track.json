@@ -1,0 +1,287 @@
+{
+	"52": {
+		"Track_id" : "490",
+		"Track_type" : "1",
+		"Track" : "track_jinlongyu"
+	},
+	"56": {
+		"Track_id" : "483",
+		"Track_type" : "5",
+		"Track" : "track_lianhuanzhadan"
+	},
+	"55": {
+		"Track_id" : "482",
+		"Track_type" : "5",
+		"Track" : "track_jiguangpao"
+	},
+	"54": {
+		"Track_id" : "481",
+		"Track_type" : "5",
+		"Track" : "track_zuantoupao"
+	},
+	"51": {
+		"Track_id" : "480",
+		"Track_type" : "1",
+		"Track" : "track_qie"
+	},
+	"50": {
+		"Track_id" : "475",
+		"Track_type" : "4",
+		"Track" : "track_yuchao06"
+	},
+	"49": {
+		"Track_id" : "474",
+		"Track_type" : "4",
+		"Track" : "track_yuchao05"
+	},
+	"48": {
+		"Track_id" : "473",
+		"Track_type" : "4",
+		"Track" : "track_yuchao04"
+	},
+	"47": {
+		"Track_id" : "472",
+		"Track_type" : "4",
+		"Track" : "track_yuchao03"
+	},
+	"46": {
+		"Track_id" : "471",
+		"Track_type" : "4",
+		"Track" : "track_yuchao02"
+	},
+	"45": {
+		"Track_id" : "470",
+		"Track_type" : "4",
+		"Track" : "track_yuchao01"
+	},
+	"44": {
+		"Track_id" : "462",
+		"Track_type" : "3",
+		"Track" : "track_pangxieBoss"
+	},
+	"43": {
+		"Track_id" : "461",
+		"Track_type" : "3",
+		"Track" : "track_leilongBoss"
+	},
+	"42": {
+		"Track_id" : "460",
+		"Track_type" : "3",
+		"Track" : "track_huolongBoss"
+	},
+	"41": {
+		"Track_id" : "450",
+		"Track_type" : "1",
+		"Track" : "track_bomb"
+	},
+	"40": {
+		"Track_id" : "440",
+		"Track_type" : "2",
+		"Track" : "track_dacaishenBoss"
+	},
+	"39": {
+		"Track_id" : "430",
+		"Track_type" : "2",
+		"Track" : "track_xiaocaishenBoss"
+	},
+	"53": {
+		"Track_id" : "427",
+		"Track_type" : "2",
+		"Track" : "track_jinchanBoss"
+	},
+	"38": {
+		"Track_id" : "426",
+		"Track_type" : "2",
+		"Track" : "dapanyu_denglong"
+	},
+	"37": {
+		"Track_id" : "425",
+		"Track_type" : "2",
+		"Track" : "dapanyu_bianfu"
+	},
+	"36": {
+		"Track_id" : "424",
+		"Track_type" : "2",
+		"Track" : "dapanyu_haigui"
+	},
+	"35": {
+		"Track_id" : "423",
+		"Track_type" : "2",
+		"Track" : "track_yuanbaoBoss"
+	},
+	"34": {
+		"Track_id" : "422",
+		"Track_type" : "1",
+		"Track" : "track_qinlinBoss"
+	},
+	"33": {
+		"Track_id" : "421",
+		"Track_type" : "2",
+		"Track" : "track_eyuBoss"
+	},
+	"32": {
+		"Track_id" : "420",
+		"Track_type" : "1",
+		"Track" : "track_huangjinhaigui01"
+	},
+	"31": {
+		"Track_id" : "410",
+		"Track_type" : "1",
+		"Track" : "track_huangjinsha01"
+	},
+	"30": {
+		"Track_id" : "400",
+		"Track_type" : "1",
+		"Track" : "track_huangjinjianyu01"
+	},
+	"29": {
+		"Track_id" : "390",
+		"Track_type" : "1",
+		"Track" : "track_huangjinbianfuyu01"
+	},
+	"28": {
+		"Track_id" : "380",
+		"Track_type" : "1",
+		"Track" : "track_xiyouhaigui01"
+	},
+	"27": {
+		"Track_id" : "370",
+		"Track_type" : "1",
+		"Track" : "track_xiyouxinyuejinyu01"
+	},
+	"26": {
+		"Track_id" : "360",
+		"Track_type" : "1",
+		"Track" : "track_xiyoujianyu01"
+	},
+	"25": {
+		"Track_id" : "350",
+		"Track_type" : "1",
+		"Track" : "track_xiyoukongqueyu01"
+	},
+	"24": {
+		"Track_id" : "340",
+		"Track_type" : "1",
+		"Track" : "track_xiyoubianfuyu01"
+	},
+	"23": {
+		"Track_id" : "330",
+		"Track_type" : "1",
+		"Track" : "track_xinyuejinyu01"
+	},
+	"22": {
+		"Track_id" : "320",
+		"Track_type" : "1",
+		"Track" : "track_xiyoudenglongyu01"
+	},
+	"21": {
+		"Track_id" : "310",
+		"Track_type" : "1",
+		"Track" : "track_xiyoushiziyu01"
+	},
+	"20": {
+		"Track_id" : "300",
+		"Track_type" : "1",
+		"Track" : "track_xiyouhetun01"
+	},
+	"19": {
+		"Track_id" : "290",
+		"Track_type" : "1",
+		"Track" : "track_xiyouxiaochouyu01"
+	},
+	"18": {
+		"Track_id" : "280",
+		"Track_type" : "1",
+		"Track" : "track19"
+	},
+	"17": {
+		"Track_id" : "270",
+		"Track_type" : "1",
+		"Track" : "track18"
+	},
+	"16": {
+		"Track_id" : "260",
+		"Track_type" : "1",
+		"Track" : "track17"
+	},
+	"15": {
+		"Track_id" : "250",
+		"Track_type" : "1",
+		"Track" : "track16"
+	},
+	"14": {
+		"Track_id" : "240",
+		"Track_type" : "1",
+		"Track" : "track15"
+	},
+	"13": {
+		"Track_id" : "230",
+		"Track_type" : "1",
+		"Track" : "track14"
+	},
+	"12": {
+		"Track_id" : "220",
+		"Track_type" : "1",
+		"Track" : "track13"
+	},
+	"11": {
+		"Track_id" : "210",
+		"Track_type" : "1",
+		"Track" : "track12"
+	},
+	"10": {
+		"Track_id" : "200",
+		"Track_type" : "1",
+		"Track" : "track11"
+	},
+	"9": {
+		"Track_id" : "190",
+		"Track_type" : "1",
+		"Track" : "track10"
+	},
+	"8": {
+		"Track_id" : "180",
+		"Track_type" : "1",
+		"Track" : "track09"
+	},
+	"7": {
+		"Track_id" : "170",
+		"Track_type" : "1",
+		"Track" : "track08"
+	},
+	"6": {
+		"Track_id" : "160",
+		"Track_type" : "1",
+		"Track" : "track07"
+	},
+	"5": {
+		"Track_id" : "150",
+		"Track_type" : "1",
+		"Track" : "track06"
+	},
+	"4": {
+		"Track_id" : "140",
+		"Track_type" : "1",
+		"Track" : "track05"
+	},
+	"3": {
+		"Track_id" : "130",
+		"Track_type" : "1",
+		"Track" : "track04"
+	},
+	"2": {
+		"Track_id" : "120",
+		"Track_type" : "1",
+		"Track" : "track03"
+	},
+	"1": {
+		"Track_id" : "110",
+		"Track_type" : "1",
+		"Track" : "track02"
+	},
+	"0": {
+		"Track_id" : "100",
+		"Track_type" : "1",
+		"Track" : "track01"
+	}
+}

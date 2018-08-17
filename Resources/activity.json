@@ -1,0 +1,47 @@
+{
+	"1": {
+		"title" : "充值返利",
+		"order" : 1,
+		"title_corner" : 2,
+		"picture" : "ui_gonggao_beiban_004.png",
+		"title_icon" : 1,
+		"start_time" : "2017-01-01",
+		"over_time" : "2017-01-20",
+		"activity_type" : 1,
+		"attendMode" : 0,
+		"detailed_type" : 1,
+		"need_number" : 18,
+		"reward_type" : 2,
+		"reward_number" : 360
+	},
+	"2": {
+		"title" : "消费返利",
+		"order" : 2,
+		"title_corner" : 2,
+		"picture" : "ui_gonggao_beiban_005.png",
+		"title_icon" : 1,
+		"start_time" : "2017-01-01",
+		"over_time" : "2017-01-20",
+		"activity_type" : 2,
+		"attendMode" : 0,
+		"detailed_type" : 2,
+		"need_number" : 500,
+		"reward_type" : 1,
+		"reward_number" : 1000
+	},
+	"3": {
+		"title" : "累计获得金币",
+		"order" : 3,
+		"title_corner" : 1,
+		"picture" : "ui_gonggao_beiban_006.png",
+		"title_icon" : 2,
+		"start_time" : "2016-08-16",
+		"over_time" : "2017-01-01",
+		"activity_type" : 4,
+		"attendMode" : 1,
+		"detailed_type" : 3,
+		"need_number" : 300000,
+		"reward_type" : 1,
+		"reward_number" : 100000
+	}
+}

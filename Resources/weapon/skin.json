@@ -1,0 +1,44 @@
+{
+  "skin": [
+    {
+      "skin_name": "fishjoy_string_changeskin_chushipao",
+      "pilot": 10110,
+      "unlock_act": 0,
+      "unlock": 0,
+      "unlock_num": 0,
+      "resource_name": "icon_weapon_001.png"
+    },
+    {
+      "skin_name": "fishjoy_string_changeskin_shenghuapao",
+      "pilot": 10111,
+      "unlock_act": 1,
+      "unlock": 1000002,
+      "unlock_num": 200,
+      "resource_name": "icon_weapon_002.png"
+    },
+    {
+      "skin_name": "fishjoy_string_changeskin_bianfuxiapao",
+      "pilot": 10112,
+      "unlock_act": 1,
+      "unlock": 1000002,
+      "unlock_num": 200,
+      "resource_name": "icon_weapon_003.png"
+    },
+    {
+      "skin_name": "fishjoy_string_changeskin_gangtiexiapao",
+      "pilot": 10113,
+      "unlock_act": 1,
+      "unlock": 1000002,
+      "unlock_num": 200,
+      "resource_name": "icon_weapon_004.png"
+    },
+    {
+      "skin_name": "fishjoy_string_changeskin_xunjipao",
+      "pilot": 10114,
+      "unlock_act": 1,
+      "unlock": 1000002,
+      "unlock_num": 200,
+      "resource_name": "icon_weapon_004.png"
+    }
+  ]
+}

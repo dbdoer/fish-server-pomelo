@@ -1,0 +1,1 @@
+protoc.exe --descriptor_set_out=field-options.desc --include_imports field-options.proto

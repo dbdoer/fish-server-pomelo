@@ -1,0 +1,11 @@
+{
+	"register":[
+		{ "register_days":1, "award_id":"1000001", "award_amount":"100", "icon":null },
+		{ "register_days":2, "award_id":"1000001", "award_amount":"500", "icon":null },
+		{ "register_days":3, "award_id":"1000001", "award_amount":"1000", "icon":null },
+		{ "register_days":4, "award_id":"1000001", "award_amount":"2000", "icon":null },
+		{ "register_days":5, "award_id":"1000002", "award_amount":"5", "icon":null },
+		{ "register_days":6, "award_id":"1000002", "award_amount":"10", "icon":null },
+		{ "register_days":7, "award_id":"1000002", "award_amount":"20", "icon":null }
+	]
+}

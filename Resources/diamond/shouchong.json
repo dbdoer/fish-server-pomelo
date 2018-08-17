@@ -1,0 +1,54 @@
+{
+	"104101": {
+		"prop_id" : "1003",
+		"count" : "660",
+		"premium_proportion" : "0.1000",
+		"give" : "60",
+		"type" : 0,
+		"limited time" : "168",
+		"price" : "6",
+		"product_id" : "com.zsbuyu.iap.packs660",
+		"google_pay_code" : "com.fpnew.fish.icepack660",
+		"unicom_code" : "170509581458",
+		"unicom_index" : "007"
+	},
+	"104102": {
+		"prop_id" : "1003",
+		"count" : "2160",
+		"premium_proportion" : "0.2000",
+		"give" : "360",
+		"type" : 0,
+		"limited time" : "168",
+		"price" : "18",
+		"product_id" : "com.zsbuyu.iap.packs2160",
+		"google_pay_code" : "com.fpnew.fish.icepack2160",
+		"unicom_code" : "170509581459",
+		"unicom_index" : "008"
+	},
+	"104103": {
+		"prop_id" : "1003",
+		"count" : "3900",
+		"premium_proportion" : "0.3000",
+		"give" : "900",
+		"type" : 0,
+		"limited time" : "168",
+		"price" : "30",
+		"product_id" : "com.zsbuyu.iap.packs3900",
+		"google_pay_code" : "com.fpnew.fish.icepack3900",
+		"unicom_code" : "170509581460",
+		"unicom_index" : "009"
+	},
+	"104104": {
+		"prop_id" : "1003",
+		"count" : "7500",
+		"premium_proportion" : "0.5000",
+		"give" : "2500",
+		"type" : 1,
+		"limited time" : "0",
+		"price" : "50",
+		"product_id" : "com.zsbuyu.iap.packs7500",
+		"google_pay_code" : "com.fpnew.fish.icepack7500",
+		"unicom_code" : "170509581461",
+		"unicom_index" : "010"
+	}
+}

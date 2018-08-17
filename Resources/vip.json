@@ -1,0 +1,56 @@
+{
+	"1": {
+		"Price" : 6,
+		"text_descrip" : "fishjoy_string_vip_level_1",
+		"skill_id" : 0,
+		"name" : "机械轮盘"
+	},
+	"2": {
+		"Price" : 50,
+		"text_descrip" : "fishjoy_string_vip_level_2",
+		"skill_id" : 1100103,
+		"name" : "集束毁灭"
+	},
+	"3": {
+		"Price" : 100,
+		"text_descrip" : "fishjoy_string_vip_level_3",
+		"skill_id" : 1100103,
+		"name" : "摩登时代"
+	},
+	"4": {
+		"Price" : 200,
+		"text_descrip" : "fishjoy_string_vip_level_4",
+		"skill_id" : 1100103,
+		"name" : "星际来临"
+	},
+	"5": {
+		"Price" : 500,
+		"text_descrip" : "fishjoy_string_vip_level_5",
+		"skill_id" : 1100103,
+		"name" : "钻石星辰"
+	},
+	"6": {
+		"Price" : 1000,
+		"text_descrip" : "fishjoy_string_vip_level_6",
+		"skill_id" : 1100104,
+		"name" : "量子湮灭"
+	},
+	"7": {
+		"Price" : 2000,
+		"text_descrip" : "fishjoy_string_vip_level_7",
+		"skill_id" : 1100104,
+		"name" : "骑士锋芒"
+	},
+	"8": {
+		"Price" : 5000,
+		"text_descrip" : "fishjoy_string_vip_level_8",
+		"skill_id" : 1100105,
+		"name" : "魔王之力"
+	},
+	"9": {
+		"Price" : 10000,
+		"text_descrip" : "fishjoy_string_vip_level_9",
+		"skill_id" : 1100105,
+		"name" : "天使降临"
+	}
+}

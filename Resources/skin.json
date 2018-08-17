@@ -1,0 +1,72 @@
+{
+	"10109": {
+		"unlock_act" : 0,
+		"unlock" : 0,
+		"unlock_num" : 0,
+		"resource_name" : "flash_pao_l12_01",
+		"battery_base" : "icon_paotai_001"
+	},
+	"10110": {
+		"unlock_act" : 1,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_01",
+		"battery_base" : "icon_paotai_001"
+	},
+	"10111": {
+		"unlock_act" : 2,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_02",
+		"battery_base" : "icon_paotai_002"
+	},
+	"10112": {
+		"unlock_act" : 3,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_03",
+		"battery_base" : "icon_paotai_003"
+	},
+	"10113": {
+		"unlock_act" : 4,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_04",
+		"battery_base" : "icon_paotai_004"
+	},
+	"10114": {
+		"unlock_act" : 5,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_05",
+		"battery_base" : "icon_paotai_005"
+	},
+	"10115": {
+		"unlock_act" : 6,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_06",
+		"battery_base" : "icon_paotai_006"
+	},
+	"10116": {
+		"unlock_act" : 7,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_07",
+		"battery_base" : "icon_paotai_007"
+	},
+	"10117": {
+		"unlock_act" : 8,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_08",
+		"battery_base" : "icon_paotai_008"
+	},
+	"10118": {
+		"unlock_act" : 9,
+		"unlock" : 1000002,
+		"unlock_num" : 200,
+		"resource_name" : "flash_pao_l12_09",
+		"battery_base" : "icon_paotai_009"
+	}
+}

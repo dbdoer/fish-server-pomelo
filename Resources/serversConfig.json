@@ -1,0 +1,25 @@
+{
+  "staticStart": [
+    {
+      "type": "RoomServer",
+      "rpcPort": 40000
+    },
+    {
+      "type": "FrontServer",
+      "socketPort": 40001,
+      "rpcPort": 40002
+    },
+    {
+      "type": "GateServer",
+      "httpPort": 40003
+    },
+    {
+      "type": "FastMatchServer",
+      "rpcPort": 40004
+    },
+    {
+      "type": "MatchQueueServer",
+      "rpcPort": 40005
+    }
+  ]
+}

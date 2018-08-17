@@ -1,0 +1,8 @@
+{
+	"card":[
+		{ "card_index":0, "card_name":"string_rainbowgun", "card_id":1080101, "card_Icon":"icon_card_001", "card_weapon":1010202, "card_scene":"1030101|1030102" },
+		{ "card_index":1, "card_name":"string_puffgun", "card_id":1080102, "card_Icon":"icon_card_002", "card_weapon":0, "card_scene":null },
+		{ "card_index":2, "card_name":"string_treasure", "card_id":1080201, "card_Icon":"icon_card_003", "card_weapon":0, "card_scene":"1030101|1030102" },
+		{ "card_index":3, "card_name":"string_generous", "card_id":1080202, "card_Icon":"icon_card_004", "card_weapon":0, "card_scene":null }
+	]
+}

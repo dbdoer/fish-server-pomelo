@@ -1,0 +1,5 @@
+forever stop MasterServer/main.js &&
+forever stop ServerManager/main.js &&
+forever start MasterServer/main.js &&
+forever start ServerManager/main.js &&
+echo "restart ok"
