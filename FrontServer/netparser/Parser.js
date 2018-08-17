@@ -1,11 +1,14 @@
 var fs = require('fs');
 var Schema = require('protobuf').Schema;
 //var log = require('../../log/log').logger("normal");
+
 //gameserver服务器协议
 var schema = new Schema(fs.readFileSync('./FrontServer/netparser/field-options.desc'));
 //var schema = new Schema(fs.readFileSync(__dirname + '/field-options.desc'));
+
 var schema_log = new Schema(fs.readFileSync('./FrontServer/netparser/field-options.desc'));
 var before = "mi.";
+
 exports.encode = function (packetname, json) {
     //buffer will *only* contain the protobuf encoded message, *NOT* the full riak packet
     try {

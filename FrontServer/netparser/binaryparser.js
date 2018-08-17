@@ -1,3 +1,4 @@
+//
 exports.CS_Fire_encode = function (clientid, fireX, fireY) {
     var buffer = new Buffer(6);
     var offset = 0;
@@ -21,6 +22,7 @@ exports.CS_Fire_decode = function (buffer) {
     return {clientid: clientid, fireX: fireX, fireY: fireY}
 }
 
+//
 exports.CS_ExplosionInfo_encode = function (fireid, fishids) {
     var len = 4 + 2 + 4 * fishids.length;
     var buffer = new Buffer(len);
@@ -62,6 +64,7 @@ exports.CS_ExplosionInfo_decode = function (buffer) {
     return {fireid: fireid, fishid: fishids, isFullCapture: fullCapture, bombValue:bombValue}
 }
 
+//
 exports.SC_Fire_encode = function (clientid, fireid, canfire) {
     var datalen = 2 + 4 + 1;
     var buffer = new Buffer(datalen);
@@ -90,6 +93,7 @@ exports.SC_Fire_decode = function (buffer) {
     return {clientid: clientid, fireId: fireid, canfire: canfire}
 }
 
+//
 exports.SC_BroadcastFire_encode = function (pos, fireX, fireY) {
     var datalen = 1 + 2 + 2;
     var buffer = new Buffer(datalen);
@@ -103,6 +107,7 @@ exports.SC_BroadcastFire_encode = function (pos, fireX, fireY) {
     return buffer;
 }
 
+//
 exports.SC_ExplosionInfo_encode = function (fishids) {
     var datalen = 2 + 4 * fishids.length;
     var buffer = new Buffer(datalen);
@@ -129,6 +134,7 @@ exports.SC_ExplosionInfo_decode = function (buffer) {
     return {fishids: fishids};
 }
 
+//
 exports.SC_BroadcastExplosionInfo_encode = function (pos, fishids, fullCatch) {
     var datalen = 1 + 2 + 8 * fishids.length + 1;
     var buffer = new Buffer(datalen);

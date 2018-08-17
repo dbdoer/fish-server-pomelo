@@ -1,12 +1,11 @@
 package mi;
 //数组使用关键字 repeated
 
-
 // 玩家货币
 message CurrencyUnit
 {
-	required uint32 gold = 1; // 金币
-	required uint32 gem = 2;  // 宝石
+	required uint32 gold = 1;    // 金币
+	required uint32 gem = 2;     // 宝石
 	required uint32 coupon = 3;  // 兑换券
 }
 
@@ -72,6 +71,7 @@ message SC_Login
     required uint32 isChecked = 11;   //是否勾选赠送礼物提示  1  勾选  0 未勾选
     required string lastTimeStamp = 12;  //玩家最后一条礼物记录时间戳
 }
+
 //道具属性
 message DataProp
 {
@@ -79,6 +79,7 @@ message DataProp
 	required uint32 propType = 2;
 	required uint32 propNum = 3;
 }
+
 //月卡属性
 message DataCard
 {
@@ -91,6 +92,7 @@ message CS_ModifyNickName
 {
 	required string newNickname = 1;
 }
+
 //packetid: 4102 修改昵称响应
 message SC_ModifyNickName
 {
@@ -233,6 +235,7 @@ message SC_Mail_OneKey_Del
  {
 
  }
+
  message GoodsInfo
  {
   	required string goodsName = 1;

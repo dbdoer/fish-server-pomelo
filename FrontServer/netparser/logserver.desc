@@ -1,17 +1,24 @@
 
-â
-logserver.protomi"…
+ï¿½
+logserver.protomi"ï¿½
 	logheader
-	timestamp (
-millisencond (
-logtype (
-playerid (
-roomid (
-serverid (
+	timestamp (
+
+millisencond (
+
+logtype (
+
+playerid (
+
+roomid (
+
+serverid (
+
 
 ip (	"
 logecho
 info (	"*
 firelog
-fireId (
+fireId (
+
 canfire (

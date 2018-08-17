@@ -6,7 +6,7 @@
 //var redis = require('../dao/redis/redisCmd');
 var redis = require("../database/redis").getCluster();
 
-
+//--redis相关配置
 var REDIS_UID_NAME = "fish4uid:";
 var userDao = require('../dao/userDao');
 var REDIS_NOTICE_LINK = "fish4NoticeLink:";
@@ -19,6 +19,7 @@ var REDIS_KEY_OUT2IN = "out2in:";
 var REDIS_PROFIT_STORAGE = "fish4Profit"
 var CLOSE_SERVER = "fish4CloseServer";
 
+//
 var bagDao = require("../dao/bagDao");
 var rpcManager = require("../rpc/RpcManager.js")();
 var prop = require("../Resources/prop");
@@ -28,21 +29,24 @@ var nodeExcel = require('excel-export');
 var async = require('async');
 var fs = require('fs');
 
-
+//
 module.exports = function (app,rpcManager) {
     return new GmCommunication(app,rpcManager);
 };
 
-
+//
 function GmCommunication(app,rpcManager) {
     this.app = app;
     this.rpcManager = rpcManager;
     this.appGM();
 }
+
+//
 GmCommunication.prototype.init = function () {
 
 }
 
+//
 GmCommunication.prototype.appGM = function () {
     //数值查询
     /*var data = this.getRoomServerInfo(1112001);
@@ -77,7 +81,7 @@ GmCommunication.prototype.appGM = function () {
     });
 
 
-//总盈利值查询
+    //-----总盈利值查询-----
     this.app.get('/fish4/totalProfit', function (req, res) {
         console.log("-----------------------totalProfit");
         if(!req.query.startTime || req.query.startTime == undefined){
@@ -113,7 +117,8 @@ GmCommunication.prototype.appGM = function () {
             res.end(JSON.stringify({code: 0,totalProfit:info}));
         });
     });
-    //数值修改
+
+    //-----数值修改-----
     this.app.get('/fish4/changeCoefficient', function (req, res) {
         if(!req.query.roomType || req.query.roomType == undefined){
             res.end(JSON.stringify({code: 1}));
@@ -142,7 +147,8 @@ GmCommunication.prototype.appGM = function () {
             }
         }
     });
-    //账号封存
+
+    //-----账号封存-----
     this.app.get("/fish4/accountClosure", function (req, res) {
 
         console.log('=======req.query.account=',req.query.account);
@@ -207,12 +213,13 @@ GmCommunication.prototype.appGM = function () {
         });
 
     });
+
     function isPositiveNum(s){//是否为正整数
         var re = /^[0-9]*[1-9][0-9]*$/ ;
         return re.test(s);         //返回true或false来判断是否正确
     }
 
-//账号解封
+    //-----账号解封-----
     this.app.get('/fish4/accountRelease', function (req, res) {
         var data = {endTime:0,blockingContent:"",unblockingContent:req.query.content};
         if(!req.query){
@@ -252,7 +259,8 @@ GmCommunication.prototype.appGM = function () {
         });
 
     });
-//功能按键开关
+
+    //-----功能按键开关-----
     this.app.get('/fish4/functionKeys', function (req, res) {
         //req.query.data = {battleInvitation:0,propGive:0,shareReward:0}
         if(!req.query.data){
@@ -277,7 +285,7 @@ GmCommunication.prototype.appGM = function () {
 
     });
 
-//游戏公告
+    //-----游戏公告-----
     this.app.get('/fish4/gameNotice', function (req, res) {
         //var nowDay = Math.floor(Date.now()/1000/60/60/24);
         var nowDay = Date.now();
@@ -333,7 +341,7 @@ GmCommunication.prototype.appGM = function () {
 
     });
 
-//系统邮件发送
+    //-----系统邮件发送-----
     this.app.get('/fish4/mailSend', function (req, res) {
         //console.log("---------------sendType,title,content,mailGoods,numId",req.query.sendType,req.query.title,req.query.content,req.query.mailGoods,req.query.numId);
         if(req.query.sendType == undefined){
@@ -475,7 +483,8 @@ GmCommunication.prototype.appGM = function () {
         }
 
     });
-//系统全服通告
+
+    //-----系统全服通告-----
     this.app.post('/fish4/fullNotice', function (req, res) {
         console.log("----------fullNotice---------------------req.body",req.body);
         if (req.body.sendType*1 !== 0) {
@@ -515,7 +524,8 @@ GmCommunication.prototype.appGM = function () {
             return;
         }
     });
-//实物兑换
+    
+    //-----实物兑换-----
     /*this.app.get('/fish4/goodsExchange', function (req, res) {
         console.log("--------------req.query",req.query);
         var now = Date.now();
@@ -565,6 +575,8 @@ GmCommunication.prototype.appGM = function () {
         
 
     });*/
+
+    //-----
     this.app.get('/fish4/purchaseChange', function (req, res) {
         console.log("-------------------req.query.clientID,req.query.money",req.query.clientID,req.query.money);
         redis.get(REDIS_KEY_OUT2IN + req.query.clientID, function (err,uid) {
@@ -625,11 +637,14 @@ GmCommunication.prototype.appGM = function () {
 
         });
     });
+
+    //-----
     this.app.get('/fish4/weiXinRecharge', function (req, res) {
         console.log("-----------------------result");
         res.end(JSON.stringify({code: 0}));
     });
 
+    //-----
     this.app.get('/fish4/pictureActiveGet', function (req, res) {
         //console.log("-----------------------pictureActiveGet");
         pictureList.processActivitySelect(function (err,result) {
@@ -644,6 +659,8 @@ GmCommunication.prototype.appGM = function () {
             res.end(JSON.stringify({code: 0,pictureList:pictureList}));
         });
     });
+
+    //-----
     this.app.get('/fish4/pictureNoticeGet', function (req, res) {
         //console.log("-----------------------pictureNoticeGet");
         pictureList.processNoticeSelect(function (err,result) {
@@ -659,6 +676,7 @@ GmCommunication.prototype.appGM = function () {
         });
     });
 
+    //-----
     this.app.get('/fish4/GetPlayerGuideNumToExcel', function (req, res){
         //console.log("-GetPlayerGuideNumToExcel--->res = ", res.req.headers.host);
         var conf = {};
@@ -718,6 +736,7 @@ GmCommunication.prototype.appGM = function () {
         });
     });
 
+    //-----
     this.app.get('/fish4/SetSignDataToJson', function (req, res) {
         if (req.query == undefined) {
             res.end(JSON.stringify({code: 1}));
@@ -803,6 +822,7 @@ GmCommunication.prototype.appGM = function () {
         }
     });
 
+    //-----
     this.app.get('/fish4/SetTotalSignRewardToJson', function (req, res){
         if (req.query == undefined) {
             res.end(JSON.stringify({code: 1}));
@@ -885,6 +905,8 @@ GmCommunication.prototype.appGM = function () {
             });
         }
     });
+
+    //-----
     this.app.get('/fish4/CloseServer', function (req, res) {
         if(!req.query){
             res.end(JSON.stringify({code: 1}));

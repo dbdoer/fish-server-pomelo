@@ -4,7 +4,6 @@
  * 整个生命周期由Match管理
  */
 
-
 module.exports = Room;
 //var MatchManager = require('./MatchManager.js');
 
@@ -49,7 +48,7 @@ var BROADCAST_TEST = 10086;
 var BIG_BOSS_DIE_ANIMATION_TIME = 18;/// 大BOSS死亡动画时间
 var TASK_FISH_ANIMATION_TIME = 20;/// 任务鱼动画时间
 var messageid = 0;
-var TRACK_UPDATE_BROADCAST_INTERVAL = 15*1000;//track更新广播间隔时间
+var TRACK_UPDATE_BROADCAST_INTERVAL = 15 * 1000;//track更新广播间隔时间
 
 module.exports = Room;
 /**
@@ -69,7 +68,7 @@ function Room(options) {
 
     this.guid = uuid.v4();
     this.roomId = options.roomId;//房间唯一识别id
-    this.size = options.size > 8 ? 8 : options.size ;//创建的房间大小(最多多少人) 此项可以为空
+    this.size = options.size > 8 ? 8 : options.size;//创建的房间大小(最多多少人) 此项可以为空
     this.status = -1;//房间状态 -1 不可用 0可以进入 1 条件进入(密码) 2不可进入(满员)
     //this.fishFarmIndex = options.farmIndex || 0;//房间类型 配置表index
 
@@ -111,24 +110,23 @@ Room.prototype.init = function () {
 };
 
 /// 切换场景时调用()
-Room.prototype.sceneSwitchByIndex = function(index){
-    if(index == undefined){
+Room.prototype.sceneSwitchByIndex = function (index) {
+    if (index == undefined) {
         return;
     }
-    if(index *1> this.farmIndexList.length -1)
-    {
+    if (index * 1 > this.farmIndexList.length - 1) {
         index = 0;
         this.curFishFarmIndex = index;
         this.farmIndexList = global.getRandomFarmIdByLastFarmId(this.matchTypeId, this.fishFarmId);
     }
 
     this.fishFarmId = this.farmIndexList[index];
-    logger.debug('==FastMatch==sceneSwitchByIndex==>curFishFarmId: '+ this.fishFarmId +", ", this.fishTideTrackId);
-    if(this.fishFarmId == undefined || this.fishFarmId < 0){
+    logger.debug('==FastMatch==sceneSwitchByIndex==>curFishFarmId: ' + this.fishFarmId + ", ", this.fishTideTrackId);
+    if (this.fishFarmId == undefined || this.fishFarmId < 0) {
         this.fishFarmId = 0;
     }
-    if(this.scene != undefined){
-        this.weaponEnergyInfo[0] = this.scene.weaponFishEnergy *1;
+    if (this.scene != undefined) {
+        this.weaponEnergyInfo[0] = this.scene.weaponFishEnergy * 1;
         this.scene = {};
     }
 
@@ -144,107 +142,135 @@ Room.prototype.setMatchInfo = function (matchInfo) {
 //房间内广播 根据type分配pid pName
 Room.prototype.broadcast = function (type, data, except) {
 
-    if (!except)except = []; //除外规则 不广播谁
+    if (!except) except = []; //除外规则 不广播谁
     var pid = -1;
     var pName;
 
     switch (type) {
+
         case BROADCAST_ENTER:
             pid = 4203;
             pName = 'SC_BroadcastEnterRoom';
             break;
+
         case BROADCAST_FIRE:
             pid = 4208;
             pName = "SC_BroadcastFire";
             break;
+
         case BROADCAST_USE_CARD:
             break;
+
         case BROADCAST_USE_SKILL:
             pid = 4602;
             pName = 'SC_BroadcastUseSkill';
             break;
-        case BROADCAST_CHANGE_SKIN:{
+
+        //皮肤更换
+        case BROADCAST_CHANGE_SKIN: 
             pid = 4229;
-            pName = 'SC_BroadcastSkinChange';///皮肤更换
-        }break;
+            pName = 'SC_BroadcastSkinChange';
+            break;
+
         case BROADCAST_CAPTURE:
             pid = 4210;
             pName = null;
             break;
+
         case BROADCAST_LEAVE:
             pid = 4206;
             pName = 'SC_BroadcastLeaveRoom';
             break;
+
         case BROADCAST_SYNC_TRACK_TIME:
             pid = 4212;
             pName = 'SC_SynchTrackTime';
             break;
+
         case BROADCAST_SYNC_TRACK_RESET:
             pid = 4211;
             pName = 'Pathinfo';
             break;
+
         case BROADCAST_ROOM_TALK:
             pid = 4233;
             pName = 'SC_BroadcastExpressionInfo';
             break;
+
         case BROADCAST_GIFT_GIVE:
             pid = 4237;
             pName = 'SC_BroadcastGiftGive';
             break;
+
         case BROADCAST_START_GAME:
             pid = 4266;
             pName = 'SC_BroadcastFastMatchStart';
             break;
+
         case BROADCAST_TEST:
             pid = 4240;
             pName = 'SC_SynchData';
-            data = {questIndex: 12};
+            data = { questIndex: 12 };
             break;
-        case BROADCAST_TASKFISH_REWARD:{
+
+        case BROADCAST_TASKFISH_REWARD: 
             pid = 4270;
             pName = 'SC_BroadcastClassicRstInfo';///经典模式中彩金结果统计
-        }break;
-        case BROADCAST_QILIN_VALUE:{
+            break;
+
+        case BROADCAST_QILIN_VALUE: 
             pid = 4310;
             pName = 'SC_BroadcastQiLinValue';///麒麟Boss价值
-        }break;
-        case BROADCAST_BOMB_LOCKSCREEN:{
-            pid = 4311;
+            break;
+
+        case BROADCAST_BOMB_LOCKSCREEN: 
+            pid = 4311
             pName = 'SC_BroadcastBombLockScreen';///炸弹Boss锁屏
-        }break;
-        case BROADCAST_FULL:{
+            break;
+
+        case BROADCAST_FULL: 
             pid = 4809;
             pName = 'SC_FullServiceNoticeData';///全服通告
-        }break;
-        case BROADCAST_PROPDATA_DROP:{
+            break;
+
+        case BROADCAST_PROPDATA_DROP:
             pid = 4226;
             pName = 'SC_BroadcastDropData';///广播物品掉落
-        }break;
-        case BROADCAST_THEMESWITCH_READY:{
+            break;
+
+        case BROADCAST_THEMESWITCH_READY: 
             pid = 4302;
             pName = 'SC_ThemeSwitchReady';///准备切换场景
-        }break;
-        case BROADCAST_THEMESWITCH_BEGIN:{
+            break;
+
+        case BROADCAST_THEMESWITCH_BEGIN: 
             pid = 4303;
             pName = 'SC_ThemeSwitchBegin';///开始切换场景
-        }break;
-        case BROADCAST_FISH_TIDE:{
+            break;
+
+        case BROADCAST_FISH_TIDE: 
             pid = 4213;
             pName = 'SC_FishWaveBegin';///鱼潮
-        }break;
-        case BROADCAST_WEAPON_ENERGY:{
+            break;
+
+        case BROADCAST_WEAPON_ENERGY: 
             pid = 4234;
             pName = 'SC_SpecialWeapon_Energy';///特殊武器能量
-        }break;
-        case BROADCAST_SPECIAL_FIRE:{
+            break;
+
+        case BROADCAST_SPECIAL_FIRE: 
             pid = 4236;
             pName = 'SC_BroadcastSpecialWeapon_Fire';///特殊开火广播
-        }break;
+            break;
+
         default:
             break;
     }
 
-    if (pid < 0)return;
+    if (pid < 0) {
+        return;
+    }
+    
     for (var k in this.playerPos) {
         var p = this.playerPos[k];
         if (p != undefined && p != null && except.indexOf(p) == -1) {
@@ -276,11 +302,11 @@ Room.prototype.close = function () {
 Room.prototype.buildRoomInfo = function () {
 };
 
-Room.prototype.getPlyersInfo = function(){
+Room.prototype.getPlyersInfo = function () {
     var ret = [];
-    for(var k =0; k<this.playerPos.length; k++){
+    for (var k = 0; k < this.playerPos.length; k++) {
         var p = this.playerPos[k];
-        if(!p){
+        if (!p) {
             continue;
         }
         ret.push(p.getUserInfo())
@@ -290,22 +316,22 @@ Room.prototype.getPlyersInfo = function(){
 
 //由一个server实例统一的定时器进行调用 Match.js 140行调用
 Room.prototype.update = function () {
-    if(this.bombLockScreenTime == 0 && this.qieLockScreenTime == 0) {
+    if (this.bombLockScreenTime == 0 && this.qieLockScreenTime == 0) {
         this.time++;
         var now = Date.now();
-        if(this.fishTideState == false){
+        if (this.fishTideState == false) {
             /// 准备切换场景
-            if(this.time >= this.scene.fishFarmConfig.Scensetime *1 - 6 && this.switchSceneStatus == 0){
-                this.broadcast(BROADCAST_THEMESWITCH_READY, {isStart: true});
+            if (this.time >= this.scene.fishFarmConfig.Scensetime * 1 - 6 && this.switchSceneStatus == 0) {
+                this.broadcast(BROADCAST_THEMESWITCH_READY, { isStart: true });
                 this.switchSceneStatus = 1;
             }
-            if(this.time >= this.scene.fishFarmConfig.Scensetime *1 && this.switchSceneStatus == 1){
+            if (this.time >= this.scene.fishFarmConfig.Scensetime * 1 && this.switchSceneStatus == 1) {
                 this.curFishFarmIndex += 1;
                 this.sceneSwitchByIndex(this.curFishFarmIndex);
-                this.broadcast(BROADCAST_THEMESWITCH_BEGIN, {nextSceneIndex: this.fishFarmId});
+                this.broadcast(BROADCAST_THEMESWITCH_BEGIN, { nextSceneIndex: this.fishFarmId });
                 this.switchSceneStatus = 2;
             }
-            if(this.time >= this.scene.fishFarmConfig.Scensetime *1 +6 && this.switchSceneStatus == 2){
+            if (this.time >= this.scene.fishFarmConfig.Scensetime * 1 + 6 && this.switchSceneStatus == 2) {
                 //this.fishTideState = true;  ///鱼潮状态
                 this.time = 0;  ///场景存活时间(包括鱼潮存活时间)
                 this.switchSceneStatus = 0;
@@ -313,26 +339,26 @@ Room.prototype.update = function () {
                 var pathInfo = this.scene.fishManager.getRandomPathInfos();
                 var trackTime = this.scene.getTrackTimeInfo();
                 /// 特殊需求--不出鱼潮
-                for(var t =0; t< trackTime.length; t++){
-                    if(trackTime[t].trackId *1 >= 470 && trackTime[t].trackId *1  <= 475){
+                for (var t = 0; t < trackTime.length; t++) {
+                    if (trackTime[t].trackId * 1 >= 470 && trackTime[t].trackId * 1 <= 475) {
                         trackTime[t].time = -1;
                     }
                 }
                 var deadfishs = this.scene.getTrackDeadFishInfo();
-                this.broadcast(BROADCAST_FISH_TIDE, {pathinfo: pathInfo, tracktime: trackTime, deadfishs: deadfishs});
-            }else {
+                this.broadcast(BROADCAST_FISH_TIDE, { pathinfo: pathInfo, tracktime: trackTime, deadfishs: deadfishs });
+            } else {
                 if (this.switchSceneStatus != 2) {
                     var path = this.scene.refreshTrackByTime();
                     if (path != undefined && path.length > 0) {
                         //console.log('==4211=Update=BROADCAST_SYNC_TRACK_RESET==> ',JSON.stringify(path));
                         // 广播path重置
-                        this.broadcast(BROADCAST_SYNC_TRACK_RESET, {tracks: path});
+                        this.broadcast(BROADCAST_SYNC_TRACK_RESET, { tracks: path });
                     } else {
                         if (now - this.lastUpdateTime > TRACK_UPDATE_BROADCAST_INTERVAL) {
                             // 广播trackTime
                             //console.log('===> BROADCAST_SYNC_TRACK_TIME <== 4212');
                             var tempTracktime = this.scene.getCurrentTrackTime(this.isFistUpdateTrackTime);
-                            this.broadcast(BROADCAST_SYNC_TRACK_TIME, {tracktime: tempTracktime});
+                            this.broadcast(BROADCAST_SYNC_TRACK_TIME, { tracktime: tempTracktime });
                             this.lastUpdateTime = now;
                             this.isFistUpdateTrackTime = false;
                         }
@@ -347,19 +373,19 @@ Room.prototype.update = function () {
             }
         }*/
     }
-    else{
-        if(this.qieLockScreenTime > 0){
-            this.qieLockScreenTime ++;
-            if(this.qieLockScreenTime >= 10){
+    else {
+        if (this.qieLockScreenTime > 0) {
+            this.qieLockScreenTime++;
+            if (this.qieLockScreenTime >= 10) {
                 this.qieLockScreenTime = 0;
-                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, {isLockScreen: this.qieLockScreenTime});
+                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, { isLockScreen: this.qieLockScreenTime });
             }
         }
-        if(this.bombLockScreenTime > 0) {
+        if (this.bombLockScreenTime > 0) {
             this.bombLockScreenTime++;
             if (this.bombLockScreenTime >= 10) {
                 this.bombLockScreenTime = 0;
-                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, {isLockScreen: this.bombLockScreenTime});
+                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, { isLockScreen: this.bombLockScreenTime });
             }
         }
     }
@@ -401,7 +427,7 @@ Room.prototype.join = function (player) {
     if (this.playerCount == this.size) {
         this.changeStatus(2);//房间满员
     }
-    if(player == undefined || player == null){
+    if (player == undefined || player == null) {
         return;
     }
     for (var i = 0; i < this.playerPos.length; i++) {
@@ -439,8 +465,8 @@ Room.prototype.getNotRobot = function () {
     var players = [];
     for (var k in this.playerPos) {
         var p = this.playerPos[k];
-        if (p && p!== -1) {
-            if(!p.isRobot()){
+        if (p && p !== -1) {
+            if (!p.isRobot()) {
                 players.push(p);
             }
         }
@@ -452,7 +478,7 @@ Room.prototype.getRobot = function () {
     for (var k in this.playerPos) {
         var p = this.playerPos[k];
         if (p) {
-            if(p.isRobot()){
+            if (p.isRobot()) {
                 players.push(p);
             }
         }
@@ -490,15 +516,15 @@ Room.prototype.stop = function () {
  * */
 Room.prototype.getRoomInfo = function () {
     var scene = this.scene;
-    if(!scene || !scene.allFishFarmTrackIds){
+    if (!scene || !scene.allFishFarmTrackIds) {
         return null;
     }
 
     var pathInfo = scene.fishManager.getRandomPathInfos();
     var trackTime = scene.getTrackTimeInfo();
     // 特殊需求--不出鱼潮
-    for(var t =0; t< trackTime.length; t++){
-        if(trackTime[t].trackId *1 >= 470 && trackTime[t].trackId *1  <= 475){
+    for (var t = 0; t < trackTime.length; t++) {
+        if (trackTime[t].trackId * 1 >= 470 && trackTime[t].trackId * 1 <= 475) {
             trackTime[t].time = -1;
         }
     }
@@ -522,7 +548,7 @@ Room.prototype.getRoomInfo = function () {
 
 //离开房间
 Room.prototype.leaveRoom = function (player) {
-    if(!player){
+    if (!player) {
         return;
     }
 
@@ -532,7 +558,7 @@ Room.prototype.leaveRoom = function (player) {
 
     this.emit(EVENT_LEAVE, player.uid);
     if (this.status == 2 && this.playerCount == 0) {
-        if(this.pwd !== undefined)
+        if (this.pwd !== undefined)
             this.changeStatus(1);
         else
             this.changeStatus(0);
@@ -544,13 +570,13 @@ Room.prototype.leaveRoom = function (player) {
         this.close();
     }
 
-    this.broadcast(BROADCAST_LEAVE, {uid: player.uid});
+    this.broadcast(BROADCAST_LEAVE, { uid: player.uid });
 };
 
 ///比赛进行中退出房间时,捕获到道具鱼(钻头炮)后的处理
-Room.prototype.setSpceialWeaponFish = function (playerUid){
+Room.prototype.setSpceialWeaponFish = function (playerUid) {
     this.scene.weaponFishEnergy = 0;
-    this.broadcast(BROADCAST_LEAVE, {uid: playerUid, matchType:this.matchTypeId});
+    this.broadcast(BROADCAST_LEAVE, { uid: playerUid, matchType: this.matchTypeId });
     this.scene.setSpceialWeaponTrackTime(false);
 };
 
@@ -561,7 +587,7 @@ Room.prototype.fire = function (player, x, y) {
 
 //特殊武器开火
 Room.prototype.specialFire = function (player, x, y, weaponType) {
-    this.broadcast(BROADCAST_SPECIAL_FIRE, {playerIndex:player.getPos(), weaponType:weaponType, fireX:x, fireY:y}, [player]);
+    this.broadcast(BROADCAST_SPECIAL_FIRE, { playerIndex: player.getPos(), weaponType: weaponType, fireX: x, fireY: y }, [player]);
 };
 /**
  * 碰撞 room负责广播结果 具体计算在scene中进行
@@ -573,13 +599,13 @@ Room.prototype.explosion = function (player, multiple, fishes, isFullCapture, bo
     }
     var boxPropRate = 0;
     /// vip等级大于等于7级后,每相差1级掉落系数累加 box_rate (0.1000)
-    if(player.vipLv *1 >= 7){
-        boxPropRate = (1 + player.vipLv - 7) * global.other[1].box_rate *1;
+    if (player.vipLv * 1 >= 7) {
+        boxPropRate = (1 + player.vipLv - 7) * global.other[1].box_rate * 1;
     }
     var result = this.scene.capture(2, fishes, multiple, isFullCapture, this.explosionQiLin, bombValue, boxPropRate, 0, finalExplode);
     // 获取到结果后进行广播 并返回player需要的结果(划掉)
     //返回将死鱼进行广播 并返回计算信息给player
-    if(result.explosionQiLin != undefined){
+    if (result.explosionQiLin != undefined) {
         this.explosionQiLin = result.explosionQiLin;
     }
 
@@ -587,49 +613,49 @@ Room.prototype.explosion = function (player, multiple, fishes, isFullCapture, bo
     if (result.deadFish.length > 0) {
 
         /// 记录任务鱼的条数
-        for(var i = 0; i<result.deadFish.length; i++) {
+        for (var i = 0; i < result.deadFish.length; i++) {
             //根据类型获取鱼的基础配置信息
             var fishType = this.scene.fishManager.getFishTypeById(result.deadFish[i].fishId);
-            if (fishType * 1 == global.capture[this.matchTypeId].task_fish_id *1) {
+            if (fishType * 1 == global.capture[this.matchTypeId].task_fish_id * 1) {
                 player.curTaskFishNum += 1;
                 //// 满足条数后发放奖励 100积分
-                if(player.curTaskFishNum >= global.capture[this.matchTypeId].task_fish_num *1){
-                    awardScore = global.compConfig[this.matchTypeId].bonus *1;
+                if (player.curTaskFishNum >= global.capture[this.matchTypeId].task_fish_num * 1) {
+                    awardScore = global.compConfig[this.matchTypeId].bonus * 1;
                     player.curTaskFishNum = 0;  ///任务鱼条数清零
-                    this.broadcast(BROADCAST_TASKFISH_REWARD,{
+                    this.broadcast(BROADCAST_TASKFISH_REWARD, {
                         matchType: 11,
                         reward: awardScore,
-                        position: player.pos +1
+                        position: player.pos + 1
                     });
                     /// 任务鱼完成时,如果主题剩余时间小于动画时间
-                    if(this.scene.fishFarmConfig.Scensetime - this.time < TASK_FISH_ANIMATION_TIME){
+                    if (this.scene.fishFarmConfig.Scensetime - this.time < TASK_FISH_ANIMATION_TIME) {
                         this.time -= TASK_FISH_ANIMATION_TIME - (this.scene.fishFarmConfig.Scensetime - this.time);
                     }
                 }
             }
 
             var fishInfo = global.getFishInfoByIndex(fishType);
-            if(fishInfo == undefined){
+            if (fishInfo == undefined) {
                 continue;
             }
             ///  大Boss死亡后,如果主题剩余时间小于鱼的死亡动画时间
-            if(fishInfo.fish_type == 3){
-                if(this.scene.fishFarmConfig.Scensetime - this.time < BIG_BOSS_DIE_ANIMATION_TIME){
+            if (fishInfo.fish_type == 3) {
+                if (this.scene.fishFarmConfig.Scensetime - this.time < BIG_BOSS_DIE_ANIMATION_TIME) {
                     this.time -= BIG_BOSS_DIE_ANIMATION_TIME - (this.scene.fishFarmConfig.Scensetime - this.time);
                 }
             }
 
-            if(fishInfo.name == "qilin"){
+            if (fishInfo.name == "qilin") {
                 this.explosionQiLin = 0;  ///捕获成功则清零
             }
-            else if(fishInfo.name == "bomb"){
+            else if (fishInfo.name == "bomb") {
                 this.bombLockScreenTime = 1;
-                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, {isLockScreen: this.bombLockScreenTime});
+                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, { isLockScreen: this.bombLockScreenTime });
             }
-            else if(fishInfo.name == "xiaocaishen"){
+            else if (fishInfo.name == "xiaocaishen") {
                 var newCount = Number(this.scene.trackCount[global.fishTrackType.SmallBoss][this.scene.curSmallBossIndex]) * 1.5;
                 this.scene.trackCount[global.fishTrackType.SmallBoss][this.scene.curSmallBossIndex] = Math.floor(newCount);
-                var newTrackTime = Number(this.scene.trackTime[global.fishTrackType.SmallBoss][this.scene.curSmallBossIndex]) *1.5;
+                var newTrackTime = Number(this.scene.trackTime[global.fishTrackType.SmallBoss][this.scene.curSmallBossIndex]) * 1.5;
                 this.scene.trackTime[global.fishTrackType.SmallBoss][this.scene.curSmallBossIndex] = Math.floor(newTrackTime);
                 var index = this.scene.curSmallBossIndex;
                 /*if(index > 0){
@@ -637,25 +663,25 @@ Room.prototype.explosion = function (player, multiple, fishes, isFullCapture, bo
                 }*/
                 this.scene.allFishFarmTrackIds[global.fishTrackType.SmallBoss][index] = "440";
 
-                this.broadcast(BROADCAST_SYNC_TRACK_TIME, {tracktime: this.scene.getCurrentTrackTime()});
+                this.broadcast(BROADCAST_SYNC_TRACK_TIME, { tracktime: this.scene.getCurrentTrackTime() });
             }
-            else if(fishInfo.name == "dacaishen"){
+            else if (fishInfo.name == "dacaishen") {
                 var index = this.scene.curSmallBossIndex;
                 /*if(index > 0){
                     index = index -1;
                 }*/
                 this.scene.allFishFarmTrackIds[global.fishTrackType.SmallBoss][index] = "430";
             }
-            else if(fishInfo.name == "qie"){
+            else if (fishInfo.name == "qie") {
                 this.qieLockScreenTime = 1;
-                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, {isLockScreen: this.qieLockScreenTime});
+                this.broadcast(BROADCAST_BOMB_LOCKSCREEN, { isLockScreen: this.qieLockScreenTime });
             }
 
-            if(fishInfo.fish_type == 4){ ///是否捕获了特殊武器鱼
-                player.captureWeaponFish.fishType = fishType *1; /// 鱼的索引
+            if (fishInfo.fish_type == 4) { ///是否捕获了特殊武器鱼
+                player.captureWeaponFish.fishType = fishType * 1; /// 鱼的索引
                 player.captureWeaponFish.weaponInfo = multiple; /// 当前武器信息
                 this.scene.setSpceialWeaponTrackTime(true);
-                this.weaponEnergyInfo = [this.scene.weaponFishEnergy,this.scene.totalWeaponEnergy];
+                this.weaponEnergyInfo = [this.scene.weaponFishEnergy, this.scene.totalWeaponEnergy];
             }
         }
 
@@ -670,43 +696,43 @@ Room.prototype.explosion = function (player, multiple, fishes, isFullCapture, bo
                 continue;
             }
             if (fishInfo.name == "qilin") {
-                this.broadcast(BROADCAST_QILIN_VALUE, {qiLinValue: this.explosionQiLin});
+                this.broadcast(BROADCAST_QILIN_VALUE, { qiLinValue: this.explosionQiLin });
             }
         }
     }
-    if(result.drop != undefined) {
-        for(var dKey in result.drop){
+    if (result.drop != undefined) {
+        for (var dKey in result.drop) {
             var tempDropList = [];
             var tempGemNum = 0;
-            if(result.drop[dKey] != undefined && result.drop[dKey].propList != undefined){
+            if (result.drop[dKey] != undefined && result.drop[dKey].propList != undefined) {
                 var list = result.drop[dKey].propList;
-                for(var l = 0; l <list.length; l++){
-                    if(list[l] != undefined) {
-                        tempDropList.push({propID: list[l].id, propType: list[l].type, propNum: list[l].num})
+                for (var l = 0; l < list.length; l++) {
+                    if (list[l] != undefined) {
+                        tempDropList.push({ propID: list[l].id, propType: list[l].type, propNum: list[l].num })
                     }
                 }
             }
-            if(result.drop[dKey] != undefined && result.drop[dKey].gemNum != undefined){
-                tempGemNum = result.drop[dKey].gemNum *1;
+            if (result.drop[dKey] != undefined && result.drop[dKey].gemNum != undefined) {
+                tempGemNum = result.drop[dKey].gemNum * 1;
             }
 
-            if(tempDropList.length > 0 || tempGemNum > 0){
-                this.broadcast(BROADCAST_PROPDATA_DROP, {playerIndex: player.getPos(), fishId: dKey, dataPropList: tempDropList, gemNum: tempGemNum});
+            if (tempDropList.length > 0 || tempGemNum > 0) {
+                this.broadcast(BROADCAST_PROPDATA_DROP, { playerIndex: player.getPos(), fishId: dKey, dataPropList: tempDropList, gemNum: tempGemNum });
             }
         }
     }
-    if(finalExplode != undefined) {
+    if (finalExplode != undefined) {
         var tempWeaponEnergy = 0;
-        if(this.scene.weaponFishEnergy > 0 && finalExplode == 0) {
+        if (this.scene.weaponFishEnergy > 0 && finalExplode == 0) {
             tempWeaponEnergy = this.scene.weaponFishEnergy;
-        }else{
+        } else {
             this.scene.setSpceialWeaponTrackTime(false);
         }
 
-        this.broadcast(BROADCAST_WEAPON_ENERGY, {curWeaponEnergy: tempWeaponEnergy});
+        this.broadcast(BROADCAST_WEAPON_ENERGY, { curWeaponEnergy: tempWeaponEnergy });
     }
 
-    return {worth:result.score, task:awardScore, list: result.drop/*result.deadFish*/};
+    return { worth: result.score, task: awardScore, list: result.drop/*result.deadFish*/ };
 };
 
 //使用卡牌
@@ -718,19 +744,19 @@ Room.prototype.useSkill = function (player, skillId, is, skillCoefficient) {
 
     //TODO 根据房间配置进行切换武器检测
     this.scene.setSkillCoefficient(skillCoefficient);
-    logger.debug('==FastMatchRoom===>use skill: '+ skillCoefficient);
-    this.broadcast(BROADCAST_USE_SKILL, {uid:player.uid, skillId:skillId, isOpen:is}, [player]);
+    logger.debug('==FastMatchRoom===>use skill: ' + skillCoefficient);
+    this.broadcast(BROADCAST_USE_SKILL, { uid: player.uid, skillId: skillId, isOpen: is }, [player]);
     return true;
 };
 Room.prototype.changeSkin = function (guid, skinId) {
-    this.broadcast(BROADCAST_CHANGE_SKIN, {uid: guid, skinType: skinId});
+    this.broadcast(BROADCAST_CHANGE_SKIN, { uid: guid, skinType: skinId });
 };
 
 //聊天
 Room.prototype.chat = function (player) {
 };
 //预定义表情文字
-Room.prototype.expression = function (player,messageId,messageContent,cb) {
+Room.prototype.expression = function (player, messageId, messageContent, cb) {
     this.broadcast(BROADCAST_ROOM_TALK, {
         name: player.name,
         pos: player.pos
@@ -740,7 +766,7 @@ Room.prototype.expression = function (player,messageId,messageContent,cb) {
 };
 
 //赠送礼物
-Room.prototype.giftGive = function (player,id,uid,fid,cb) {
+Room.prototype.giftGive = function (player, id, uid, fid, cb) {
     this.broadcast(BROADCAST_GIFT_GIVE, {
         id: id,
         uid: uid,
@@ -753,7 +779,7 @@ Room.prototype.giftGive = function (player,id,uid,fid,cb) {
 Room.prototype.canFire = function () {
     var flag = false;
     if (this.startFlag) flag = true;
-    if (this.stopFlag)flag = false;
+    if (this.stopFlag) flag = false;
     return flag;
 };
 

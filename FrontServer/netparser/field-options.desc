@@ -1,19 +1,26 @@
 
-šŠ
+æ®œ
 field-options.protomi"9
 CurrencyUnit
-gold (
-gem (
-coupon ("2
+gold (
+
+gem (
+
+coupon (
+"2
 
 helloworld
 
-id (
+id (
+
 str (	
-opt ("'
+opt (
+"'
 	ErrorInfo
-csid (
-code ("$
+csid (
+
+code (
+"$
 SC_AccountRepetition
 code ("
 CS_AccountSwitch" 
@@ -21,7 +28,7 @@ helloworld
 code ("%
 CS_Login
 uid (	
-uuid (	"«
+uuid (	"ï¿½
 SC_Login
 code (
 userInfo (2.mi.UserInfo"
@@ -29,20 +36,31 @@ helloworld
 dataCardList (2.mi.DataCard
 guideStepNum (
 timeNow (	
-novicePackage (
+
+novicePackage (
+
 novicePackageTime (	
-otherPackage	 (
+otherPackage	 (
+
 isUpdate
- (
-	isChecked (
-lastTimeStamp (	"=
+ (
+
+	isChecked (
+
+
+lastTimeStamp (	"=
 DataProp
-propID (
-propType (
-propNum ("-
+propID (
+
+propType (
+
+propNum (
+"-
 DataCard
-	monthCard (
-canGet ("(
+	monthCard (
+
+canGet (
+"(
 CS_ModifyNickName
 newNickname (	"6
 SC_ModifyNickName
@@ -54,93 +72,130 @@ newHeadUrl (	"4
 SC_ModifyHeadUrl
 code (
 
-newHeadUrl (	"²
+newHeadUrl (	"ï¿½
 MailInfo
-type (
+type (
+
 
 id (	
-state (
+state (
+
 
-templateId (
+templateId (
+
 replacement (	
 itemList (2.mi.GoodUnit
 
-createTime (
-	isAdjunct (
+createTime (
+
+	isAdjunct (
+
 title	 (	"
 CS_Mail_Get
 
 id (	".
 SC_Mail_List
 mailList (2.mi.MailInfo")
-CS_Mail_Check
+
+CS_Mail_Check
 
 id (	
-type (",
-SC_Mail_Check
-err (
-result ("'
+type (
+",
+
+SC_Mail_Check
+err (
+
+result (
+"'
 CS_Mail_Del
 
 id (	
-type ("*
+type (
+"*
 SC_Mail_Del
-err (
-result ("
+err (
+
+result (
+"
 CS_Mail_Adjunct
 
 id (	".
 SC_Mail_Adjunct
-err (
-result ("5
+err (
+
+result (
+"5
 SC_Mail_OneKey_Adjunct
-err (
-result ("1
+err (
+
+result (
+"1
 SC_Mail_OneKey_Del
-err (
-result ("-
+err (
+
+result (
+"-
 
 CS_PropUse
-propId (
-propNum ("I
+propId (
+
+propNum (
+"I
 
 SC_PropUse
-errCode (
-gold (
-gem (
-bullion ("=
+errCode (
+
+gold (
+
+gem (
+
+bullion (
+"=
 CS_PropGive
 numId (	
-propId (
-propNum ("
+propId (
+
+propNum (
+"
 SC_PropGive
-errCode ("
+errCode (
+"
 CS_GoodsList"]
 	GoodsInfo
 	goodsName (	
-bullion (
+bullion (
+
 label (	
 link (	
-goodsId ("A
+goodsId (
+"A
 SC_GoodsList
-errCode ( 
-	goodsList (2.mi.GoodsInfo"
+errCode (
+ 
+	goodsList (2
+.mi.GoodsInfo"ï¿½
 CS_GoodsExchange
-goodsId (
+goodsId (
+
 userName (	
 telephoneNumber (	
 	goodsName (	
-bullion (
+bullion (
+
 email (	"#
 SC_GoodsExchange
-errCode ("
+errCode (
+"
 CS_MonthCardUse""
 SC_MonthCardUse
-errCode ("
+errCode (
+"
 CS_CoefficientDebug"G
 SC_CoefficientDebug
-errCode (
-result (2.mi.Coefficient"¿
+errCode (
+
+result (2.mi.Coefficient"ï¿½
 Coefficient
 currentProfitEP (	
 coefficient (	
@@ -153,79 +208,110 @@ SC_PropUse
 
 id (	"G
 SC_redeemCodeUse
-errCode ("
+errCode (
+"
 dataPropList (2.mi.DataProp"*
 CS_giftGive
 uid (	
-giftId ("*
+giftId (
+"*
 SC_giftGive
-err (
-giftId ("
-SC_checkState
-code ("8
+err (
+
+giftId (
+"
+
+SC_checkState
+code (
+"8
 
 recordData
 name (	
-giftId (
+giftId (
+
 time (	"3
-SC_giftRecord"
+
+SC_giftRecord"
 
 recordList (2.mi.recordData"?
 SC_BroadcastGiftGive
 
 id (	
 uid (	
-giftId (";
-SC_GiftRemain
+giftId (
+";
+
+SC_GiftRemain
 name (	
-giftId (
+giftId (
+
 time (	"G
 SC_MessageRemind
-messageType (
+messageType (
+
 mailList (2.mi.MailInfo"M
 SC_BroadcastLevelUp
-playerIndex (
-level (
+playerIndex (
+
+level (
+
 
 experience (	"
 wave
-deep ("3
+deep (
+"3
 Screen
-screenid (
+screenid (
+
 waves (2.mi.wave"5
 Track
-trackid (
+trackid (
+
 screens (2
 .mi.Screen"*
 	TrackTime
-trackId (
-time (",
+trackId (
+
+time (
+",
 DeadFish
-trackId (
-fishIds ("%
+trackId (
+
+fishIds (
+"%
 Pathinfo
 tracks (2	.mi.Track"5
 SC_SynchTrackTime 
-	tracktime (2.mi.TrackTime"X
+	tracktime (2
+.mi.TrackTime"X
 CompetitionUserInfo
 uid (	
-leftAttackCount (
-score (
-time ("+
+leftAttackCount (
+
+score (
+
+time (
+"+
 GoodUnit
-goodId (
-goodNum (":
+goodId (
+
+goodNum (
+":
 DropData
-fishId (
+fishId (
+
 goodList (2.mi.GoodUnit"*
 CS_EnterCompetitionRoom
-sceneid ("ë
+sceneid (
+"ï¿½
 SC_CompetitionRoomInfo
 userList (2.mi.UserInfo
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish
-totalAttackCount (4
+totalAttackCount (
+4
 competitionInfoList (2.mi.CompetitionUserInfo"
 CS_LeaveRoom
 type ("
@@ -233,10 +319,12 @@ experience (	"
 code ("Y
 SC_BroadcastEnterRoom
 userInfo (2.mi.UserInfo 
-	tracktime (2.mi.TrackTime"
+	tracktime (2
+.mi.TrackTime"ï¿½
 SC_BroadcastCompEnterRoom
 userInfo (2.mi.UserInfo 
-	tracktime (2.mi.TrackTime0
+	tracktime (2
+.mi.TrackTime0
 competitionInfo (2.mi.CompetitionUserInfo"G
 SC_BroadcastLeaveRoom
 uid (	
@@ -245,29 +333,39 @@ experience (	"
 SC_DropData"
 dropDataList (2.mi.DropData"o
 SC_BroadcastDropData
-playerIndex (
-fishId ("
+playerIndex (
+
+fishId (
+"
 dataPropList (2.mi.DataProp
-gemNum ("u
+gemNum (
+"u
 SC_FishWaveBegin
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish"s
 SC_FishWaveEnd
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish"0
 SC_DropCard
-	cardCount (
-fishId ("A
+	cardCount (
+
+fishId (
+"A
 SC_UseCard_Normal
 canUse (
-cardId (
+cardId (
+
 rate ("U
 SC_BroadcastUseCard
 uid (	
-cardId (
-isCompleted (
+cardId (
+
+isCompleted (
+
 rate ("J
 CS_RainbowEventPos
 	positionX (
@@ -279,68 +377,102 @@ experience (	"
 	positionY (
 fishid ("7
 CS_EventExplosionInfo
-fireid (
-fishid (">
+fireid (
+
+fishid (
+">
 CS_ExpressionInfo
-	messageId (
+	messageId (
+
 messageContent (	"!
 SC_ExpressionInfo
-code ("3
+code (
+"3
 CS_ChangeWeapon
-weaponid (
+weaponid (
+
 isAuto ("
 CS_Heartbeat"5
 SC_Heartbeat
 
-secondtime (
-	microtime ("
+secondtime (
+
+	microtime (
+"
 CS_RefreshRoomInfo"1
-SC_UploadData
-goldPool (
-energy ("%
-CS_SkinUnlock
-unlockSkinId ("#
-SC_SkinUnlock
 
-curSkinIds ("0
-CS_SkinChange
-skinID (
-actType ("
-SC_SkinChange
-err ("7
+SC_UploadData
+goldPool (
+
+energy (
+"%
+
+CS_SkinUnlock
+unlockSkinId (
+"#
+
+SC_SkinUnlock
+
+curSkinIds (
+"0
+
+CS_SkinChange
+skinID (
+
+actType (
+"
+
+SC_SkinChange
+err (
+"7
 SC_BroadcastSkinChange
 uid (	
-skinType ("$
-CS_Guide_Step
-fishTypePos ("
-SC_Guide_Step
+skinType (
+"$
+
+CS_Guide_Step
+fishTypePos (
+"
+
+SC_Guide_Step
 code ("9
 SC_BroadcastChangeWeapon
 uid (	
-weaponid ("O
+weaponid (
+"O
 SC_BroadcastCurrencyUnit
 uid (	&
 currencyUnit (2.mi.CurrencyUnit"b
 SC_BroadcastExpressionInfo
 name (	
-pos (
-	messageId (
+pos (
+
+	messageId (
+
 messageContent (	"2
 SC_SpecialWeapon_Energy
 curWeaponEnergy ("I
 CS_SpecialWeapon_Fire
 
-weaponType (
-fireX (
-fireY ("(
+weaponType (
+
+fireX (
+
+fireY (
+"(
 SC_SpecialWeapon_Fire
-errCode ("g
+errCode (
+"g
 SC_BroadcastSpecialWeapon_Fire
-playerIndex (
+playerIndex (
+
 
-weaponType (
-fireX (
-fireY ("J
+weaponType (
+
+fireX (
+
+fireY (
+"J
 CS_SpecialWeapon_ExplosionInfo
 
 fishidlist (
@@ -350,38 +482,60 @@ fishidlist (
 questIndex (""
 SC_SynchData
 
-questIndex ("‚
+questIndex ("ï¿½
 CompetitionInfo
-competitionId (
-status (
-	startTime (
-endTime (
-goal (
-weaponId (
-reward1Type (
-reward1Number (
-reward2Type	 (
-reward2Number
- (
-costGem (
-score (
-rank ("F
+
+competitionId (
+
+status (
+
+	startTime (
+
+endTime (
+
+goal (
+
+weaponId (
+
+reward1Type (
+
+
+reward1Number (
+
+reward2Type	 (
+
+
+reward2Number
+ (
+
+costGem (
+
+score (
+
+rank
+ (
+"F
 RankInfo
 headurl (	
 name (	
-rank (
-score ("7
+rank (
+
+score (
+"7
 SC_FastMatchRankSelf
 self (2.mi.MatchRankItem"&
 SC_ThemeSwitchReady
 isStart ("-
 SC_ThemeSwitchBegin
-nextSceneIndex ("(
+nextSceneIndex (
+"(
 SC_ThemeBossComing
 
-themeIndex ("%
+themeIndex (
+"%
 CS_RankInfo
-competition_id ("P
+competition_id (
+"P
 SC_RankInfo
 	rankInfos (2.mi.RankInfo 
 
@@ -393,26 +547,34 @@ myRankInfo (2.mi.RankInfo"
 competitionInfo (2.mi.CompetitionUserInfo",
 SC_BroadcastQiLinValue
 
-qiLinValue ("2
+qiLinValue (
+"2
 SC_BroadcastBombLockScreen
-isLockScreen ("G
+isLockScreen (
+"G
 SC_StartSceneEvent
-	eventType (
+	eventType (
+
 pathinfo (2.mi.Pathinfo"-
 SceneEventReward
 uid (	
-gold ("f
+gold (
+"f
 SC_EndSceneEvent
 pathinfo (2.mi.Pathinfo2
 sceneEventRewardList (2.mi.SceneEventReward"4
 SceneEventFishNode
-fishid (
-nodeid ("`
+fishid (
+
+nodeid (
+"`
 CS_SceneEventExplosionInfo
-fireid (2
+fireid (
+2
 sceneEventFishNode (2.mi.SceneEventFishNode"o
 SC_SceneEventExplosionInfo
-fireid (
+fireid (
+
 whole (2
 sceneEventFishNode (2.mi.SceneEventFishNode"u
 #SC_BroadcastSceneEventExplosionInfo
@@ -420,11 +582,14 @@ qiLinValue ("2
 whole (2
 sceneEventFishNode (2.mi.SceneEventFishNode"3
 AchievementConUnit
-conId (
-number ("~
+conId (
+
+number (
+"~
 AchievementUnit
 
-id (6
+id (
+6
 achievementConUnitList (2.mi.AchievementConUnit
 isCompleted (
 
@@ -432,173 +597,254 @@ isReceived ("
 CS_AchievementData"P
 SC_AchievementData,
 achievementList (2.mi.AchievementUnit
-flag ("X
+flag (
+"X
 SC_BroadcastAchievementData
 uid (	,
 achievementList (2.mi.AchievementUnit",
 CS_AchievementAward
-achievementId (",
+
+achievementId (
+",
 SC_AchievementAward
-achievementId (".
+
+achievementId (
+".
 CS_UseSkill
-skillId (
+skillId (
+
 isOpen ("!
 CS_BuyUseSkill
-skillId ("P
+skillId (
+"P
 SC_UseSkill
-skillId (
+skillId (
+
 isUsable (
-code (
-costType ("D
+code (
+
+costType (
+"D
 SC_BroadcastUseSkill
 uid (	
-skillId (
+skillId (
+
 isOpen ("2
 CS_SkillProcess
-skillId (
-fishId ("H
+skillId (
+
+fishId (
+"H
 SC_BroadcastSkillProcess
 uid (	
-skillId (
-fishId ("4
+skillId (
+
+fishId (
+"4
 SC_BroadcastSkillEnd
 uid (	
-skillId (",
+skillId (
+",
 SC_BroadcastGroupSkillEnd
-skillId ("&
+skillId (
+"&
 AwdList
 type (
 count ("
 CS_OnLineAwdInit"<
 SC_OnLineAwdInit
-err (
-state (
-time (" 
+err (
+
+state (
+
+time (
+" 
 CS_OnLineAwdLingQu
 
-id ("?
+id (
+"?
 SC_OnLineAwdLingQu
-err (
-time (
-idList ("f
+err (
+
+time (
+
+idList (
+"f
 SC_TimeRewardGoldZero
-time (
+time (
+
 award1 (
 award2 (
 award3 (
-timeNow ("!
-CS_TimeReward
+timeNow (
+"!
+
+CS_TimeReward
 timeZone ("(
-SC_TimeReward
+
+SC_TimeReward
 
 is (
-num ("
+num (
+"
 CS_Subsidy_Sync"t
 SC_Subsidy_Sync
-errCode (
+errCode (
+
 isPreGetSubsidy (
-stateNumber (
-	startTime (
-nowTime ("
+stateNumber (
+
+	startTime (
+
+nowTime (
+"
 CS_SubsidyReward"K
 SC_SubsidyReward
-errCode (
+errCode (
+
 isGetSubsidy (
-stateNum (")
-SC_AcceptGold
+stateNum (
+")
+
+SC_AcceptGold
 uid (	
-Num ("8
+Num (
+"8
 SignData
-goodId (
-goodNum (
-vip ("=
-SignTotalData
-goodId (
-goodNum (
-day (",
+goodId (
+
+goodNum (
+
+vip (
+"=
+
+SignTotalData
+goodId (
+
+goodNum (
+
+day (
+",
 CS_GetToTalSignReward
-rewardWhich ("%
+rewardWhich (
+"%
 SC_GetToTalSignReward
-code ("[
+code (
+"[
 SC_PushSignData
 signData (2.mi.SignData(
-signTotalData (2.mi.SignTotalData"
-CS_GetSignData"ž
+
+signTotalData (2.mi.SignTotalData"
+CS_GetSignData"ï¿½
 SC_GetSignData
-code (
+code (
+
 todayIsSign (
 
-curSignNum (
+curSignNum (
+
 
-curDateDay (
-curMonthNum (
+curDateDay (
+
+curMonthNum (
+
 
-signRepair (
+signRepair (
+
 claimTotalReward (	"
 CS_GetSignReward" 
 SC_GetSignReward
-code ("M
+code (
+"M
 SenderPersonalData
 uid (	
-pos (
+pos (
+
 headurl (	
-name (	"Ù
+name (	"ï¿½
 TemplateMessageData2
 senderPersonalData (2.mi.SenderPersonalData
-	channelId (
-	messageId (
-fishId (
-fishGold (
-matchId (
+	channelId (
+
+	messageId (
+
+fishId (
+
+fishGold (
+
+matchId (
+
 
-rewardGold (
-sendType (
+rewardGold (
+
+sendType (
+
 content	 (	"P
 SC_FullServiceNoticeData4
 templateMessageData (2.mi.TemplateMessageData"/
 	QuestUnit
 questId (
-	questType ("J
+	questType (
+"J
 QuestAwardUnit
-rewardId (
-	rewardNum (
-rewardIndex (" 
-CS_QuestAward
-questId ("¥
-SC_QuestAward
-questId (
+rewardId (
+
+	rewardNum (
+
+rewardIndex (
+" 
 
-rewardGold (%
+CS_QuestAward
+questId (
+"ï¿½
+
+SC_QuestAward
+questId (
+
+
+rewardGold (
+%
 	awardUnit (2.mi.QuestAwardUnit 
-	nextQuest (2.mi.QuestUnit&
+	nextQuest (2
+.mi.QuestUnit&
 currencyUnit (2.mi.CurrencyUnit"D
 CS_PurchProduct
 	productID (	
-state (
+state (
+
 tradeNo (	"Z
 SC_PurchProduct
 	productID (	
-productType (
+productType (
+
 
-productNum (
-err ("1
+productNum (
+
+err (
+"1
 CS_SubmitCallsOrder
 
-id (
+id (
+
 mobile (	"3
 SC_SubmitCallsOrder
 code (	
-coupon (" 
+coupon (
+" 
 CS_SubmitCardOrder
 
-id ("2
+id (
+"2
 SC_SubmitCardOrder
 code (	
-coupon ("7
+coupon (
+"7
 CS_DebugInfo
-type (
+type (
+
 
-id (
+id (
+
 state ("-
 NormalRoomInfo
 type (
@@ -615,9 +861,11 @@ productNum (
 room (2.mi.NormalRoomInfo"5
 SC_CustomRoomList 
 room (2.mi.CustomRoomInfo"
-CS_ChangeSite
+
+CS_ChangeSite
 toSite ("-
-SC_ChangeSite
+
+SC_ChangeSite
 newSite (
 err (" 
 Site
@@ -625,41 +873,65 @@ productNum (
 uid (	"0
 SC_BroadcastChangeSite
 site (2.mi.Site"
-CS_AgainEnterMatch"Û
+CS_AgainEnterMatch"ï¿½
 fastMatchUserInfo
 uid (	
-gold (
-gem (
-pos (
+gold (
+
+gem (
+
+pos (
+
 headurl (	
 name (	
-weaponId (
-skinType (
-coupon	 (
+weaponId (
+
+skinType (
+
+coupon	 (
+
 energy
- (
-optimalComScore (
-showId (
-skillBingFeng (
-skillSuoding (
-bullet (
-score (
-rank (
-curTaskFishNum (
-curUseSkill (	"Ü
+ (
+
+optimalComScore (
+
+showId (
+
+
+skillBingFeng
+ (
+
+skillSuoding (
+
+bullet (
+
+score (
+
+rank (
+
+curTaskFishNum (
+
+curUseSkill (	"ï¿½
 SC_AgainEnterMatch
 time (
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish'
 userList (2.mi.fastMatchUserInfo
-taskFishReward (
-targetTaskFishNum (
-taskFishType (&
+taskFishReward (
+
+targetTaskFishNum (
+
+taskFishType (
+&
 showTop	 (2.mi.fastMatchUserInfo
-curFishFarmId
- (
-explosionQiLin (
+
+curFishFarmId
+ (
+
+explosionQiLin (
+
 code ("
 CS_GetFastMatchList"7
 	MatchItem
@@ -667,28 +939,37 @@ productNum (
 cost (
 total ("/
 SC_FastMatchList
-list (2.mi.MatchItem"4
+list (2
+.mi.MatchItem"4
 CS_FastMatchSignUp
 type (	
-timeZone ("·
+timeZone ("ï¿½
 SC_FastMatchSignUp
 userList (2.mi.UserInfo
-taskFishReward (
-targetTaskFishNum (
-taskFishType (
-curFishFarmId (
-errCode (
-waitTime ("
+taskFishReward (
+
+targetTaskFishNum (
+
+taskFishType (
+
+
+curFishFarmId (
+
+errCode (
+
+waitTime ("ï¿½
 SC_BroadcastFastMatchStart
 time (
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish"*
 
 ItemReward
 type (
 number ("x
-MatchRankItem
+
+MatchRankItem
 uid (	
 name (	
 headurl (
@@ -706,244 +987,355 @@ ItemReward
 SC_FastMatchWaitTime
 time ("x
 SC_BroadcastClassicRstInfo
-	matchType (
-reward (
-position (
-rewardId (
-newGoldPool (";
+	matchType (
+
+reward (
+
+position (
+
+rewardId (
+
+newGoldPool (
+";
 IntegralRank
 uid (	
 name (	
-integral ("2
+integral (
+"2
 IntegralInfo"
 rankList (2.mi.IntegralRank"2
 bigMatchInfo"
 rankInfo (2.mi.IntegralInfo"R
 SC_Big_Match_Info
-err ("
+err (
+"
 infoList (2.mi.bigMatchInfo
 time (	"T
 CS_Enter_Big_Match_Room
-	matchType (
+	matchType (
+
 isAgainMatch (
-timeZone ("²
+timeZone ("ï¿½
 SC_Enter_Big_Match_Room
-err (
+err (
+
 userList (2.mi.UserInfo
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish&
 
 onlineInfo (2.mi.OnlineRoomInfo
-curTaskFishInfo (
-targetTaskFishNum (
-taskFishType	 (
-curFishFarmId
- ("V
-BigMatchScore
-typeId (
-curScore (
-maxScore (
-	curBullet ("M
+curTaskFishInfo (
+
+targetTaskFishNum (
+
+taskFishType	 (
+
+
+curFishFarmId
+ (
+"V
+
+BigMatchScore
+typeId (
+
+curScore (
+
+maxScore (
+
+	curBullet (
+"M
 SC_Big_Match_PlayerScore
-err ($
+err (
+$
 	scoreList (2.mi.BigMatchScore"=
 SC_Big_Match_Settlement
-curScore (
-maxScore ("¢
+curScore (
+
+maxScore (
+"ï¿½
 RankingData
 uid (	
 name (	
-level (
-headurl (
-param (
-gold (
+level (
+
+headurl (
+
+param (
+
+gold (
+
 
 experience (	
-glory (
-gem	 (
+glory (
+
+gem	 (
+
 sex
- ("/
+ (
+"/
 SelfData
-selfType (
-	selfParam ("#
+selfType (
+
+	selfParam (
+"#
 CS_Ranking_List
-rankType ("©
+rankType (
+"ï¿½
 SC_Ranking_List
-err (!
+err (
+!
 goldRank (2.mi.RankingData#
 
 masterRank (2.mi.RankingData!
 giftRank (2.mi.RankingData
-selfData (2.mi.SelfData"±
+selfData (2.mi.SelfData"ï¿½
 
 FriendInfo
 guid (	
 name (	
 headurl (	
-sex (
-gold (
-vipLv (
-level (
-glory (
-state	 (
+sex (
+
+gold (
+
+vipLv (
+
+level (
+
+glory (
+
+state	 (
+
 
 experience
  (	
-gem ("C
+gem (
+"C
 SC_Friends_List
-err (#
+err (
+#
 friendsList (2.mi.FriendInfo"K
 SC_Friends_Request_List
-err (#
+err (
+#
 requestList (2.mi.FriendInfo"4
 CS_Friends_Request_Deal
-type (
+type (
+
 uid (	"K
 SC_Friends_Request_Deal
-err (#
+err (
+#
 reqDealList (2.mi.FriendInfo""
 CS_Friends_Find
 keyWord (	"B
 SC_Friends_Find
-err ("
+err (
+"
 
 playerInfo (2.mi.FriendInfo"
 CS_Friends_Find_Arround"H
 SC_Friends_Find_Arround
-err ( 
+err (
+ 
 findList (2.mi.FriendInfo"
 CS_Friends_Add
 uid (	"
 SC_Friends_Add
-err (" 
+err (
+" 
 CS_Friends_Delete
 uid (	" 
 SC_Friends_Delete
-err ("%
+err (
+"%
 SC_Friends_Request
-request (" 
+request (
+" 
 CS_Friends_Invite
 uid (	" 
 SC_Friends_Invite
-err ("B
+err (
+"B
 SC_Invite_Friend
-	matchType (
+	matchType (
+
 roomId (	
 uid (	"N
 CS_Friends_Invite_Request
-result (
-	matchType (
+result (
+
+	matchType (
+
 roomId (	"(
 SC_Friends_Invite_Request
-err ("9
+err (
+"9
 SC_Friends_RequestDeal_Res
 result (
 uid (	"7
 CS_EnterOnlineRoom
 roomId (	
-	matchType (	"Ö
+	matchType (	"ï¿½
 SC_OnlineRoomInfo
 userList (2.mi.UserInfo
 pathinfo (2.mi.Pathinfo 
-	tracktime (2.mi.TrackTime
+	tracktime (2
+.mi.TrackTime
 	deadfishs (2.mi.DeadFish&
 
 onlineInfo (2.mi.OnlineRoomInfo
-curTaskFishInfo (
-targetTaskFishNum (
-taskFishType (
-explosionQiLin	 (
+curTaskFishInfo (
+
+targetTaskFishNum (
+
+taskFishType (
+
+explosionQiLin	 (
+
 goldPool
- (
-curFishFarmId (
-err ("@
+ (
+
+
+curFishFarmId (
+
+err (
+"@
 OnlineRoomInfo
 uid (	
-cardId (
-	topEnergy ("¤
+cardId (
+
+	topEnergy (
+"ï¿½
 UserInfo
 uid (	
 name (	
 headurl (	
-gold (
-gem (
-coupon (
-energy (
-weaponId (
-pos	 (
+gold (
+
+gem (
+
+coupon (
+
+energy (
+
+weaponId (
+
+pos	 (
+
 optimalComScore
- (
-weaponMaxLevel (
-skinType (
-unlockedSkins (
-unlockedMaxSceneId (
-skillSuoding (
-skillBingfeng (
+ (
+
+weaponMaxLevel (
+
+skinType (
+
+
+unlockedSkins
+ (
+
+unlockedMaxSceneId (
+
+skillSuoding (
+
+
+skillBingfeng (
+
 showid (
-bullet (
-vipLv (
+bullet (
+
+vipLv (
+
 	vipNumber (	
-curTaskFishNum (
-level (
+curTaskFishNum (
+
+level (
+
 
 experience (	
-glory (
+glory (
+
 curUseSkill (	
 registerTime (	
 loginIP (	
 fbheadimage (	
 
-fbnickname (	"É
+fbnickname (	"ï¿½
 ActivityInfo
-aid (
+aid (
+
 title (	
-order (
-titleCorner (
+order (
+
+titleCorner (
+
 picture (	
-	titleIcon (
+	titleIcon (
+
 	startTime (	
 overTime (	
-activiytType	 (
+activiytType	 (
+
 detailedType
- (
-curTargetNum (
-needTargetNum (
+ (
+
+curTargetNum (
+
 
-attendMode (
+needTargetNum (
+
+
+attendMode
+ (
+
 state (&
 
 rewardInfo (2.mi.ActivityReward
 link (	"
 CS_ActivityList
-uid ("F
+uid (
+"F
 SC_ActivityList
-err (&
-activityList (2.mi.ActivityInfo"©
+err (
+&
+activityList (2.mi.ActivityInfo"ï¿½
 
 NoticeInfo
-nid (
+nid (
+
 title (	
-order (
+order (
+
 titleCorner (	
 	imageName (	
-detailContent (	
+
+detailContent (	
 	startTime (	
 overTime (	
 link	 (	"
-CS_NoticeList
-uid ("@
-SC_NoticeList
-err ("
+
+CS_NoticeList
+uid (
+"@
+
+SC_NoticeList
+err (
+"
 
 noticeList (2.mi.NoticeInfo"1
 ActivityReward
-propID (
-propNum (" 
+propID (
+
+propNum (
+" 
 CS_ActivityReward
-aid ("H
+aid (
+"H
 SC_ActivityReward
-err (&
+err (
+&
 
 rewardlist (2.mi.ActivityReward"
 CS_DebugCommand

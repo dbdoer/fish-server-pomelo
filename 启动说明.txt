@@ -1,13 +1,14 @@
-Ò» ×¼±¸
+ä¸€ å‡†å¤‡
 1 node MasterServer/main.js
 2 node ServerManager/main.js
 3 node FrontServer/client.js 
-´ò¿ª batch_test_register_guest(100);
-¶ş 
-redisÊı¾İ¿âÖĞÈ¡³öÊı¾İ fish4user:* Ğ´Èëµ½
+æ‰“å¼€ batch_test_register_guest(100);
+
+äºŒ 
+redisæ•°æ®åº“ä¸­å–å‡ºæ•°æ® fish4user:* å†™å…¥åˆ°
 client-user.json
 
-Èı ²âÊÔÆô¶¯Á÷³Ì
+ä¸‰ æµ‹è¯•å¯åŠ¨æµç¨‹
 1 node MasterServer/main.js
 2 node ServerManager/main.js
 3 node RoomServer/main.js
